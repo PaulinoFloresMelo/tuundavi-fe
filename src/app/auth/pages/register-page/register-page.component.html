@@ -1,0 +1,57 @@
+<div>
+    <section class="form-register"
+            [formGroup]="registerForm"
+            (ngSubmit)="onSubmit()">
+        <h4>Formulario de registro</h4>
+        <form action="onClick">
+            <input 
+                class="controls" 
+                type="text" 
+                name="nombres" 
+                id="nombres" 
+                placeholder="nombres"
+                formControlName="firstName"
+            >
+
+            <input 
+                class="controls" 
+                type="text" 
+                name="apellidoP" 
+                id="apellidoP" 
+                placeholder="apellido paterno"
+                formControlName="paternalName"
+            >
+            <input 
+                class="controls" 
+                type="text" 
+                name="apellidoM" 
+                id="apellidoM" 
+                placeholder="apellido materno"
+                formControlName="maternalName"
+            >
+            <input 
+                class="controls" 
+                type="email" 
+                name="correo" 
+                id="correo" 
+                placeholder="correo"
+                formControlName="email"
+            >
+            <input 
+                class="controls" 
+                type="password" 
+                name="contraseña" 
+                id="contraseña" 
+                placeholder="contraseña"
+                formControlName="password"
+            >
+            
+            <button class="botons" type="submit">Registrar</button> 
+            
+            @if (hasError()) {
+                Credenciales no validos
+            }
+                <p><a routerLink="/auth/login">Ya tengo una cuenta</a></p>
+        </form>
+    </section>
+</div>

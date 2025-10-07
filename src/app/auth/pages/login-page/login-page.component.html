@@ -1,0 +1,33 @@
+
+<div>
+    <section class="form-register"
+    [formGroup]="loginForm"
+    (ngSubmit)="onSubmit()">
+        
+    <h4>Formulario de autenticación</h4>
+        <form action="onClick">
+            <input 
+                class="controls"   
+                type="text" 
+                name="correo" 
+                id="correo" 
+                placeholder="Correo electrónico"
+                formControlName="email">
+
+            <input 
+                class="controls" 
+                type="password" 
+                name="contraseña" 
+                id="contraseña" 
+                placeholder="Contraseña"
+                formControlName="password">
+            <button class="botons" type="submit">Entrar</button>
+
+            @if (hasError()) {
+                Credenciales no validos
+            }
+                <p>¿No tienes cuenta? <a routerLink="/auth/register">Crea una aquí</a></p>
+            
+        </form>
+    </section>
+</div>
