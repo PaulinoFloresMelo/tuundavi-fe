@@ -3,6 +3,7 @@ import { StoreFrontLayoutComponent } from "./layouts/store-front-layout/store-fr
 import { HomePageComponent } from "./pages/home-page/home-page.component";
 import { TermPageComponent } from "./pages/term-page/term-page.component";
 import { NotFoundPageComponent } from "./pages/not-found-page/not-found-page.component";
+import { CategoryPageComponent } from "./pages/category-page/category-page.component";
 
 export const storeFrontRoutes: Routes = [
     {
@@ -14,7 +15,11 @@ export const storeFrontRoutes: Routes = [
                 component: HomePageComponent,
             },
             {
-                path: 'term/id:Slug',
+                path: 'category/:category',
+                component: CategoryPageComponent,
+            },
+            {
+                path: 'term/:idSlug',
                 component: TermPageComponent,
             },
             {
