@@ -6,7 +6,7 @@ import { AuthResponse } from '../interfaces/auth-response.interface';
 import { catchError, map, Observable, of, tap } from 'rxjs';
 
 type AuthStatus = 'cheking' | 'authenticated' | 'not-authenticated'
-const baseURL = environment.baseURL; 
+const baseUrl = environment.baseUrl; 
 
 @Injectable({providedIn: 'root'})
 export class AuthService {
@@ -32,7 +32,7 @@ export class AuthService {
 
 
     login(email: string, password: string):Observable<boolean>{
-        return this.http.post<AuthResponse>(`${ baseURL }/auth/login`, {
+        return this.http.post<AuthResponse>(`${ baseUrl }/auth/login`, {
             email: email,
             password: password,
         }).pipe(

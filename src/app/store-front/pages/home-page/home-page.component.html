@@ -8,8 +8,14 @@
 </h1>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-2 gap-3">
-  <term-card></term-card>
-  <term-card></term-card>
-  <term-card></term-card>
+
+  @for (term of termsResource.value()?.terms; track $index) {
+
+  <term-card [term]="term"></term-card>
+}
+<!-- Empty -->
+@empty {
+  <p>No hay terminos</p>
+}
 </div>
 
