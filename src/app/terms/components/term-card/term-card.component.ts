@@ -1,20 +1,20 @@
 import { Term } from '@/terms/interfaces/term.interface';
+import { TermImagePipe } from '@/terms/pipes/term-image.pipe';
 import { SlicePipe } from '@angular/common';
 import { Component, computed, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { environment } from 'src/environments/environment.development';
 
+const baseUrl = environment.baseUrl;
 
 @Component({
   selector: 'term-card',
-  imports: [RouterLink, SlicePipe],
+  imports: [RouterLink, SlicePipe, TermImagePipe],
   templateUrl: './term-card.component.html',
 })
 export class TermCardComponent { 
   term = input.required<Term>();
-
   imageUrl = computed(() => {
-    return `http://localhost:3000/api/v1/terms/${
-    this.term().imageUrl
-    }`
+    return `${baseUrl}/images/${this.term().imageUrl}`
   });
 };

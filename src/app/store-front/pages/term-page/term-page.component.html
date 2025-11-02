@@ -1,1 +1,22 @@
-<p>term-page works!</p>,
+<h2 class="text-2xl font-bold"></h2>
+@if ( termResource.isLoading() ) {
+    <div class="flex justify-center items-center h-screen">
+        <span class="loading loading-spinner loading-lg"></span>
+
+    </div>
+}
+
+@if ( termResource.hasValue() ) {
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+       
+        <term-carousel></term-carousel>
+        
+        <h2 class="text-2xl font-bold">
+            {{ termResource.value().content }}
+        </h2>
+
+        <div class="divider"></div>
+
+        <p>{{ termResource.value().example}}</p>
+    </div>
+}
