@@ -8,7 +8,7 @@
       "@/dashboard/*":["./src/app/admi-dashboard/*"],
       "@/auth/*":["./src/app/auth/*"],
       "@/store-front":["./src/app/store-front/*"],
-      "@/shared":["./src/app/store-front/*"],
+      "@/shared/*":["./src/app/shared/*"],
       "@/terms/*":["./src/app/terms/*"],
     },
     "strict": true,

@@ -14,3 +14,8 @@
   <p>No hay terminos</p>
 }
 </div>
+
+<app-pagination 
+  [pages]="termsResource.value()?.pages ?? 0"
+  [currentPage]="paginationService.currentPage()"
+/>
