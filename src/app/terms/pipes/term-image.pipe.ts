@@ -12,15 +12,19 @@ export class TermImagePipe implements PipeTransform {
     transform(value: string | string[]  ): string {
         
         if ( typeof value === 'string' ) {
-            return `${value}`
+            return `${baseUrl}/images/${value}`;
         }
+        console.log({ value });
 
-        const image = value.at(0);
+        // const image = value.at(0);
+        const image = value;
 
+        console.log({ image });
+        
         if ( !image ) {
             return './assets/images/no-image.jpg'
         }
 
-        return `${image}`
+        return `${baseUrl}/images/${image}`;
     }
 }

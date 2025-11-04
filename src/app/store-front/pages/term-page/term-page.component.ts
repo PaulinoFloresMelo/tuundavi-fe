@@ -11,13 +11,13 @@ import { TermCarouselComponent } from "@/terms/components/term-carousel/term-car
 })
 export class TermPageComponent { 
   
-  activatedRouted = inject(ActivatedRoute)
-  termService     = inject(TermsService)
+  activatedRoute = inject(ActivatedRoute)
+  termService    = inject(TermsService)
   
-  termId          = this.activatedRouted.snapshot.params['idSlug'];
+  termIdSlug         = this.activatedRoute.snapshot.params['idSlug'];
   
   termResource = rxResource({
-    params: () => ({ idSlug: this.termId }),
+    params: () => ({ idSlug: this.termIdSlug }),
     stream: ({ params }) => {
       return this.termService.getTermById(params.idSlug)
     }
