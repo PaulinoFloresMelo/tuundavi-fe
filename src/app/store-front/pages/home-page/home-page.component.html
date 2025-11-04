@@ -1,21 +1,18 @@
 
 <h1 class="text-3xl font-bold">
-  Tu'u nDa'vi
-</h1>
-
-<h1 class="text-xl mb-5">
   Todos los terminos
 </h1>
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-2 gap-3">
 
   @for (term of termsResource.value()?.terms; track $index) {
+    <term-card [term]="term"></term-card>
+  }
 
-  <term-card [term]="term"></term-card>
-}
-<!-- Empty -->
-@empty {
-  <p>No hay terminos</p>
-}
+  <!-- Empty -->
+  @empty {
+    <p>No hay terminos</p>
+  }
+  
 </div>
 
