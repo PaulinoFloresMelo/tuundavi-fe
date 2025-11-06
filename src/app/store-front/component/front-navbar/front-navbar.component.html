@@ -1,10 +1,3 @@
-<!-- 
-<ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li><a href="#about">About</a></li>
-</ul> -->
 
 <div class="navbar bg-base-100 shadow-sm">
   <div class="navbar-start">
@@ -50,7 +43,23 @@
         </li>
     </ul>
   </div>
-  <div class="navbar-end">
-    <a class="btn">Button</a>
+  
+  <div class="navbar-end gap-4">
+    @if ( authService.authStatus() === 'authenticated') {
+      <button class="btn btn-ghost">
+        {{ authService.user()?.email }}
+      </button>
+      
+      <button class="btn btn-sm btn-accent"
+        (click)="authService.logout()">Salir</button>
+    }
+    <!--  -->
+    @else if ( authService.authStatus() === 'not-authenticated') {
+      <a routerLink="/auth/login">Login</a>
+    }
+    <!--  -->
+    @else {
+      <a class="btn btn-ghost"></a>
+    }
   </div>
 </div>

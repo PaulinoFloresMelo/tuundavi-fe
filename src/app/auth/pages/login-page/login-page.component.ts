@@ -2,6 +2,7 @@ import { Component, inject, signal } from "@angular/core";
 import { FormBuilder, ReactiveFormsModule, Validators } from "@angular/forms";
 import { Router, RouterLink } from "@angular/router";
 import { AuthService } from "../../services/auth.service";
+import { Observable, of } from "rxjs";
 
 @Component({
     selector: 'login-page-component',
@@ -49,9 +50,6 @@ export class LoginPageComponent {
             }, 2000);
         });     
     }
-
-
-    // check authetication
 
     // Registro
 
