@@ -1,57 +1,144 @@
-<div>
-    <section class="form-register"
-            [formGroup]="registerForm"
-            (ngSubmit)="onSubmit()">
-        <h4>Formulario de registro</h4>
-        <form action="onClick">
-            <input 
-                class="controls" 
-                type="text" 
-                name="nombres" 
-                id="nombres" 
-                placeholder="nombres"
-                formControlName="firstName"
-            >
+<h4>Formulario de registro</h4>
+<form 
+    class="flex flex-col gap-2"
+    [formGroup]="registerForm"
+    (ngSubmit)="onSubmit()">
 
-            <input 
-                class="controls" 
-                type="text" 
-                name="apellidoP" 
-                id="apellidoP" 
-                placeholder="apellido paterno"
-                formControlName="paternalName"
+    <label class="input input-bordered flex items-center gap-2">
+        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <g
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="2.5"
+            fill="none"
+            stroke="currentColor"
             >
-            <input 
-                class="controls" 
-                type="text" 
-                name="apellidoM" 
-                id="apellidoM" 
-                placeholder="apellido materno"
-                formControlName="maternalName"
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+            </g>
+        </svg>
+        <input
+            type="text"
+            required
+            placeholder="Nombres"
+            minlength="3"
+            maxlength="30"
+            title="Only letters"
+            formControlName="firstName"
+        />
+    </label>
+
+    <label class="input validator">
+        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <g
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="2.5"
+            fill="none"
+            stroke="currentColor"
             >
-            <input 
-                class="controls" 
-                type="email" 
-                name="correo" 
-                id="correo" 
-                placeholder="correo"
-                formControlName="email"
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+            </g>
+        </svg>
+        <input
+            type="text"
+            required
+            placeholder="Apellido paterno"
+            minlength="3"
+            maxlength="30"
+            title="Only letters"
+            formControlName="paternalName"
+        />
+    </label>
+
+    <label class="input validator">
+        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <g
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="2.5"
+            fill="none"
+            stroke="currentColor"
             >
-            <input 
-                class="controls" 
-                type="password" 
-                name="contraseña" 
-                id="contraseña" 
-                placeholder="contraseña"
-                formControlName="password"
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+            <circle cx="12" cy="7" r="4"></circle>
+            </g>
+        </svg>
+        <input
+            type="text"
+            required
+            placeholder="Apellido materno"
+            minlength="3"
+            maxlength="30"
+            title="Only letters"
+            formControlName="maternalName"
+        />
+    </label>
+
+
+    <label class="input validator">
+        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <g
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="2.5"
+            fill="none"
+            stroke="currentColor"
             >
-            
-            <button class="botons" type="submit">Registrar</button> 
-            
-            @if (hasError()) {
-                Credenciales no validos
-            }
-                <p><a routerLink="/auth/login">Ya tengo una cuenta</a></p>
-        </form>
-    </section>
-</div>
+            <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+            </g>
+        </svg>
+
+        <input 
+            type="email" 
+            placeholder="Correo electrónico" 
+            formControlName="email" 
+            required />
+    </label>
+
+    <label class="input validator">
+        <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <g
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            stroke-width="2.5"
+            fill="none"
+            stroke="currentColor"
+            >
+            <path
+                d="M2.586 17.414A2 2 0 0 0 2 18.828V21a1 1 0 0 0 1 1h3a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h1a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1h.172a2 2 0 0 0 1.414-.586l.814-.814a6.5 6.5 0 1 0-4-4z"
+            ></path>
+            <circle cx="16.5" cy="7.5" r=".5" fill="currentColor"></circle>
+            </g>
+        </svg>
+        <!-- pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" -->
+        <input
+            type="password"
+            required
+            placeholder="Contraseña"
+            minlength="6"
+            title="Must be more than 8 characters, including number, lowercase letter, uppercase letter"
+            formControlName="password"
+        />
+    </label>
+    
+    <button class="btn btn-accent" type="submit">Registrar</button> 
+        <p class="text-slate-700">
+            <a routerLink="/auth/login" class="text-accent">Ya tengo una cuenta</a></p>
+</form>
+
+@if (hasError()) {
+    <div 
+    role="alert" 
+    class="alert alert-error animate-fadeIn fixed bottom-5 right-5 w-52"
+    >
+        
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 shrink-0 stroke-current" fill="none" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>
+
+    <span>Por favor revise la información ingresada.</span>
+    </div>
+}
