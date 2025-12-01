@@ -1,0 +1,60 @@
+<div class="overflow-x-auto">
+  <table class="table">
+    <!-- head -->
+    <thead>
+      <tr>
+        <th>
+          <label>
+            <input type="checkbox" class="checkbox" />
+          </label>
+        </th>
+        <th>Término</th>
+        <th>Ejemplo</th>
+        <th>Localidad</th>
+        <th>Variante</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- row 1 -->
+       @for (term of terms(); track term.id) {
+        <tr>
+          <th>
+            <label>
+              <input type="checkbox" class="checkbox" />
+            </label>
+          </th>
+          <td>
+            <div class="flex items-center gap-3">
+              <div class="avatar">
+                <div class="mask mask-squircle h-12 w-12">
+                  <img
+                    [src]="term.imageUrl | termImage"
+                    [alt]="term.content" />
+                </div>
+              </div>
+              <div>
+                <div 
+                  [routerLink]="['/admin/term/id', term.id]"
+                  class="font-bold">{{ term.content}}</div>
+                <div class="text-sm opacity-50">{{ term.content}}</div>
+              </div>
+            </div>
+          </td>
+          <td>
+            {{ term.example }}
+            <br />
+            <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
+          </td>
+          <td>
+            
+          </td>
+          <th>
+            <button 
+              [routerLink]="['/admin/term', term.id]",    
+              class="btn btn-ghost btn-xs">Editar</button>
+          </th>
+        </tr>  
+       }
+      
+  </table>
+</div>
