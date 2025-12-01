@@ -2,6 +2,7 @@ import { Routes } from "@angular/router";
 import { TermAdminPage } from "./pages/term-admin-page/term-admin-page";
 import { Component } from '@angular/core';
 import { AdminDashboardLayout } from "./layouts/admin-dashboard-layout/admin-dashboard-layout";
+import { TermsAdminPage } from "./pages/terms-admin-page/terms-admin-page";
 
 export const adminDashboardRoutes: Routes = [
     {
@@ -10,7 +11,7 @@ export const adminDashboardRoutes: Routes = [
         children: [
             {
                 path: 'terms',
-                component: TermAdminPage
+                component: TermsAdminPage
             },
             {
                 path: 'term/:id',
