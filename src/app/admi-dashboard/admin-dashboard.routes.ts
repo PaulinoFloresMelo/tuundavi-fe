@@ -3,11 +3,15 @@ import { TermAdminPage } from "./pages/term-admin-page/term-admin-page";
 import { Component } from '@angular/core';
 import { AdminDashboardLayout } from "./layouts/admin-dashboard-layout/admin-dashboard-layout";
 import { TermsAdminPage } from "./pages/terms-admin-page/terms-admin-page";
+import { IsAdminGuard } from "@/auth/guards/is-admin.guard";
 
 export const adminDashboardRoutes: Routes = [
     {
         path:'',
         component: AdminDashboardLayout,
+        canMatch: [
+            IsAdminGuard
+        ],
         children: [
             {
                 path: 'terms',
