@@ -16,8 +16,11 @@
     
     <div class="card-actions justify-end">
       <!-- <a class="link link-accent" [routerLink]="['/term', term().imageUrl]">Ver termino</a> -->
-      <a class="badge badge-accent" [routerLink]="['/term', term().id]">Ver termino</a>
-      
+      <button class="btn btn-sm btn-accent"
+        >Escuchar</button>
+        
+      <button class="btn btn-sm btn-accent" [routerLink]="['/term', term().id]"
+        >Ver termino</button>
     </div>
   </div>
 </div>

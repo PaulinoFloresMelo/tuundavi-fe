@@ -9,18 +9,16 @@
 @if ( termResource.hasValue() ) {
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         
-        <!-- <term-carousel [images]="termResource.value()?.imageUrl ?? '' "></term-carousel> -->
+        <!-- <term-carousel [images]="termResource.value()?.imageUrl ?? '' "></term-carousel> comentar esta linea -->
         <term-carousel [images]="termResource.value().imageUrl"></term-carousel>
 
-        <div>
-            
-            <h2 class="text-2xl font-bold">
-                {{ termResource.value().content }}
-            </h2>
+        <div class="card-body">
 
-            <div class="divider"></div>
-
+            <h2 class="card-title">{{ termResource.value().content }}</h2>
             <p>{{ termResource.value().example}}</p>
+            <div class="card-actions justify-end">
+            <button class="btn btn-accent">Escuchar</button>
+            </div>
         </div>
     </div>
 }
