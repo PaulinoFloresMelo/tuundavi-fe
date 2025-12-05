@@ -4,6 +4,8 @@ import { Component } from '@angular/core';
 import { AdminDashboardLayout } from "./layouts/admin-dashboard-layout/admin-dashboard-layout";
 import { TermsAdminPage } from "./pages/terms-admin-page/terms-admin-page";
 import { IsAdminGuard } from "@/auth/guards/is-admin.guard";
+import { UserAdminPage } from "./pages/user-admin-page/user-admin-page";
+import { UsersAdminPage } from "./pages/users-admin-page/users-admin-page";
 
 export const adminDashboardRoutes: Routes = [
     {
@@ -20,6 +22,14 @@ export const adminDashboardRoutes: Routes = [
             {
                 path: 'term/:id',
                 component: TermAdminPage
+            },
+            {
+                path: 'users',
+                component: UsersAdminPage
+            },
+            {
+                path: 'user/:id',
+                component: UserAdminPage
             },
             {
                 path: '**',
