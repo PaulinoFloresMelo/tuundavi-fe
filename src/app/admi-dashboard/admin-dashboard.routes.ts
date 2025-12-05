@@ -20,7 +20,7 @@ export const adminDashboardRoutes: Routes = [
                 component: TermsAdminPage
             },
             {
-                path: 'term/:id',
+                path: 'terms/:id',
                 component: TermAdminPage
             },
             {
@@ -28,7 +28,7 @@ export const adminDashboardRoutes: Routes = [
                 component: UsersAdminPage
             },
             {
-                path: 'user/:id',
+                path: 'users/:id',
                 component: UserAdminPage
             },
             {

@@ -43,13 +43,14 @@ export class TermsService {
         );
     }
 
-    getTermById(idSlug: string): Observable<Term>{
-        if (this.termCache.has(idSlug)) {
-            return of(this.termCache.get(idSlug)!);
+    getTermById(id: string): Observable<Term>{
+        if (this.termCache.has(id)) {
+            return of(this.termCache.get(id)!);
         }
 
-        return this.http.get<Term>(`${baseUrl}/terms/${idSlug}`).pipe(
-            tap((term) => this.termCache.set(idSlug, term))
+        return this.http
+            .get<Term>(`${baseUrl}/terms/${id}`)
+            .pipe(tap((term) => this.termCache.set(id, term))
         );
     }
 }

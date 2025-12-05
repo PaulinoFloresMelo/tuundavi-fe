@@ -1,1 +1,10 @@
-<p>term-admin-page works!</p>,
+@if (termResource.isLoading()) {
+    <div class="flex justify-center items-center h-screen">
+        <span class="loading loading-spinner loading-lg"></span>
+    </div>
+}
+
+@if ( termResource.hasValue()) {
+    <term-details [term]="termResource.value()!"/>
+}
+

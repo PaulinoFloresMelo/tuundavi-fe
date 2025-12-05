@@ -16,7 +16,7 @@
     </thead>
     <tbody>
       <!-- row 1 -->
-       @for (term of terms(); track term.id) {
+      @for (term of terms(); track term.id) {
         <tr>
           <th>
             <label>
@@ -33,9 +33,9 @@
                 </div>
               </div>
               <div>
-                <div 
-                  [routerLink]="['/admin/term/id', term.id]"
-                  class="font-bold">{{ term.content}}</div>
+                <a 
+                  [routerLink]="['/admin/terms', term.id]"
+                  class="font-bold hover:text-accent transition-colors dusration-300">{{ term.content}}</a>
                 <div class="text-sm opacity-50">{{ term.content}}</div>
               </div>
             </div>
@@ -46,12 +46,14 @@
             <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
           </td>
           <td>
-            
+            <button 
+              [routerLink]="['/admin/terms', term.id]",    
+              class="btn btn-accent btn-xs">Editar</button>
           </td>
           <th>
             <button 
-              [routerLink]="['/admin/term', term.id]",    
-              class="btn btn-ghost btn-xs">Editar</button>
+              [routerLink]="['/admin/terms', term.id]",    
+              class="btn btn-error btn-xs">Eliminar</button>
           </th>
         </tr>  
        }
