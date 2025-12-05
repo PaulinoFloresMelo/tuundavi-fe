@@ -10,8 +10,7 @@
   @for (term of termsResource.value()?.terms; track $index) {
     <term-card [term]="term"></term-card>
   }
-  
-  <!-- Empty -->
+
   @empty {
     <p>No hay terminos</p>
   }

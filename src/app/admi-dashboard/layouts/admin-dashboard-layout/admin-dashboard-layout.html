@@ -1,59 +1,77 @@
-<div class="bg-slate-100 overflow-y-scroll w-screen h-screen antialiased text-slate-300 selection:bg-blue-600 selection:text-white">
-    <div class="flex flex-col relative w-screen">
-        <div id="menu" class="bg-gray-800 min-h-screen z-10 text-slate-300 w-64 fixed left-0 h-screen overflow-y-scroll">
-           <div id="logo" class="my-4 px-6">
-            <h1 class="text-lg md:text-2xl font-bold text-white">Dash<span class="text-blue-500">8</span>.</h1>
-            <p class="text-slate-500 text-sm">Manage your actions and activities</p>
-           </div>
-           <div id="profile" class="px-6 py-10">
-                <p class="text-slate-500">Bienvenido</p>
-                <a href="#" class="inline-flex space-x-2 items-center">
-                    <span>
-                        <img class="rounded-full w-8 h-8" src="https://images.unsplash.com/photo-1542909168-82c3e7fdca5c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=128&q=80" alt="">
-                    </span>
-                    <span class="text-sm md:text-base font-bold">
-                        {{ user()?.email }}
-                    </span>
-                </a>
-           </div>
-           <div id="nav" class="w-full px-6">
-            <a routerLink="/admin/dashboard" class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
-                      </svg>
-                      
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-lg font-bold leading-5 text-white">Dashboard</span>
-                    <span class="text-sm text-white/50 hidden md:block">Data Overview</span>
-                </div>
-            </a>
-            <a routerLink="/admin/terms"
-                routerLinkActive="bg-blue-800" 
-                class="w-full px-2 inline-flex space-x-2 items-center border-b border-slate-700 py-3 hover:bg-white/5 transition ease-linear duration-150">
-                <div>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
-                      </svg>                      
-                </div>
-                <div class="flex flex-col">
-                    <span class="text-lg text-slate-300 font-bold leading-5">Términos</span>
-                    <span class="text-sm text-slate-500 hidden md:block">Listado de términos</span>
-                </div>
-            </a>
 
-            <div class="divider my-1"></div>
+<div class="drawer lg:drawer-open">
+  <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
+  <div class="drawer-content">
+    <!-- Navbar -->
+    <nav class="navbar w-full bg-base-300">
+      <label for="my-drawer-4" aria-label="open sidebar" class="btn btn-square btn-ghost">
+        <!-- Sidebar toggle icon -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" class="my-1.5 inline-block size-4"><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"></path><path d="M9 4v16"></path><path d="M14 10l2 2l-2 2"></path></svg>
+      </label>
+      
+      <!-- <div class="px-4">Navbar Title</div> -->
+      
+      <div class="navbar-end gap-4">
+        @if ( authService.authStatus() === 'authenticated') {
+          <button class="btn btn-ghost">
+            {{ authService.user()?.email }}
+          </button>
+          
+          <button class="btn btn-sm btn-accent"
+            (click)="authService.logout()">Salir</button>
+        }
+        @else if ( authService.authStatus() === 'not-authenticated') {
+          <a class="btn btn-soft" routerLink="/auth/login">Autenticación</a>
+        }
+        @else {
+          <a class="btn btn-ghost"></a>
+        }
+      </div>
+    </nav>
 
-            <button 
-                class="btn btn-ghost text-accent w-full"
-                (click)="authService.logout()">
-                Cerrar sesión
-            </button>
-           </div>
-        </div>
-    </div>
-    <div class="flex-1 ml-64 pt-5 px-5">
+    <!-- Page content here -->
+    <div class="p-4">
         <router-outlet/>
     </div>
+  </div>
+
+  <div class="drawer-side is-drawer-close:overflow-visible">
+    <label for="my-drawer-4" aria-label="close sidebar" class="drawer-overlay"></label>
+    <div class="flex min-h-full flex-col items-start bg-base-200 is-drawer-close:w-14 is-drawer-open:w-64">
+      <!-- Sidebar content here -->
+      <ul class="menu w-full grow">
+        <!-- List item -->
+        <li>
+          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right btn btn-soft text-xl mb-7" data-tip="Homepage" routerLink="/">
+            <!-- Home icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" class="w-6 h-6">
+                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
+                <path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+            </svg>Tu'u 
+            <span class="is-drawer-close:hidden text-accent">
+                <a routerLink="/">- Nda'vi</a>
+            </span>
+          </button>
+        </li>
+
+        <!-- List item -->
+        
+        <li>
+          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right btn btn-soft mb-2" 
+            routerLinkActive="text-accent" 
+            routerLink="/users">
+            <span class="is-drawer-close:hidden">Usuarios</span>
+          </button>
+        </li>
+        <li>
+          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right btn btn-soft mb-2"  
+            routerLinkActive="text-accent" 
+            routerLink="/admin/terms">
+            <span class="is-drawer-close:hidden">Términos</span>
+          </button>
+        </li>
+
+      </ul>
+    </div>
+  </div>
 </div>
