@@ -4,7 +4,7 @@ import { AuthService } from '../../../auth/services/auth.service';
 
 @Component({
   selector: 'front-navbar',
-  imports: [ RouterOutlet,RouterLink, RouterLinkActive],
+  imports: [ RouterOutlet, RouterLink, RouterLinkActive],
   templateUrl: './front-navbar.component.html',
 })
 export class FrontNavbarComponent { 

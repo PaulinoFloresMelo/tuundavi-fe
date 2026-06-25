@@ -2,11 +2,11 @@ import { TermsService } from '@/terms/services/terms.service';
 import { Component, inject } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
-import { TermCarouselComponent } from "@/terms/components/term-carousel/term-carousel.component";
+import { TermImageComponent} from "@/terms/components/term-image/term-image.component";
 
 @Component({
   selector: 'app-term-page',
-  imports: [TermCarouselComponent],
+  imports: [TermImageComponent],
   templateUrl: './term-page.component.html',
 })
 export class TermPageComponent { 

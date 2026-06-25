@@ -22,7 +22,7 @@ export class TermsService {
 
     getTerms( options: Options ):Observable<TermsResponse>{
 
-        const { limit = 2, offset =0 , category = ''} = options;
+        const { limit = 5, offset = 0 , category = ''} = options;
         
         const key = `${limit}-${offset}-${category}`; // 9-0-''
         if ( this.termsCache.has(key) ) {

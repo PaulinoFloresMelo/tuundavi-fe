@@ -28,7 +28,7 @@ export class CategoryPageComponent {
     }),
     stream: ({ params }) => {
       return this.termsService.getTerms({
-        category: params.category,
+        category: (params.category).toLowerCase(),
         offset: params.page * 9,
       });
     }

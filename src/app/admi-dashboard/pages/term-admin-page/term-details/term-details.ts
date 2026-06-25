@@ -1,11 +1,11 @@
 import { Term } from '@/terms/interfaces/term.interface';
 import { Component, inject, input } from '@angular/core';
-import { TermCarouselComponent } from "@/terms/components/term-carousel/term-carousel.component";
+import { TermImageComponent } from "@/terms/components/term-image/term-image.component";
 import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'term-details',
-  imports: [TermCarouselComponent],
+  imports: [TermImageComponent],
   templateUrl: './term-details.html',
 })
 export class TermDetails {

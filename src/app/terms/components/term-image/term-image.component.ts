@@ -20,7 +20,7 @@ import { TermImagePipe } from '@/terms/pipes/term-image.pipe';
 @Component({
   selector: 'term-carousel',
   imports: [TermImagePipe],
-  templateUrl: './term-carousel.component.html',
+  templateUrl: './term-image.component.html',
   styles: `
   .swiper {
     width: 100%;
@@ -28,7 +28,7 @@ import { TermImagePipe } from '@/terms/pipes/term-image.pipe';
   }`
 })
 
-export class TermCarouselComponent implements AfterViewInit {
+export class TermImageComponent implements AfterViewInit {
   
   images = input.required<string>();
   swiperDiv = viewChild.required<ElementRef>('swiperDiv');

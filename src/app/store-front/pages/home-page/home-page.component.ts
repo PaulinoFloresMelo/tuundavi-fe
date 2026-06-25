@@ -19,7 +19,7 @@ export class HomePageComponent {
     params: () => ({ page: this.paginationService.currentPage() - 1 }),
     stream: ({ params }) => {
       return this.termsService.getTerms({
-        offset: params.page * 9,
+        offset: params.page * 5,
       });
     }
   })
