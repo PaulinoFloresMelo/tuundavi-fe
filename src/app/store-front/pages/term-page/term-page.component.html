@@ -10,7 +10,15 @@
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
         
         <!-- <term-carousel [images]="termResource.value()?.imageUrl ?? '' "></term-carousel> comentar esta linea -->
-        <term-carousel [images]="termResource.value().imageUrl"></term-carousel>
+        <!-- <term-carousel [images]="termResource.value().imageUrl"></term-carousel> -->
+        <figure>
+            [src]="term().imageUrl | termImage"
+            <img 
+            [src]="termResource.value().imageUrl | termImage"
+            alt="Term"
+            class="object-cover animate-fadeIn"
+            />
+        </figure>
 
         <div class="card-body">
 

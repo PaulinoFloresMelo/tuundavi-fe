@@ -1,12 +1,16 @@
+import { TermImagePipe } from '@/terms/pipes/term-image.pipe';
 import { TermsService } from '@/terms/services/terms.service';
 import { Component, inject } from '@angular/core';
 import { rxResource } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
-import { TermImageComponent} from "@/terms/components/term-image/term-image.component";
+// import { TermImageComponent} from "@/terms/components/term-image/term-image.component";
 
 @Component({
   selector: 'app-term-page',
-  imports: [TermImageComponent],
+  imports: [
+    // TermImageComponent
+    TermImagePipe
+  ],
   templateUrl: './term-page.component.html',
 })
 export class TermPageComponent { 

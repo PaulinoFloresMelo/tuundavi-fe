@@ -5,6 +5,7 @@ import { routes } from './app.routes';
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { loggingInterceptor } from './shared/interceptors/logging.interceptor';
 import { authInterceptor } from './auth/interceptors/auth.interceptor';
+import { provideTanStackQuery, QueryClient } from '@tanstack/angular-query-experimental';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -17,5 +18,6 @@ export const appConfig: ApplicationConfig = {
         // loggingInterceptor, 
         authInterceptor])
     ),
+    provideTanStackQuery(new QueryClient())
   ]
 };

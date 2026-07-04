@@ -9,26 +9,12 @@ export interface TermsResponse{
 export interface Term{
     id: string;
     content: string;
-    category: Category;
+    category: string;
     imageUrl: string;
-    user: User;
+    user: {
+        id: string,
+        username: string;
+    };
     example: string[];
 }
 
-export interface Category{
-    adverb: string;
-    animal: string;
-    color: string;
-    dayOfTheWeek: string;
-    frequentVerb: string;
-    numberFromOneToHundred: string;
-    schoolObject: string;
-    agriculture: string;
-    mood: string;
-    familyAndPeople: string;
-    fruitsAndVegetables: string;
-    householdObjects: string;
-    personalPronouns: string;
-    weatherAndSeasonsOfTheYear: string;
-    foodAndDrink: string;
-}

@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Term, TermsResponse } from '../interfaces/term.interface';
-import { Observable, of, tap } from 'rxjs';
+import { forkJoin, map, Observable, of, switchMap, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 const baseUrl = environment.baseUrl;
@@ -12,6 +12,17 @@ interface Options{
     category?: string;
 }
 
+const emptyProduct: Term = {
+    id: '',
+    content: '',
+    category: '',
+    imageUrl: '',
+    user: {
+        id: '',
+        username: ''
+    },
+    example: []
+};
 
 @Injectable({providedIn: 'root'})
 export class TermsService {
@@ -44,6 +55,10 @@ export class TermsService {
     }
 
     getTermById(id: string): Observable<Term>{
+        if (id === 'new') {
+            return of(emptyProduct);
+        }
+
         if (this.termCache.has(id)) {
             return of(this.termCache.get(id)!);
         }
@@ -52,5 +67,74 @@ export class TermsService {
             .get<Term>(`${baseUrl}/terms/${id}`)
             .pipe(tap((term) => this.termCache.set(id, term))
         );
+    }
+
+    updateTermCache(term: Term) {
+    const termId = term.id;
+
+    this.termCache.set(termId, term);
+
+    this.termsCache.forEach((termResponse) => {
+      termResponse.terms = termResponse.terms.map(
+        (currentTerm) =>
+          currentTerm.id === termId ? term : currentTerm
+      );
+    });
+
+    console.log('Caché actualizado');
+  }
+
+    createTerm(
+    termLike: Partial<Term>,
+    imageFileList?: FileList
+  ): Observable<Term> {
+    return this.http
+      .post<Term>(`${baseUrl}/products`, termLike)
+      .pipe(tap((product) => this.updateTermCache(product)));
+  }
+
+    updateTerm(
+        id: string,
+        termLike: Partial<Term>,
+        imageFileList?: FileList
+    ): Observable<Term> {
+        const currentImages = termLike.imageUrl ?? [];
+
+        return this.uploadImages(imageFileList).pipe(
+        map((imageNames) => ({
+            ...termLike,
+            images: [...currentImages, ...imageNames],
+        })),
+        switchMap((updatedProduct) =>
+            this.http.patch<Term>(`${baseUrl}/terms/${id}`, updatedProduct)
+        ),
+        tap((product) => this.updateTermCache(product))
+        );
+
+        // return this.http
+        //   .patch<Product>(`${baseUrl}/products/${id}`, productLike)
+        //   .pipe(tap((product) => this.updateProductCache(product)));
+    }
+
+    // Tome un FileList y lo suba
+    uploadImages(images?: FileList): Observable<string[]> {
+        if (!images) return of([]);
+
+        const uploadObservables = Array.from(images).map((imageFile) =>
+        this.uploadImage(imageFile)
+        );
+
+        return forkJoin(uploadObservables).pipe(
+        tap((imageNames) => console.log({ imageNames }))
+        );
+    }
+    uploadImage(imageFile: File): Observable<string>{
+        const formData = new FormData();
+        formData.append('image', imageFile);
+
+        return this.http.post<{fileName:string}>(`${baseUrl}/terms/upload`, formData)
+        .pipe(
+            map( resp => resp.fileName)
+        )
     }
 }
