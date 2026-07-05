@@ -11,20 +11,21 @@ const baseUrl = environment.baseUrl
 
 
 @Injectable({providedIn: 'root'})
-export class CreateTermService {
+export class UploadImageService {
 
     private http = inject(HttpClient);
     private queryClient = inject(QueryClient);
 
-    private async createTerm(term: Partial<Term>): Promise<Partial<Term>> {
+    private async uploadImages(imageFile: File): Promise<Partial<Term>> {
 
         try {
 
             const response = await lastValueFrom(
-                this.http.post<Partial<Term>>(`${baseUrl}/terms/term-register`,
-                    term,
+                this.http.post<Partial<Term>>(`${baseUrl}/images/upload`,
+                    imageFile,
                 )
             );
+            console.log({responseOfUploadImage: response});
             return response
 
         } catch (error) {
@@ -38,9 +39,9 @@ export class CreateTermService {
     }
     
     private  mutation = injectMutation(() => ({
-        mutationFn: (term: Partial<Term>) => this.createTerm(term),
+        mutationFn: (imageFile: File) => this.uploadImages(imageFile),
         onSuccess: () => {
-            this.queryClient.invalidateQueries({ queryKey: ['terms'] })
+            this.queryClient.invalidateQueries({ queryKey: ['images'] })
         }
     }))
 

@@ -12,7 +12,7 @@ interface Options{
     category?: string;
 }
 
-const emptyProduct: Term = {
+const emptyTerm: Term = {
     id: '',
     content: '',
     category: '',
@@ -56,7 +56,7 @@ export class TermsService {
 
     getTermById(id: string): Observable<Term>{
         if (id === 'new') {
-            return of(emptyProduct);
+            return of(emptyTerm);
         }
 
         if (this.termCache.has(id)) {
@@ -70,28 +70,28 @@ export class TermsService {
     }
 
     updateTermCache(term: Term) {
-    const termId = term.id;
+        const termId = term.id;
 
-    this.termCache.set(termId, term);
+        this.termCache.set(termId, term);
 
-    this.termsCache.forEach((termResponse) => {
-      termResponse.terms = termResponse.terms.map(
-        (currentTerm) =>
-          currentTerm.id === termId ? term : currentTerm
-      );
-    });
+        this.termsCache.forEach((termResponse) => {
+        termResponse.terms = termResponse.terms.map(
+            (currentTerm) =>
+            currentTerm.id === termId ? term : currentTerm
+        );
+        });
 
-    console.log('Caché actualizado');
-  }
+        console.log('Caché actualizado');
+    }
 
     createTerm(
-    termLike: Partial<Term>,
-    imageFileList?: FileList
-  ): Observable<Term> {
-    return this.http
-      .post<Term>(`${baseUrl}/products`, termLike)
-      .pipe(tap((product) => this.updateTermCache(product)));
-  }
+        termLike: Partial<Term>,
+        imageFileList?: FileList
+    ): Observable<Term> {
+        return this.http
+        .post<Term>(`${baseUrl}/terms`, termLike)
+        .pipe(tap((term) => this.updateTermCache(term)));
+    }
 
     updateTerm(
         id: string,
@@ -105,10 +105,10 @@ export class TermsService {
             ...termLike,
             images: [...currentImages, ...imageNames],
         })),
-        switchMap((updatedProduct) =>
-            this.http.patch<Term>(`${baseUrl}/terms/${id}`, updatedProduct)
+        switchMap((updatedTerm) =>
+            this.http.patch<Term>(`${baseUrl}/terms/${id}`, updatedTerm)
         ),
-        tap((product) => this.updateTermCache(product))
+        tap((term) => this.updateTermCache(term))
         );
 
         // return this.http
@@ -128,11 +128,12 @@ export class TermsService {
         tap((imageNames) => console.log({ imageNames }))
         );
     }
+
     uploadImage(imageFile: File): Observable<string>{
         const formData = new FormData();
         formData.append('image', imageFile);
 
-        return this.http.post<{fileName:string}>(`${baseUrl}/terms/upload`, formData)
+        return this.http.post<{fileName:string}>(`${baseUrl}/images/upload`, formData)
         .pipe(
             map( resp => resp.fileName)
         )

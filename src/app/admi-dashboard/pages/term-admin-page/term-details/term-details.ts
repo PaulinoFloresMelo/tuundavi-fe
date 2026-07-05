@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import { UpdateTermService } from '@/terms/services/update-term.service';
 import { firstValueFrom } from 'rxjs';
 import { TermsService } from '@/terms/services/terms.service';
+import { AudioUpload } from '@/shared/components/audio-upload/audio-upload';
 
 @Component({
   selector: 'term-details',
@@ -17,7 +18,8 @@ import { TermsService } from '@/terms/services/terms.service';
     TermImagePipe,
     ReactiveFormsModule,
     KeyValuePipe,
-    Alert
+    Alert,
+    AudioUpload
   ],
   templateUrl: './term-details.html',
 })
@@ -33,7 +35,7 @@ export class TermDetails {
   updateTerm   = inject(UpdateTermService);
   
   alertMessage = signal('');
-  imageFile    : FileList | undefined = undefined;
+  imageFileList: FileList | undefined = undefined;
   tempImage    = signal('');
 
   termForm = this.fb.group({
@@ -63,8 +65,6 @@ export class TermDetails {
 
   ngOnInit(): void {
     this.setFormValue(this.term());
-    console.log(this.term().category);
-    
   }
 
   setFormValue(formLike: Partial<Term>){
@@ -79,40 +79,46 @@ export class TermDetails {
     
     
     if ( this.termForm.pristine ) return;
-    if (!this.termForm.valid ) return;
-    console.log('formValid');
-    
+    // if (!this.termForm.valid ) return;
 
-    const formValue = this.termForm.value;
+    const {...formValue} = this.termForm.value;
     const keyState = formValue.category?.toString() ?? '';
+    console.log('hola');
 
     const termLike: Partial<Term> = {...(formValue as any), }
 
     if ( this.term().id === 'new'){
       const term = await firstValueFrom(
-        this.termsService.createTerm(termLike)
+        this.termsService.createTerm(termLike, this.imageFileList)
       )
 
     } else {
-      this.updateTerm.mutate({id: this.term().id, term: termLike},{
+      // console.log('no es new');
+      // this.termsService.updateTerm(
+      //   this.term().id,
+      //   termLike,
+      //   this.imageFileList
+      // );
+      // console.log('fin no es new');
+      this.updateTerm.mutate({id: this.term().id, term: formValue as any, imageFile: this.imageFileList}, {
         onSuccess: (data) => {
           console.log(data);
           this.alertMessage.update( ()=> 'Datos actualizados correctamente' )
           this.alertService.showAlert(this.alertMessage(), 'success')
           
-          this.termForm.markAsUntouched();
+          this.termForm.markAsPristine();
         },
         onError: (error) =>{
-          this.alertMessage.update(() => error.message)
+          this.alertMessage.update(() => error.message);
           this.alertService.showAlert(this.alertMessage(), 'error');
         }
-      });
+      })
     }
   }
 
   onFileChanged( event: Event){
     const fileList = (event.target as HTMLInputElement).files;
-    this.imageFile = fileList ?? undefined;
+    this.imageFileList = fileList ?? undefined;
 
     const imageUrl = Array.from(fileList ?? []).map( (file) => 
       URL.createObjectURL(file)

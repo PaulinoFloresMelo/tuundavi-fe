@@ -1,0 +1,63 @@
+<div class="upload-container">
+  <h3>Cambiar archivo de audio</h3>
+  
+  <!-- Input oculto para seleccionar archivo -->
+  <input 
+    type="file" 
+    #fileInput
+    accept="audio/*" 
+    (change)="onFileSelected($event)"
+    style="display: none"
+  >
+  
+  <!-- Botón para abrir el selector de archivos -->
+  <button (click)="fileInput.click()" [disabled]="isUploading">
+    {{ isUploading ? 'Subiendo...' : 'Seleccionar audio' }}
+  </button>
+
+  <!-- Mostrar nombre del archivo seleccionado -->
+   @if (selectedFile) {
+    <div class="file-info">
+    <span>{{ selectedFile.name }}</span>
+    <span>{{ selectedFile.size | fileSize }}</span>
+  </div>
+   }
+  
+
+  <!-- Botón de subida (solo si hay archivo seleccionado) -->
+   @if (selectedFile) {
+        <button 
+            (click)="uploadAudio()" 
+            [disabled]="isUploading"
+            class="upload-btn"
+            >
+            Subir audio
+        </button>
+    }
+
+  <!-- Mostrar respuesta o error -->
+   @if(uploadResponse){
+        
+        <div class="response">
+            @if (uploadResponse.success) {
+                <p class="success">
+                ✅ Audio subido: {{ uploadResponse.filename }}
+                </p>
+            }
+            @if (!uploadResponse.success) {
+                <p class="error">
+            ❌ {{ uploadResponse.message }}
+            </p>
+            }
+            
+        </div>
+
+    }
+
+    @if (isUploading) {
+        <!-- Barra de progreso (opcional) -->
+        <div class="progress-bar">
+            <div class="progress" [style.width]="progress + '%'"></div>
+        </div>
+    }
+</div>

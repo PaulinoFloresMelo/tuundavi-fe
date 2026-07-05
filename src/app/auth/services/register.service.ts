@@ -1,9 +1,7 @@
-import { computed, inject, Injectable, signal } from '@angular/core';
-import { User } from '../interfaces/user.interface';
+import { inject, Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../../environments/environment';
 import { AuthResponse } from '../interfaces/auth-response.interface';
-import { catchError, map, Observable, of, tap } from 'rxjs';
 
 const baseUrl = environment.baseUrl; 
 
