@@ -21,7 +21,7 @@ interface UploadResponse {
 
 export class AudioUpload {
   http = inject(HttpClient)
-   selectedFile: File | null = null;
+  selectedFile: File | null = null;
   isUploading = false;
   uploadResponse: UploadResponse | null = null;
   progress = 0;
@@ -69,7 +69,7 @@ export class AudioUpload {
 
     // Hacer la petición POST
     this.http.post<any>(
-      `${baseUrl}/audio/upload`, // Ajusta la URL según tu endpoint
+      `${baseUrl}/audio/upload`,
       formData,
       {
         reportProgress: true,  // Para obtener el progreso

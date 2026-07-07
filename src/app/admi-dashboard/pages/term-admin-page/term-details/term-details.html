@@ -27,7 +27,10 @@
         }
     </select>
     <audio controls>
-      <source src="https://tuundavi-be2.paquirris983.workers.dev/api/v1/audio/audio_1783216668620.mp3" type="audio/mpeg">
+      <!-- <source src="https://tuundavi-be2.paquirris983.workers.dev/api/v1/audio/audio_1783216668620.mp3" type="audio/mpeg"> -->
+      <source 
+        [src]="term().audioUrl | termAudio"
+        type="audio/mpeg">
       Tu navegador no soporta el elemento de audio.
     </audio>
     <app-audio-upload/>

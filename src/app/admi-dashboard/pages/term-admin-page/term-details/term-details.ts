@@ -11,11 +11,13 @@ import { UpdateTermService } from '@/terms/services/update-term.service';
 import { firstValueFrom } from 'rxjs';
 import { TermsService } from '@/terms/services/terms.service';
 import { AudioUpload } from '@/shared/components/audio-upload/audio-upload';
+import { TermAudioPipe } from '@/terms/pipes/term-audio.pipe';
 
 @Component({
   selector: 'term-details',
   imports: [
     TermImagePipe,
+    TermAudioPipe,
     ReactiveFormsModule,
     KeyValuePipe,
     Alert,
@@ -65,6 +67,8 @@ export class TermDetails {
 
   ngOnInit(): void {
     this.setFormValue(this.term());
+    console.log(this.term());
+    
   }
 
   setFormValue(formLike: Partial<Term>){

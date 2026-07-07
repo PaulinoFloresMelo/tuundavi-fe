@@ -17,6 +17,7 @@ const emptyTerm: Term = {
     content: '',
     category: '',
     imageUrl: '',
+    audioUrl: '',
     user: {
         id: '',
         username: ''
