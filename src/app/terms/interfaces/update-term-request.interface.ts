@@ -4,4 +4,5 @@ export interface UpdateTermRequest {
     id: string,
     term: Partial<Term>;
     imageFile: FileList | undefined;
+    audioFile: File | null;
 }

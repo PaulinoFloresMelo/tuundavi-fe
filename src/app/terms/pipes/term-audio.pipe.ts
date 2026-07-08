@@ -12,7 +12,6 @@ export class TermAudioPipe implements PipeTransform {
     transform(value: string | string[]  ): string {
         
         if ( typeof value === 'string' ) {
-            console.log( `${baseUrl}/audio/${value}` );
             return `${baseUrl}/audio/${value}`;
         }
         console.log({ value });

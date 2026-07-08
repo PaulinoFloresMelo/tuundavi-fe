@@ -30,10 +30,12 @@
     <div class="divider">Audio</div>
 
     <!-- Aquí inicia la prueba de audio -->
-    <div class="max-w-full my-5 mx-auto p-5 border border-[#ddd] rounded-lg">
+    <!-- <div class="max-w-full my-5 mx-auto p-5 border border-[#ddd] rounded-lg"> -->
+    <div class="w-full mx-auto p-5 border border-[#ddd] rounded-lg">
       <!-- <h3>Cambiar archivo de audio</h3> -->
 
-      <audio controls class="mb-2">
+      <!-- <audio controls class="mb-2"> -->
+      <audio controls class="mb-2 w-full">
         <source 
           [src]="term().audioUrl | termAudio"
           type="audio/mpeg">
@@ -47,6 +49,7 @@
         accept="audio/*" 
         (change)="onFileSelected($event)"
         style="display: none"
+        formControlName="audio"
       >
       
       <!-- Botón para abrir el selector de archivos -->
@@ -63,20 +66,10 @@
       }
 
     </div>
-    <app-audio-upload/>
-
   </div>
 
   <!-- Imágenes -->
   <div class="flex flex-col gap-2">
-    <div class="flex justify-end h-12">
-      <button class="btn btn-secondary" type="submit" (click)="onSubmit()">
-        <!-- <span class="loading loading-spinner loading-sm"></span> -->
-
-        Guardar
-      </button>
-    </div>
-
     <!-- <term-carousel [images]="term().imageUrl" /> -->
     
     <div class="card card-side bg-base-100 shadow-sm">
@@ -105,6 +98,18 @@
 
         </div>
       }
+
+      <div class="flex justify-end h-12">
+        <button class="btn btn-secondary" type="submit" (click)="onSubmit()">
+
+          @if(updateTerm.isPending()){
+
+            <span class="loading loading-spinner loading-sm"></span>
+          }
+
+          Guardar
+        </button>
+      </div>
 
   </div>
 </div>

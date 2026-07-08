@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 import { UpdateTermService } from '@/terms/services/update-term.service';
 import { firstValueFrom } from 'rxjs';
 import { TermsService } from '@/terms/services/terms.service';
-import { AudioUpload } from '@/shared/components/audio-upload/audio-upload';
 import { TermAudioPipe } from '@/terms/pipes/term-audio.pipe';
 import { FileSizePipe } from './file-size.pipe';
 
@@ -22,11 +21,9 @@ import { FileSizePipe } from './file-size.pipe';
     ReactiveFormsModule,
     KeyValuePipe,
     Alert,
-    AudioUpload,
     FileSizePipe
   ],
   templateUrl: './term-details.html',
-  styleUrl: './audio-upload.css',
 })
 export class TermDetails {
   term = input.required<Term>();
@@ -41,7 +38,6 @@ export class TermDetails {
   
   imageFileList: FileList | undefined = undefined;
   selectedFile: File | null = null;
-  uploadResponse: UploadResponse | null = null;
   
   alertMessage = signal('');
   tempImage    = signal('');
@@ -51,7 +47,8 @@ export class TermDetails {
     content: ['', Validators.required],
     example: ['', Validators.required],
     category: ['', Validators.required],
-    image: ['', Validators.required],
+    image: ['', ],
+    audio: ['', ],
   })
 
   categories = {
@@ -75,7 +72,6 @@ export class TermDetails {
   ngOnInit(): void {
     this.setFormValue(this.term());
     console.log(this.term());
-    
   }
 
   setFormValue(formLike: Partial<Term>){
@@ -94,7 +90,6 @@ export class TermDetails {
 
     const {...formValue} = this.termForm.value;
     const keyState = formValue.category?.toString() ?? '';
-    console.log('hola');
 
     const termLike: Partial<Term> = {...(formValue as any), }
 
@@ -104,14 +99,12 @@ export class TermDetails {
       )
 
     } else {
-      // console.log('no es new');
-      // this.termsService.updateTerm(
-      //   this.term().id,
-      //   termLike,
-      //   this.imageFileList
-      // );
-      // console.log('fin no es new');
-      this.updateTerm.mutate({id: this.term().id, term: formValue as any, imageFile: this.imageFileList}, {
+      this.updateTerm.mutate({
+        id: this.term().id, 
+        term: formValue as any, 
+        imageFile: this.imageFileList,
+        audioFile: this.selectedFile
+      }, {
         onSuccess: (data) => {
           console.log(data);
           this.alertMessage.update( ()=> 'Datos actualizados correctamente' )
@@ -161,7 +154,6 @@ export class TermDetails {
       }
 
       this.selectedFile = file;
-      // this.uploadResponse = null;
     }
   }
   

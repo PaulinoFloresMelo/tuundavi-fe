@@ -22,7 +22,8 @@ export class UpdateTermService {
     private async updateTerm(request: UpdateTermRequest): Promise<Partial<Term>> {
         const id=  request.id;
         const termLike = request.term;
-        const image = request.imageFile
+        const image = request.imageFile;
+        const audio = request.audioFile
         
         if(image !== undefined){
 
@@ -37,6 +38,29 @@ export class UpdateTermService {
                     )
                 )
                 termLike.imageUrl = responseImageUpload.fileName
+                console.log({responseImageUpload});
+                
+            } catch (error) {
+                console.log({responseImageUpload: error});
+                
+                const responseError = error as HttpErrorResponse;
+                const message = responseError.error.message;
+                throw new Error(message);
+            }
+        }
+
+        if(audio !== null){
+            
+            const formData = new FormData();
+            formData.append('audio', audio);
+            
+            try {
+                const responseImageUpload = await lastValueFrom(
+                    this.http.post<Partial<UploadImageResponse>>(`${baseUrl}/audio/upload`, 
+                        formData, 
+                    )
+                )
+                termLike.audioUrl = responseImageUpload.fileName
                 console.log({responseImageUpload});
                 
             } catch (error) {
@@ -76,5 +100,17 @@ export class UpdateTermService {
 
     get mutate() {
         return this.mutation.mutate;
+    }
+
+    get isPending() {
+        return this.mutation.isPending;
+    }
+
+    get isError() {
+        return this.mutation.isError;
+    }
+
+    get error() {
+        return this.mutation.error;
     }
 }
