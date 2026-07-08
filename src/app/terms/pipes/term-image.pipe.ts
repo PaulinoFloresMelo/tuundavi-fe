@@ -11,10 +11,13 @@ export class TermImagePipe implements PipeTransform {
     
     transform(value: string | string[]  ): string {
         
+        if ( value === '' ) {
+            return './assets/images/no-image.jpg'
+        }
+
         if ( typeof value === 'string' ) {
             return `${baseUrl}/images/${value}`;
         }
-        console.log({ value });
 
         // const image = value.at(0);
         const image = value;

@@ -13,7 +13,7 @@ interface Options{
 }
 
 const emptyTerm: Term = {
-    id: '',
+    id: 'new',
     content: '',
     category: '',
     imageUrl: '',

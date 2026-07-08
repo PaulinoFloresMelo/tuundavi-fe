@@ -8,7 +8,6 @@ import { Alert } from '@/shared/components/alert/alert-error';
 import { CreateTermService } from '@/terms/services/create-term.service';
 import { Router } from '@angular/router';
 import { UpdateTermService } from '@/terms/services/update-term.service';
-import { firstValueFrom } from 'rxjs';
 import { TermsService } from '@/terms/services/terms.service';
 import { TermAudioPipe } from '@/terms/pipes/term-audio.pipe';
 import { FileSizePipe } from './file-size.pipe';
@@ -49,6 +48,7 @@ export class TermDetails {
     category: ['', Validators.required],
     image: ['', ],
     audio: ['', ],
+    userId: [0, ],
   })
 
   categories = {
@@ -81,23 +81,50 @@ export class TermDetails {
   async onSubmit(){
     
     this.termForm.markAllAsTouched();
-
     console.log(this.termForm.value);
     
-    
     if ( this.termForm.pristine ) return;
-    // if (!this.termForm.valid ) return;
+    if (!this.termForm.valid ) return;
 
-    const {...formValue} = this.termForm.value;
+    const formValue = this.termForm.value;
     const keyState = formValue.category?.toString() ?? '';
 
     const termLike: Partial<Term> = {...(formValue as any), }
 
     if ( this.term().id === 'new'){
-      const term = await firstValueFrom(
-        this.termsService.createTerm(termLike, this.imageFileList)
-      )
+      
+      if(this.imageFileList === undefined || this.imageFileList === null){
+        this.alertMessage.update(() => 'Falta seleccionar la imagen');
+        this.alertService.showAlert(this.alertMessage(), 'error');
+        return
+      }
 
+      if(this.selectedFile === null || this.selectedFile === undefined){
+        this.alertMessage.update(() => 'Falta seleccionar el audio');
+        this.alertService.showAlert(this.alertMessage(), 'error');
+        return
+      }
+
+      this.createTerm.mutate({
+        term: formValue as any, 
+        imageFile: this.imageFileList,
+        audioFile: this.selectedFile,
+        userId: 1
+      }, {
+        onSuccess: (data) => {
+          console.log(data);
+          this.alertMessage.update( ()=> 'Datos actualizados correctamente' )
+          this.alertService.showAlert(this.alertMessage(), 'success')
+          // this.router.navigate(['/admin/organizations']);
+          this.router.navigate(['/admin/terms', data.id]);
+          
+          this.termForm.markAsPristine();
+        },
+        onError: (error) =>{
+          this.alertMessage.update(() => error.message);
+          this.alertService.showAlert(this.alertMessage(), 'error');
+        }
+      })
     } else {
       this.updateTerm.mutate({
         id: this.term().id, 

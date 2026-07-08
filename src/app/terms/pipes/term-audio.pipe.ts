@@ -10,6 +10,10 @@ const baseUrl = environment.baseUrl;
 export class TermAudioPipe implements PipeTransform {
     
     transform(value: string | string[]  ): string {
+
+        if ( value === '' ) {
+            return './assets/images/no-image.jpg'
+        }
         
         if ( typeof value === 'string' ) {
             return `${baseUrl}/audio/${value}`;

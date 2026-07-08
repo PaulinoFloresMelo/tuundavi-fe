@@ -12,6 +12,7 @@ export interface Term{
     category: string;
     imageUrl: string;
     audioUrl: string;
+    userId?: number;
     user: {
         id: string,
         username: string;

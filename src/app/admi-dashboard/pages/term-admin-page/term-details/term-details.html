@@ -102,8 +102,7 @@
       <div class="flex justify-end h-12">
         <button class="btn btn-secondary" type="submit" (click)="onSubmit()">
 
-          @if(updateTerm.isPending()){
-
+          @if(updateTerm.isPending()|| createTerm.isPending()){
             <span class="loading loading-spinner loading-sm"></span>
           }
 
