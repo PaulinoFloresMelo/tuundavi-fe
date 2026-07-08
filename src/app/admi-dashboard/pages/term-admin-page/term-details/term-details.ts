@@ -12,6 +12,7 @@ import { firstValueFrom } from 'rxjs';
 import { TermsService } from '@/terms/services/terms.service';
 import { AudioUpload } from '@/shared/components/audio-upload/audio-upload';
 import { TermAudioPipe } from '@/terms/pipes/term-audio.pipe';
+import { FileSizePipe } from './file-size.pipe';
 
 @Component({
   selector: 'term-details',
@@ -21,9 +22,11 @@ import { TermAudioPipe } from '@/terms/pipes/term-audio.pipe';
     ReactiveFormsModule,
     KeyValuePipe,
     Alert,
-    AudioUpload
+    AudioUpload,
+    FileSizePipe
   ],
   templateUrl: './term-details.html',
+  styleUrl: './audio-upload.css',
 })
 export class TermDetails {
   term = input.required<Term>();
@@ -36,9 +39,13 @@ export class TermDetails {
   createTerm   = inject(CreateTermService);
   updateTerm   = inject(UpdateTermService);
   
-  alertMessage = signal('');
   imageFileList: FileList | undefined = undefined;
+  selectedFile: File | null = null;
+  uploadResponse: UploadResponse | null = null;
+  
+  alertMessage = signal('');
   tempImage    = signal('');
+  isUploading = false;
 
   termForm = this.fb.group({
     content: ['', Validators.required],
@@ -129,6 +136,33 @@ export class TermDetails {
     );
 
     this.tempImage.set(imageUrl[0])
+  }
+
+  onFileSelected(event: Event): void {
+    const input = event.target as HTMLInputElement;
+    if (input.files && input.files.length > 0) {
+      const file = input.files[0];
+      
+      // Validar que sea un archivo de audio
+      if (!file.type.startsWith('audio/')) {
+        alert('Por favor selecciona un archivo de audio válido');
+        input.value = '';
+        this.selectedFile = null;
+        return;
+      }
+
+      // Validar tamaño (ej. 20 MB)
+      const maxSize = 20 * 1024 * 1024; // 20 MB
+      if (file.size > maxSize) {
+        alert('El archivo excede el límite de 2 MB');
+        input.value = '';
+        this.selectedFile = null;
+        return;
+      }
+
+      this.selectedFile = file;
+      // this.uploadResponse = null;
+    }
   }
   
  }

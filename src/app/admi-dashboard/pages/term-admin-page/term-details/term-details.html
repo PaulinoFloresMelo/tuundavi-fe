@@ -26,14 +26,45 @@
           <option [value]="item.key">{{ item.value }}</option>
         }
     </select>
-    <audio controls>
-      <!-- <source src="https://tuundavi-be2.paquirris983.workers.dev/api/v1/audio/audio_1783216668620.mp3" type="audio/mpeg"> -->
-      <source 
-        [src]="term().audioUrl | termAudio"
-        type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
+
+    <div class="divider">Audio</div>
+
+    <!-- Aquí inicia la prueba de audio -->
+    <div class="max-w-full my-5 mx-auto p-5 border border-[#ddd] rounded-lg">
+      <!-- <h3>Cambiar archivo de audio</h3> -->
+
+      <audio controls class="mb-2">
+        <source 
+          [src]="term().audioUrl | termAudio"
+          type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    
+      <!-- Input oculto para seleccionar archivo -->
+      <input 
+        type="file" 
+        #fileInput
+        accept="audio/*" 
+        (change)="onFileSelected($event)"
+        style="display: none"
+      >
+      
+      <!-- Botón para abrir el selector de archivos -->
+      <button class="btn btn-secondary"(click)="fileInput.click()" [disabled]="isUploading">
+        {{ isUploading ? 'Subiendo...' : 'Cambiar audio' }}
+      </button>
+
+      <!-- Mostrar nombre del archivo seleccionado -->
+      @if (selectedFile) {
+        <div class="file-info">
+          <span>{{ selectedFile.name }}</span>
+          <span>{{ selectedFile.size | fileSize }}</span>
+        </div>
+      }
+
+    </div>
     <app-audio-upload/>
+
   </div>
 
   <!-- Imágenes -->

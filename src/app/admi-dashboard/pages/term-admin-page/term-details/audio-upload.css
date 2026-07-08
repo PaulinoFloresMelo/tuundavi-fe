@@ -1,0 +1,38 @@
+.upload-container {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.file-info {
+  margin: 10px 0;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 4px;
+}
+.upload-btn {
+  background: #28a745;
+}
+.response {
+  margin-top: 15px;
+}
+.success { color: #28a745; }
+.error { color: #dc3545; }
+.progress-bar {
+  width: 100%;
+  background: #f0f0f0;
+  border-radius: 4px;
+  margin: 10px 0;
+  height: 8px;
+}
+.progress {
+  height: 100%;
+  background: #007bff;
+  border-radius: 4px;
+  transition: width 0.2s;
+}
