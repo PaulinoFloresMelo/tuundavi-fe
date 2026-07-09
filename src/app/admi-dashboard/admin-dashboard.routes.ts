@@ -6,18 +6,20 @@ import { TermsAdminPage } from "./pages/terms-admin-page/terms-admin-page";
 import { IsAdminGuard } from "@/auth/guards/is-admin.guard";
 import { UserAdminPage } from "./pages/user-admin-page/user-admin-page";
 import { UsersAdminPage } from "./pages/users-admin-page/users-admin-page";
+import { IsAuthenticatedGuard } from "@/auth/guards/is-authenticated.guard";
 
 export const adminDashboardRoutes: Routes = [
     {
         path:'',
         component: AdminDashboardLayout,
         canMatch: [
-            IsAdminGuard
+            // IsAdminGuard
         ],
         children: [
             {
                 path: 'terms',
-                component: TermsAdminPage
+                component: TermsAdminPage,
+                canMatch: [IsAuthenticatedGuard]       
             },
             {
                 path: 'terms/:id',

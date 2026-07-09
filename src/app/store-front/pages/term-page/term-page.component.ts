@@ -1,3 +1,4 @@
+import { TermAudioPipe } from '@/terms/pipes/term-audio.pipe';
 import { TermImagePipe } from '@/terms/pipes/term-image.pipe';
 import { TermsService } from '@/terms/services/terms.service';
 import { Component, inject } from '@angular/core';
@@ -9,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
   selector: 'app-term-page',
   imports: [
     // TermImageComponent
+    TermAudioPipe,
     TermImagePipe
   ],
   templateUrl: './term-page.component.html',

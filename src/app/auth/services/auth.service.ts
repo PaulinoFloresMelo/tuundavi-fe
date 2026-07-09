@@ -77,6 +77,9 @@ export class AuthService {
         this._authStatus.set('authenticated');
         this._token.set(token);
 
+        console.log({user});
+        
+
         localStorage.setItem('token', token);
 
         return true

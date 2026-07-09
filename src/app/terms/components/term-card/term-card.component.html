@@ -13,14 +13,19 @@
         {{term().content}}
     </h2>
     <p> {{term().example | slice: 0:70 }}... </p>
-    
+
+    <audio #audioPlayer class="hidden">
+      <source [src]="term().audioUrl | termAudio" type="audio/mpeg">
+      Tu navegador no soporta el elemento de audio.
+    </audio>
+        
     <div class="card-actions justify-end">
       <!-- <a class="link link-accent" [routerLink]="['/term', term().imageUrl]">Ver termino</a> -->
-      <button class="btn btn-sm btn-accent"
+      <button class="btn btn-sm btn-accent" (click)="playAudio()"
         >Escuchar</button>
         
       <button class="btn btn-sm btn-accent" [routerLink]="['/term', term().id]"
-        >Ver termino</button>
+        >Detalles</button>
     </div>
   </div>
 </div>
