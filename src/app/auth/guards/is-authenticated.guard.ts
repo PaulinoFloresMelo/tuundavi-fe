@@ -23,8 +23,13 @@ export const IsAuthenticatedGuard: CanMatchFn = async(
     // return false
 
     if ( !user()?.user ) {
+        console.log(user()?.user);
+
         router.navigateByUrl('/')
         return false;
+    }else{
+        console.log(user()?.user);
+        
     }
 
     return true;

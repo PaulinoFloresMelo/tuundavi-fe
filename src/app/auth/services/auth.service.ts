@@ -1,14 +1,14 @@
-import { computed, inject, Injectable, signal } from '@angular/core';
-import { User } from '../interfaces/user.interface';
+import { computed, effect, inject, Injectable, signal } from '@angular/core';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { environment } from '../../../environments/environment';
-import { AuthResponse } from '../interfaces/auth-response.interface';
-import { catchError, lastValueFrom, map, Observable, of, tap } from 'rxjs';
-import { rxResource } from '@angular/core/rxjs-interop';
 import { Router } from '@angular/router';
+
 import { injectMutation, injectQuery, QueryClient } from '@tanstack/angular-query-experimental';
-import { LoginRequest } from '../interfaces/login-request';
-import { LoginResponse } from '../interfaces/login-response';
+import { lastValueFrom } from 'rxjs';
+
+import { User } from '../interfaces/user.interface';
+import { environment } from '../../../environments/environment';
+import type { AuthResponse } from '../interfaces/auth-response.interface';
+import type { LoginRequest } from '../interfaces/login-request.interface';
 
 type AuthStatus = 'checking' | 'authenticated' | 'not-authenticated'
 const baseUrl = environment.baseUrl; 
@@ -24,9 +24,31 @@ export class AuthService {
     private router = inject(Router);
     private queryClient = inject(QueryClient);
 
-    checkStatusResource = rxResource({
-        stream: () => this.checkStatus()
-    })
+    constructor(){
+        effect(() => {
+        const query = this.userProfileQuery;
+
+        if (query.isSuccess()) {
+            this._user.set(query.data().user);
+            
+            this._authStatus.set('authenticated');
+            this._token.set(query.data().token);
+
+            localStorage.setItem('token', query.data().token);
+            
+        }else{
+            this._user.set(null);
+            this._token.set(null);
+            this._authStatus.set('not-authenticated')
+
+            localStorage.removeItem('token');
+            localStorage.removeItem('refresh');
+
+            this.queryClient.setQueryData(['userProfile'], undefined);
+            this.router.navigateByUrl('/');
+        }
+    });
+    }
 
     authStatus = computed<AuthStatus>(() => {
         if (this._authStatus() === 'checking' ) return 'checking';
@@ -43,29 +65,13 @@ export class AuthService {
     isAdmin = computed( () => this._user()?.roles.includes('admin') ?? false);
     isAuthenticated = signal(!!this._token());
 
-    login(email: string, password: string):Observable<boolean>{
-        return this.http.post<AuthResponse>(`${ baseUrl }/auth/login`, {
-            email: email,
-            password: password,
-        }).pipe(
-            map(resp => this.handleAuthSuccess(resp)),
-            catchError((error: any) => this.handleAuthError(error) )
-        );
-    }
-
     loginMutation = injectMutation(() => ({
         mutationFn: (credentials: LoginRequest) => this.loginRequest(credentials),
         onSuccess: (data) => {
-        // 1. Guardar el token
-        this.handleAuthSuccess(data);
-        // 2. Invalidar la consulta del perfil para que se refresque
-        this.queryClient.invalidateQueries({ queryKey: ['userProfile'] });
-        },
-        onError: (error) => {
-        console.error('Login failed', error);
-        // this.logout()
-        // Manejar error (mostrar mensaje al usuario, etc.)
-        },
+            this.handleAuthSuccess(data);
+            this.queryClient.invalidateQueries({ queryKey: ['userProfile'] });
+            this.userProfileQuery.refetch();
+        }
     }));
 
     get mutate() {
@@ -78,31 +84,16 @@ export class AuthService {
         enabled: this.isAuthenticated, // Solo se ejecuta si hay token
     }));
 
-    checkStatus():Observable<boolean> {
-        const token = localStorage.getItem('token');
-        if ( !token ) {
-            this.logout();
-            return of(false);
-        }
-
-        return this.http.get<AuthResponse>(`${ baseUrl }/auth/check-status`, {
-            // headers: {
-            //     Authorization: `Bearer ${ token }`,
-            // },
-        })
-        .pipe(
-            map(resp => this.handleAuthSuccess(resp)),
-            catchError((error: any) => this.handleAuthError(error) )
-        )
-    }
-
     logout() {
         this._user.set(null);
         this._token.set(null);
-        this._authStatus.set('authenticated')
+        this._authStatus.set('not-authenticated')
 
-        localStorage.removeItem('token')
-        localStorage.removeItem('refresh')
+        localStorage.removeItem('token');
+        localStorage.removeItem('refresh');
+
+        // this.queryClient.setQueryData(['userProfile'], undefined);
+        this.queryClient.setQueryData(['userProfile'], null);
         this.router.navigateByUrl('/');
     }
 
@@ -116,11 +107,6 @@ export class AuthService {
         localStorage.setItem('token', token);
 
         return true
-    }
-
-    private handleAuthError( error: any){
-        this.logout();
-        return of(false);
     }
 
     private async loginRequest(userLike: Partial<User>): Promise<AuthResponse> {
@@ -169,4 +155,41 @@ export class AuthService {
             throw new Error(message);;
         }
     }
+    // checkStatusResource = rxResource({
+    //     stream: () => this.checkStatus()
+    // })
+
+    // login(email: string, password: string):Observable<boolean>{
+    //     return this.http.post<AuthResponse>(`${ baseUrl }/auth/login`, {
+    //         email: email,
+    //         password: password,
+    //     }).pipe(
+    //         map(resp => this.handleAuthSuccess(resp)),
+    //         catchError((error: any) => this.handleAuthError(error) )
+    //     );
+    // }
+
+    // checkStatus():Observable<boolean> {
+    //     const token = localStorage.getItem('token');
+    //     if ( !token ) {
+    //         this.logout();
+    //         return of(false);
+    //     }
+
+    //     return this.http.get<AuthResponse>(`${ baseUrl }/auth/check-status`, {
+    //         // headers: {
+    //         //     Authorization: `Bearer ${ token }`,
+    //         // },
+    //     })
+    //     .pipe(
+    //         map(resp => this.handleAuthSuccess(resp)),
+    //         catchError((error: any) => this.handleAuthError(error) )
+    //     )
+    // }
+    
+    // private handleAuthError( error: any){
+    //     this.logout();
+    //     return of(false);
+    // }
+
 }

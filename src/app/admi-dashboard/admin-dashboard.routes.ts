@@ -19,7 +19,7 @@ export const adminDashboardRoutes: Routes = [
             {
                 path: 'terms',
                 component: TermsAdminPage,
-                // canMatch: [IsAuthenticatedGuard]       
+                canMatch: [IsAuthenticatedGuard]       
             },
             {
                 path: 'terms/:id',

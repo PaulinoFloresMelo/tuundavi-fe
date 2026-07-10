@@ -10,11 +10,14 @@ export const NotAuthenticatedGuard: CanMatchFn = async(
 
     const authService = inject(AuthService);
     const router = inject(Router);
-
-    const isAuthenticated = await firstValueFrom(authService.checkStatus());
-    console.log({isAuthenticated});
     
-    if ( isAuthenticated ) {
+    const user = authService.userProfileQuery.data;
+
+    // const isAuthenticated = await firstValueFrom(authService.checkStatus());
+    // console.log({isAuthenticated});
+    
+    // if ( isAuthenticated ) {
+    if ( user()?.user ) {
         router.navigateByUrl('/')
         return false;
     }
