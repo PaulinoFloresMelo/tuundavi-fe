@@ -6,24 +6,46 @@
   <div class="flex flex-col gap-2">
     <h2 class="text-2xl font-bold h-12">Datos generales</h2>
     
+    <span class="label text-xs">Término</span>
     <input
       type="text"
-      placeholder="Término"
+      placeholder=""
       formControlName="content"
       class="input input-bordered w-full"
     />
 
+    <span class="label text-xs">Acepción</span>
     <input
       type="text"
-      placeholder="Ejemplo"
+      placeholder=""
+      formControlName="meaning"
+      class="input input-bordered w-full"
+    />
+
+    <span class="label text-xs">Ejemplo</span>
+    <input
+      type="text"
+      placeholder=""
       formControlName="example"
       class="input input-bordered w-full"
     />
 
+    <span class="label text-xs">Categoría</span>
     <select class="select select-bordered w-full"
       formControlName="category">
+      <option disabled selected>Seleccione una categoría</option>
         @for (item of categories | keyvalue; track item.key) {
           <option [value]="item.key">{{ item.value }}</option>
+        }
+    </select>
+
+    <span class="label text-xs">Variante</span>
+    <select class="select select-bordered w-full"
+      formControlName="variantId">
+      
+      <option disabled selected>Seleccione una variante</option>
+        @for (variant of variantsService.data()?.data; track variant.id) {
+          <option [value]="variant.id">{{ variant.name }}</option>
         }
     </select>
 

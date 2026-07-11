@@ -26,28 +26,23 @@ export class AuthService {
 
     constructor(){
         effect(() => {
-        const query = this.userProfileQuery;
+            const query = this.userProfileQuery;
 
-        if (query.isSuccess()) {
-            this._user.set(query.data().user);
-            
-            this._authStatus.set('authenticated');
-            this._token.set(query.data().token);
-
-            localStorage.setItem('token', query.data().token);
-            
-        }else{
-            this._user.set(null);
-            this._token.set(null);
-            this._authStatus.set('not-authenticated')
-
-            localStorage.removeItem('token');
-            localStorage.removeItem('refresh');
-
-            this.queryClient.setQueryData(['userProfile'], undefined);
-            this.router.navigateByUrl('/');
-        }
-    });
+             if (query.isSuccess() && query.data()) {
+                const data = query.data();
+                this._user.set(data.user);
+                this._token.set(data.token);
+                this._authStatus.set('authenticated');
+                localStorage.setItem('token', data.token);
+                console.log('Perfil cargado:', data.user);
+            }
+                
+            // Manejo de error (opcional)
+            if (query.isError()) {
+            console.error('Error al cargar perfil:', query.error());
+            this.logout();
+            }   
+        });
     }
 
     authStatus = computed<AuthStatus>(() => {
@@ -83,6 +78,7 @@ export class AuthService {
         queryFn: () => this.getProfile(),
         enabled: this.isAuthenticated, // Solo se ejecuta si hay token
     }));
+
 
     logout() {
         this._user.set(null);
@@ -140,7 +136,6 @@ export class AuthService {
                 this.http.get<AuthResponse>(`${ baseUrl }/auth/check-status`,)
             );
             console.log({check: response});
-            
             
             return response;
 

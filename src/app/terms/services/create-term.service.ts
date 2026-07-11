@@ -23,7 +23,7 @@ export class CreateTermService {
         const image = request.imageFile;
         const audio = request.audioFile
 
-        termLike.userId = request.userId;
+        // termLike.userId = request.userId;
 
         if(image !== undefined){
                         

@@ -103,10 +103,10 @@
         </li>
 
         <!-- List item -->
-        @for (semantic of semantics; track $index) {
+        @for (category of categories | keyvalue; track $index) {
           <li>
-            <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right  btn btn-soft mb-2" data-tip="Settings" routerLinkActive="text-accent" routerLink="/category/{{semantic}}">
-              <span class="is-drawer-close:hidden">{{semantic}}</span>
+            <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right  btn btn-soft mb-2" data-tip="Settings" routerLinkActive="text-accent" routerLink="/category/{{category.key}}">
+              <span class="is-drawer-close:hidden">{{category.value}}</span>
             </button>
           </li>
         }

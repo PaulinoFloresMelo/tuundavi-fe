@@ -1,5 +1,5 @@
 import { Term } from '@/terms/interfaces/term.interface';
-import { Component, inject, input, signal } from '@angular/core';
+import { Component, computed, inject, input, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TermImagePipe } from '@/terms/pipes/term-image.pipe';
 import { KeyValuePipe } from '@angular/common';
@@ -11,6 +11,8 @@ import { UpdateTermService } from '@/terms/services/update-term.service';
 import { TermsService } from '@/terms/services/terms.service';
 import { TermAudioPipe } from '@/terms/pipes/term-audio.pipe';
 import { FileSizePipe } from './file-size.pipe';
+import { GetVariantsService } from 'src/app/variants/services/get-areas.service';
+import { AuthService } from '@/auth/services/auth.service';
 
 @Component({
   selector: 'term-details',
@@ -31,7 +33,9 @@ export class TermDetails {
   router = inject(Router);
 
   alertService = inject(AlertService);
-  termsService = inject(TermsService)
+  authService = inject(AuthService)
+  termsService = inject(TermsService);
+  variantsService = inject(GetVariantsService);
   createTerm   = inject(CreateTermService);
   updateTerm   = inject(UpdateTermService);
   
@@ -46,9 +50,11 @@ export class TermDetails {
     content: ['', Validators.required],
     example: ['', Validators.required],
     category: ['', Validators.required],
+    meaning: ['', Validators.required],
     image: ['', ],
     audio: ['', ],
     userId: [0, ],
+    variantId: [0, Validators.required],
   })
 
   categories = {
@@ -69,6 +75,13 @@ export class TermDetails {
     'foodAndDrink': 'Comidas y bebidas',
   }
 
+//   currentUser = computed(() => {
+//   const data = this.authService.userProfileQuery.data();
+//   return data?.user ?? null;
+// });
+  
+  user = this.authService.userProfileQuery.data
+
   ngOnInit(): void {
     this.setFormValue(this.term());
     console.log(this.term());
@@ -83,13 +96,23 @@ export class TermDetails {
     this.termForm.markAllAsTouched();
     console.log(this.termForm.value);
     
-    if ( this.termForm.pristine ) return;
-    if (!this.termForm.valid ) return;
+    // if ( this.termForm.pristine ) return;
+    // if (!this.termForm.valid ) return;
 
     const formValue = this.termForm.value;
-    const keyState = formValue.category?.toString() ?? '';
+    const variantId = formValue.variantId ? +formValue.variantId : 0;
+    
+    const termLike: Partial<Term> = {
+      ...(formValue as any),
+      variantId:variantId,
+      // userId: this.currentUser() ? this.currentUser()?.id : 0
+      // userId: this.authService.data() ? this.authService.data()?.user.id : 0
+      userId: this.user()?.user ? this.user()?.user.userId: 0
+    }
 
-    const termLike: Partial<Term> = {...(formValue as any), }
+    console.log({termLike: termLike});
+    console.log({currentUSer: this.user()?.user});
+    
 
     if ( this.term().id === 'new'){
       
@@ -106,10 +129,10 @@ export class TermDetails {
       }
 
       this.createTerm.mutate({
-        term: formValue as any, 
+        term: termLike as any, 
         imageFile: this.imageFileList,
         audioFile: this.selectedFile,
-        userId: 1
+        // userId: this.authService.user()?.id ? +this.authService.user()?.id! : 0
       }, {
         onSuccess: (data) => {
           console.log(data);
