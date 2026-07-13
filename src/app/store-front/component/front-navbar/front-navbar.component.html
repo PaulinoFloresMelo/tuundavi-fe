@@ -49,28 +49,34 @@
         <ul class="menu menu-horizontal px-1 gap-2">
             
             <li>
-              <a routerLink="/admin/terms/new" class="btn btn-soft ml-4" routerLinkActive="text-accent">Proponer termino</a>
+              <a routerLink="/admin/terms/new" 
+                class="btn btn-soft ml-4" 
+                routerLinkActive="text-accent"
+                (click)="isUser()">Proponer termino</a>
             </li>
 
-            <li>
-              <a routerLink="/admin" class="btn btn-soft" routerLinkActive="text-accent">Panel Admin</a>
-            </li>
+            @if (authService.data()?.user?.isAdmin) {
+              <li>
+                <a routerLink="/admin" 
+                  class="btn btn-soft" 
+                  routerLinkActive="text-accent"
+                  (click)="isUser()">Panel Admin</a>
+              </li>
+            }
         </ul>
       </div>
       <div class="navbar-end gap-4">
-        @if ( authService.authStatus() === 'authenticated') {
+
+        @if ( authService.data()) {
           <button class="btn btn-ghost">
-            {{ authService.user()?.username }}
+            {{ authService.data()?.user?.username }}
           </button>
           
           <button class="btn btn-sm btn-accent"
             (click)="authService.logout()">Salir</button>
         }
-        @else if ( authService.authStatus() === 'not-authenticated') {
+        @else if ( !authService.data() ) {
           <a class="btn btn-soft" routerLink="/auth/login">Autenticación</a>
-        }
-        @else {
-          <a class="btn btn-ghost"></a>
         }
       </div>
     </nav>
@@ -115,3 +121,5 @@
     </div>
   </div>
 </div>
+
+<alert/>

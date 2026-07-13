@@ -1,5 +1,5 @@
 import { Term } from '@/terms/interfaces/term.interface';
-import { Component, computed, inject, input, signal } from '@angular/core';
+import { Component, inject, input, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TermImagePipe } from '@/terms/pipes/term-image.pipe';
 import { KeyValuePipe } from '@angular/common';

@@ -5,8 +5,8 @@ import { Router } from '@angular/router';
 import { injectMutation, injectQuery, QueryClient } from '@tanstack/angular-query-experimental';
 import { lastValueFrom } from 'rxjs';
 
-import { User } from '../interfaces/user.interface';
 import { environment } from '../../../environments/environment';
+import type { User } from '../interfaces/user.interface';
 import type { AuthResponse } from '../interfaces/auth-response.interface';
 import type { LoginRequest } from '../interfaces/login-request.interface';
 
@@ -79,6 +79,9 @@ export class AuthService {
         enabled: this.isAuthenticated, // Solo se ejecuta si hay token
     }));
 
+    get data() {
+        return this.userProfileQuery.data;
+    }
 
     logout() {
         this._user.set(null);

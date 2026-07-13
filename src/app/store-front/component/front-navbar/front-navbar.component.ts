@@ -1,7 +1,11 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { AuthService } from '../../../auth/services/auth.service';
 import { KeyValuePipe } from '@angular/common';
+
+import { AuthService } from '../../../auth/services/auth.service';
+
+import { Alert } from '@/shared/components/alert/alert-error';
+import { AlertService } from '@/shared/components/alert/alert.service';
 
 @Component({
   selector: 'front-navbar',
@@ -9,12 +13,24 @@ import { KeyValuePipe } from '@angular/common';
     RouterOutlet, 
     RouterLink, 
     RouterLinkActive,
-    KeyValuePipe
+    KeyValuePipe,
+    Alert
   ],
   templateUrl: './front-navbar.component.html',
 })
-export class FrontNavbarComponent { 
+export class FrontNavbarComponent {
+  alertService = inject(AlertService);
   authService = inject(AuthService);
+
+  alertMessage = signal('');
+
+  isUser(){
+    if(!this.authService.data()){
+      this.alertMessage.update(() => 'Es necesario autenticarse');
+      this.alertService.showAlert(this.alertMessage(), 'error');
+    }
+    return
+  }
 
   categories = {
     'adverbio': 'Adverbio',
