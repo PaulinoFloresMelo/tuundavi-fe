@@ -1,4 +1,4 @@
-import { inject, Injectable } from "@angular/core";
+import { inject, Injectable, linkedSignal } from "@angular/core";
 import { toSignal } from "@angular/core/rxjs-interop";
 import { ActivatedRoute } from "@angular/router";
 import { map } from "rxjs";
@@ -15,5 +15,18 @@ export class PaginationService {
         {
         initialValue: 1,
         }
-  )
+    )
+
+    private _currentCategory = toSignal(
+        this.activatedRoute.queryParamMap.pipe(
+            map( params => (params.get('category') ? params.get('category')! : '' )),
+            map((category) => (category))
+        ),
+        {
+        initialValue: '',
+        }
+    )
+
+    public currentCategory = linkedSignal(this._currentCategory);
+
 }

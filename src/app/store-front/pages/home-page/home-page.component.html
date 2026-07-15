@@ -7,19 +7,28 @@
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-2 gap-3">
   
-  @for (term of termsResource.value()?.terms; track $index) {
+  @for (term of termsQuery.data()?.terms; track $index) {
     <term-card [term]="term"></term-card>
   }
 
   @empty {
-    <p>No hay terminos</p>
+    @if (termsQuery.isLoading()) {
+
+      <p>Cargando datos...</p>
+    }@else if (termsQuery.isError()) {
+      <p>Error: {{termsQuery.error()}}</p>
+    }@else {
+      <p>No hay datos</p>
+    }
+
   }
   
 </div>
 
 <app-pagination 
-  [pages]="termsResource.value()?.pages ?? 0"
+  [pages]="termsQuery.data()?.pages ?? 0"
   [currentPage]="paginationService.currentPage()"
+  [currentCategory]="paginationService.currentCategory()"
 />
 
 

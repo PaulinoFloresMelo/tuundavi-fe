@@ -1,16 +1,16 @@
 <h1 class="text-2xl font-bold"></h1>
 <h3 class="text-lg">
     Total de terminos
-    <span class="text-accent">{{ termsResource.value()?.count}}</span>
+    <span class="text-accent">{{ termsQuery.data()?.count}}</span>
 </h3>
 
 <div class="divider"></div>
 
 <div class="flex gap-2 items-center h-20">
 <app-pagination
-    [pages]="termsResource.value()?.pages ?? 0"
+    [pages]="termsQuery.data()?.pages ?? 0"
     [currentPage]="paginationService.currentPage()"/>
 </div>
 
 <!-- listado de terminos -->
-<term-table [terms]="termsResource.value()?.terms ?? []"></term-table>
+<term-table [terms]="termsQuery.data()?.terms ?? []"></term-table>

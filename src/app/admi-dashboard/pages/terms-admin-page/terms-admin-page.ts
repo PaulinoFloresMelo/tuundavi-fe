@@ -2,8 +2,9 @@ import { PaginationService } from '@/shared/components/pagination/pagination.ser
 import { TermTable } from '@/terms/components/term-table/term-table';
 import { TermsService } from '@/terms/services/terms.service';
 import { Component, inject } from '@angular/core';
-import { rxResource } from '@angular/core/rxjs-interop';
 import { PaginationComponent } from "@/shared/components/pagination/pagination.component";
+import { injectQuery } from '@tanstack/angular-query-experimental';
+import { GetTermsService } from '@/terms/services/get-terms.service';
 
 @Component({
   selector: 'app-terms-admin-page',
@@ -13,13 +14,14 @@ import { PaginationComponent } from "@/shared/components/pagination/pagination.c
 export class TermsAdminPage {
   termsService      = inject(TermsService);
   paginationService = inject(PaginationService)
+
+  getTerms          = inject(GetTermsService);
   
-  termsResource = rxResource({
-    params: () => ({ page: this.paginationService.currentPage() - 1 }),
-    stream: ({ params }) => {
-      return this.termsService.getTerms({
-        offset: params.page * 5,
-      });
-    }
-  })
+    termsQuery = injectQuery(() => 
+      this.getTerms.termsQuery(
+        this.paginationService.currentCategory(),
+        this.paginationService.currentPage()
+      )
+    );
+  
  }

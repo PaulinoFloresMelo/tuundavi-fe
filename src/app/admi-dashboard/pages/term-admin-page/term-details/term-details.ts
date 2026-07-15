@@ -48,9 +48,10 @@ export class TermDetails {
 
   termForm = this.fb.group({
     content: ['', Validators.required],
-    example: ['', Validators.required],
-    category: ['', Validators.required],
     meaning: ['', Validators.required],
+    example: ['', Validators.required],
+    translationExample: ['', Validators.required],
+    category: ['', Validators.required],
     image: ['', ],
     audio: ['', ],
     userId: [0, ],

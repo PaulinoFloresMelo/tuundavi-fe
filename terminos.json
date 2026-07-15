@@ -1,0 +1,1264 @@
+{
+    "sampleTerms" : [ 
+        {
+            "id": 1,
+            "content": "Axno",
+            "meaning": ["Burro"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "¡Xiguin poati to axno!",
+                "traslation": "¡Ve a contar nuestros burros!"
+            },
+            "category": "animales",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 2,
+            "content": "Pio",
+            "meaning": ["Pollo"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "animales",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 3,
+            "content": "Mistle",
+            "meaning": "Gato",
+            "imageUrl": "298773.jpg",
+            "audioUrl": "731909",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "animales",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 4,
+            "content": "Pitsotl",
+            "meaning": ["Cerdo"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "Tepitsotl",
+                "traslation": "Su cerdo"
+            },
+            "category": "animales",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 5,
+            "content": "Ayotochi",
+            "meaning": ["Armadillo"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "animales",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 6,
+            "content": "Texon",
+            "meaning": ["Tejón"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "animales",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 7,
+            "content": "Koyotl",
+            "meaning": ["Coyote"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "animales",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 8,
+            "content": "Koatl",
+            "meaning": ["Víbora"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "animales",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 9,
+            "content": "Mejtoli",
+            "meaning": ["Piojo"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "animales",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 10,
+            "content": "Mejtoli",
+            "meaning": ["Piojo"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "animales",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 11,
+            "content": "Uejka",
+            "meaning": ["Lejos"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "adverbios",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 12,
+            "content": "Sejkan",
+            "meaning": ["Cerca"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "adverbios",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 13,
+            "content": "Uiptla",
+            "meaning": ["Pasado mañana"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "adverbios",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 14,
+            "content": "Kuale",
+            "meaning": ["Bien"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "adverbios",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 15,
+            "content": "Yolik",
+            "meaning": ["Despacio"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "adverbios",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 16,
+            "content": "Nochipa",
+            "meaning": ["Siempre"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "adverbios",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 17,
+            "content": "Aik",
+            "meaning": ["Nunca"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "adverbios",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 18,
+            "content": "Güilis",
+            "meaning": ["Posiblemente"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "adverbios",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 19,
+            "content": "Amitla",
+            "meaning": ["Nada"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "adverbios",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 20,
+            "content": "Amotlen",
+            "meaning": ["De nada"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "adverbios",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 21,
+            "content": "Itta",
+            "meaning": ["Ver"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Verbos frecuentes",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 22,
+            "content": "Negui",
+            "meaning": ["Querer"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Verbos frecuentes",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 23,
+            "content": "Kagui",
+            "meaning": ["Escuchar"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Verbos frecuentes",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 24,
+            "content": "Asi",
+            "meaning": ["Agarrar"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Verbos frecuentes",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 25,
+            "content": "Chiua",
+            "meaning": ["Hacer"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Verbos frecuentes",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 26,
+            "content": "Tlakua ",
+            "meaning": ["Comer"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Verbos frecuentes",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 27,
+            "content": "Guii",
+            "meaning": ["Beber"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Verbos frecuentes",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 28,
+            "content": "Tlasojtla",
+            "meaning": ["Amar"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Verbos frecuentes",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 29,
+            "content": "Kochi",
+            "meaning": ["Dormir"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Verbos frecuentes",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 30,
+            "content": "Nejnemi",
+            "meaning": ["Caminar"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Verbos frecuentes",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 31,
+            "content": "Se",
+            "meaning": ["Uno"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Números 1-100",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 32,
+            "content": "Ome",
+            "meaning": ["Dos"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Números 1-100",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 33,
+            "content": "Yeyi",
+            "meaning": ["Tres"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Números 1-100",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 34,
+            "content": "Naui",
+            "meaning": ["Cuatro"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Números 1-100",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 35,
+            "content": "Makuile",
+            "meaning": ["Cinco"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Números 1-100",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 36,
+            "content": "Chikuase",
+            "meaning": ["Seis"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Números 1-100",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 37,
+            "content": "Chikome",
+            "meaning": ["Siete"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Números 1-100",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 38,
+            "content": "Chikueyi",
+            "meaning": ["Ocho"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Números 1-100",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 39,
+            "content": "Chiknaui",
+            "meaning": ["Nueve"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Números 1-100",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 40,
+            "content": "Maktlaktle",
+            "meaning": ["Diez"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Números 1-100",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 41,
+            "content": "Metlatl",
+            "meaning": ["Metate"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 42,
+            "content": "Tetl",
+            "meaning": ["Piedra"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 43,
+            "content": "Kuitl",
+            "meaning": ["Leña"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 44,
+            "content": "Xamitl",
+            "meaning": ["Adobe"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 45,
+            "content": "Tetsopi",
+            "meaning": ["Tejolote"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 46,
+            "content": "Amochtle",
+            "meaning": ["Libro"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 47,
+            "content": "Kal-le",
+            "meaning": ["Casa"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 48,
+            "content": "Amatl",
+            "meaning": ["Papel"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 49,
+            "content": "Xal-le",
+            "meaning": ["Arena"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 50,
+            "content": "Tlegüilitl",
+            "meaning": ["Fogón"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 51,
+            "content": "Tsontegon",
+            "meaning": ["Cabeza"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 52,
+            "content": "Tsontle cabello",
+            "meaning": ["Cabello"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 53,
+            "content": "Ixkuate frente",
+            "meaning": ["Frente"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 54,
+            "content": "Ixtlampa",
+            "meaning": ["Párpados"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 55,
+            "content": "Yegajtsol",
+            "meaning": ["Nariz"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 56,
+            "content": "Nagasjuan",
+            "meaning": ["Orejas"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 57,
+            "content": "Nejnepil",
+            "meaning": ["Lengua"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 58,
+            "content": "Kechtle ",
+            "meaning": ["Cuello"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 59,
+            "content": "Istelolo",
+            "meaning": ["Ojo"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 60,
+            "content": "Mauan",
+            "meaning": ["Manos"],
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "",
+                "traslation": ""
+            },
+            "category": "Objetos",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 60,
+            "content": "Axan",
+            "meaning": "Hoy",
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "Axan nias ni teguititin",
+                "traslation": "Hoy iré a trabajar"
+            },
+            "category": "adverbio",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "id": 60,
+            "content": "Kapostik",
+            "meaning": "Negro",
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "Mistle kapostik",
+                "traslation": "Gato negro"
+            },
+            "category": "adverbio",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        },
+        {
+            "content": "Istaktik",
+            "meaning": "Blanco",
+            "imageUrl": "",
+            "audioUrl": "",
+            "example": {
+                "example": "Istaknanagatl",
+                "traslation": "Hongo blanco"
+            },
+            "category": "color",
+            "variante": {
+                "nombre": "Náhuatl de la Sierra noreste de Puebla",
+                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
+                "localidad": {
+                    "nombre": "Hueyapan"
+                }
+            },
+            "userId": "1"
+        }
+        
+    ]        
+}

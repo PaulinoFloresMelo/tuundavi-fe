@@ -94,7 +94,7 @@ export class CreateTermService {
     
     private  mutation = injectMutation(() => ({
         mutationFn: (resquest: CreateTermRequest) => this.createTerm(resquest),
-        onSuccess: () => {
+        onSuccess: (data, variables) => {
             this.queryClient.invalidateQueries({ queryKey: ['terms'] })
         }
     }))

@@ -19,7 +19,6 @@ import { TermCardComponent } from '@/terms/components/term-card/term-card.compon
     KeyValuePipe,
     Alert,
     TermCardComponent
-    // SearchPage
   ],
   templateUrl: './front-navbar.component.html',
 })
@@ -73,18 +72,6 @@ export class FrontNavbarComponent {
   }
 
   constructor() {
-    // Efecto para manejar el éxito (cuando hay datos nuevos)
-    effect(() => {
-      const data = this.searchQuery.data();
-      if (data) {
-        console.log('✅ Búsqueda exitosa:', data);
-        // Ejemplo: mostrar toast de éxito
-        // this.toastService.success('Resultados encontrados');
-        // this.router.navigate(['/resultados'], { state: { data } });
-        // this.otroEstado.set(data);
-      }
-    });
-
     // Efecto para manejar el error
     effect(() => {
       const error = this.searchQuery.error();

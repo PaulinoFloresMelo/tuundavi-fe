@@ -12,6 +12,7 @@ export interface Term{
     content: string;
     meaning: string;
     category: string;
+    translationExample: string
     imageUrl: string;
     audioUrl: string;
     userId?: number;
