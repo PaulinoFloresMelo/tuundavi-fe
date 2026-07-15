@@ -114,6 +114,23 @@ export class FormUtils {
     return null;
   }
 
+  static inputClasses(form: FormGroup, fieldName: string): string | null{
+    if (!form.controls[fieldName]) return null;
+
+    if ( form.controls[fieldName].errors && form.controls[fieldName].touched ) {
+      
+      return 'outline-error border-error';
+
+    } else if ( !form.controls[fieldName].errors && form.controls[fieldName].touched ) {
+      
+      return 'outline-success border-success';
+
+    } else {
+      
+      return '';
+    }
+  }
+
   static notStrider(control: AbstractControl): ValidationErrors | null {
     const value = control.value;
 

@@ -1,145 +1,194 @@
 <h1 class="text-2xl font-bold">{{ term().content }}</h1>
 <div class="divider"></div>
 
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4" [formGroup]="termForm">
-  <!-- Datos generales -->
-  <div class="flex flex-col gap-2">
-    <h2 class="text-2xl font-bold h-12">Datos generales</h2>
-    
-    <span class="label text-xs">Término</span>
-    <input
-      type="text"
-      placeholder=""
-      formControlName="content"
-      class="input input-bordered w-full"
-    />
+<form
+  [formGroup]="termForm"
+  class="grid grid-cols-1 sm:grid-cols-2 gap-4"
+  (ngSubmit)="onSubmit()"
+>
 
-    <span class="label text-xs">Traducción</span>
-    <input
-      type="text"
-      placeholder=""
-      formControlName="meaning"
-      class="input input-bordered w-full"
-    />
-
-    <span class="label text-xs">Ejemplo</span>
-    <input
-      type="text"
-      placeholder=""
-      formControlName="example"
-      class="input input-bordered w-full"
-    />
-
-    <span class="label text-xs">Ejemplo traducido</span>
-    <input
-      type="text"
-      placeholder=""
-      formControlName="translationExample"
-      class="input input-bordered w-full"
-    />
-
-    <span class="label text-xs">Categoría</span>
-    <select class="select select-bordered w-full"
-      formControlName="category">
-      <option disabled selected>Seleccione una categoría</option>
-        @for (item of categories | keyvalue; track item.key) {
-          <option [value]="item.key">{{ item.value }}</option>
-        }
-    </select>
-
-    <span class="label text-xs">Variante</span>
-    <select class="select select-bordered w-full"
-      formControlName="variantId">
+    <!-- Datos generales -->
+    <div class="flex flex-col gap-2">
+      <h2 class="text-2xl font-bold h-12">Datos de la Palabra</h2>
       
-      <option disabled selected>Seleccione una variante</option>
-        @for (variant of variantsService.data()?.data; track variant.id) {
-          <option [value]="variant.id">{{ variant.name }}</option>
-        }
-    </select>
+      <!-- <span class="label text-xs">Palabra</span>
+      <input
+        type="text"
+        placeholder=""
+        formControlName="content"
+        class="input input-bordered w-full"
+        [ngClass]="formUtils.inputClasses(termForm,'content')"
+      /> -->
+      <fieldset class="fieldset">
+        <label class="label">Palabra</label>
+        <input
+          type="text"
+          placeholder=""
+          formControlName="content"
+          class="input input-bordered w-full"
+          [ngClass]="formUtils.inputClasses(termForm,'content')"
+        />
+        <!-- <form-error-fieldset [control]="termForm.get('content')!"/> -->
+      </fieldset>
 
-    <div class="divider">Audio</div>
-
-    <!-- Aquí inicia la prueba de audio -->
-    <!-- <div class="max-w-full my-5 mx-auto p-5 border border-[#ddd] rounded-lg"> -->
-    <div class="w-full mx-auto p-5 border border-[#ddd] rounded-lg">
-      <!-- <h3>Cambiar archivo de audio</h3> -->
-
-      <audio controls class="mb-2 w-full">
-        <source 
-          [src]="term().audioUrl | termAudio"
-          type="audio/mpeg">
-        Tu navegador no soporta el elemento de audio.
-      </audio>
-    
-      <!-- Input oculto para seleccionar archivo -->
-      <input 
-        type="file" 
-        #fileInput
-        accept="audio/*" 
-        (change)="onFileSelected($event)"
-        style="display: none"
-        formControlName="audio"
-      >
-      
-      <!-- Botón para abrir el selector de archivos -->
-      <button class="btn btn-secondary"(click)="fileInput.click()">
-        {{ isNew() ? 'Seleccionar audio' : 'Cambiar audio' }}
-      </button>
-
-      <!-- Mostrar nombre del archivo seleccionado -->
-      @if (audioFile) {
-        <div class="file-info">
-          <span>{{ audioFile.name }}</span>
-          <span>{{ audioFile.size | fileSize }}</span>
-        </div>
-      }
-
-    </div>
-  </div>
-
-  <!-- Imágenes -->
-  <div class="flex flex-col gap-2">
-    <!-- <term-carousel [images]="term().imageUrl" /> -->
-    
-    <div class="card card-side bg-base-100 shadow-sm">
-      <figure>
-        <img 
-          [src]="term().imageUrl | termImage"
-          alt="Term"
-          class="object-cover animate-fadeIn"
-          />
-      </figure>
-    </div>
-
-    <input 
-      type="file" 
-      accept="image/*"
-      class="file-input file-input-bordered w-full mt-4"
-      (change)="onFileChanged($event)"
-      formControlName="image"
+      <span class="label text-xs">Traducción</span>
+      <input
+        type="text"
+        placeholder=""
+        formControlName="meaning"
+        class="input input-bordered w-full"
+        [ngClass]="formUtils.inputClasses(termForm,'meaning')"
       />
+      <!-- <span class="label text-xs"> -->
+        <!-- <form-error-fieldset [control]="termForm.get('meaning')!"/> -->
+      <!-- </span> -->
 
-      @if (tempImage()) {
-        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 ">
-          <!-- @for(images of tempImages(); track image){ -->
-            <img [src]="tempImage()" alt="Imagen temporal" class="w-full object-cover rounded-xl">
-          <!-- } -->
 
-        </div>
-      }
+      <span class="label text-xs">Ejemplo</span>
+      <input
+        type="text"
+        placeholder=""
+        formControlName="example"
+        class="input input-bordered w-full"
+        [ngClass]="formUtils.inputClasses(termForm,'example')"
+      />
+      <!-- <span class="label text-xs">
+        <form-error-fieldset [control]="termForm.get('example')!"/>
+      </span> -->
 
-      <div class="flex justify-end h-12">
-        <button class="btn btn-secondary" type="submit" (click)="onSubmit()">
 
-          @if(updateTerm.isPending()|| createTerm.isPending()){
-            <span class="loading loading-spinner loading-sm"></span>
+      <span class="label text-xs">Ejemplo traducido</span>
+      <input
+        type="text"
+        placeholder=""
+        formControlName="translationExample"
+        class="input input-bordered w-full"
+        [ngClass]="formUtils.inputClasses(termForm,'translationExample')"
+      />
+      <!-- <span class="label text-xs">
+        <form-error-fieldset [control]="termForm.get('translationExample')!"/>
+      </span> -->
+
+
+      <span class="label text-xs">Categoría</span>
+      <select class="select select-bordered w-full"
+        [ngClass]="formUtils.inputClasses(termForm,'category')"
+        formControlName="category">
+        <option disabled selected>Seleccione una categoría</option>
+          @for (item of categories | keyvalue; track item.key) {
+            <option [value]="item.key">{{ item.value }}</option>
           }
+      </select>
+      <!-- <span class="label text-xs">
+        <form-error-fieldset [control]="termForm.get('category')!"/>
+      </span> -->
 
-          Guardar
+
+      <span class="label text-xs">Variante</span>
+      <select class="select select-bordered w-full"
+        [ngClass]="formUtils.inputClasses(termForm,'variantId')"
+        formControlName="variantId">
+        
+        <option disabled selected>Seleccione una variante</option>
+          @for (variant of variantsService.data()?.data; track variant.id) {
+            <option [value]="variant.id">{{ variant.name }}</option>
+          }
+      </select>
+      <!-- <span class="label text-xs">
+        <form-error-fieldset [control]="termForm.get('variantId')!"/>
+      </span> -->
+
+      <!-- Aquí inicia la prueba de audio -->
+      <div class="divider">Audio</div>
+      
+      <div class="w-full mx-auto p-5 border border-[#ddd] rounded-lg"
+      [ngClass]="formUtils.inputClasses(termForm,'audio')">
+        <!-- <h3>Cambiar archivo de audio</h3> -->
+
+        <audio controls class="mb-2 w-full">
+          <source 
+            [src]="term().audioUrl | termAudio"
+            type="audio/mpeg">
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      
+        <!-- Input oculto para seleccionar archivo -->
+        <input 
+          type="file" 
+          #fileInput
+          accept="audio/*" 
+          (change)="onFileSelected($event)"
+          style="display: none"
+          formControlName="audio"
+        >
+        
+        <!-- Botón para abrir el selector de archivos -->
+        <button class="btn btn-secondary"(click)="fileInput.click()">
+          {{ isNew() ? 'Seleccionar audio' : 'Cambiar audio' }}
         </button>
+
+        <!-- Mostrar nombre del archivo seleccionado -->
+        @if (audioFile) {
+          <div class="file-info">
+            <span>{{ audioFile.name }}</span>
+            <span>{{ audioFile.size | fileSize }}</span>
+          </div>
+        }
+
+      </div>
+      <!-- <span class="label text-xs">
+        <form-error-fieldset [control]="termForm.get('audio')!"/>
+      </span> -->
+    </div>
+
+    <!-- Imágenes -->
+    <div class="flex flex-col gap-2">
+      <!-- <term-carousel [images]="term().imageUrl" /> -->
+      
+      <div class="card card-side bg-base-100 shadow-sm">
+        <figure>
+          <img 
+            [src]="term().imageUrl | termImage"
+            alt="Term"
+            class="object-cover animate-fadeIn"
+            />
+        </figure>
       </div>
 
-  </div>
-</div>
+      <input 
+        type="file" 
+        accept="image/*"
+        class="file-input file-input-bordered w-full mt-4"
+        (change)="onFileChanged($event)"
+        formControlName="image"
+        [ngClass]="formUtils.inputClasses(termForm,'image')"
+        />
+      <!-- <span class="label text-xs">
+        <form-error-fieldset [control]="termForm.get('image')!"/>
+      </span> -->
+
+        @if (tempImage()) {
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2 ">
+            <!-- @for(images of tempImages(); track image){ -->
+              <img [src]="tempImage()" alt="Imagen temporal" class="w-full object-cover rounded-xl">
+            <!-- } -->
+
+          </div>
+        }
+
+        <div class="flex justify-end h-12">
+          <button class="btn btn-secondary" type="submit" (click)="onSubmit()">
+
+            @if(updateTerm.isPending()|| createTerm.isPending()){
+              <span class="loading loading-spinner loading-sm"></span>
+            }
+
+            Guardar
+          </button>
+        </div>
+
+    </div>
+  
+</form>
 
 <alert/>

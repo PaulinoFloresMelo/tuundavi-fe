@@ -2,7 +2,7 @@ import { Term } from '@/terms/interfaces/term.interface';
 import { Component, inject, input, linkedSignal, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TermImagePipe } from '@/terms/pipes/term-image.pipe';
-import { KeyValuePipe } from '@angular/common';
+import { KeyValuePipe, NgClass } from '@angular/common';
 import { AlertService } from '@/shared/components/alert/alert.service';
 import { Alert } from '@/shared/components/alert/alert-error';
 import { CreateTermService } from '@/terms/services/create-term.service';
@@ -13,6 +13,8 @@ import { TermAudioPipe } from '@/terms/pipes/term-audio.pipe';
 import { FileSizePipe } from './file-size.pipe';
 import { GetVariantsService } from 'src/app/variants/services/get-variants.service';
 import { AuthService } from '@/auth/services/auth.service';
+// import { FormErrorFieldset } from '@/shared/components/form-error-fieldset/form-error-fieldset';
+import { FormUtils } from '@/utils/form-utils';
 
 @Component({
   selector: 'term-details',
@@ -22,7 +24,9 @@ import { AuthService } from '@/auth/services/auth.service';
     ReactiveFormsModule,
     KeyValuePipe,
     Alert,
-    FileSizePipe
+    FileSizePipe,
+    // FormErrorFieldset,
+    NgClass
   ],
   templateUrl: './term-details.html',
 })
@@ -31,6 +35,7 @@ export class TermDetails {
 
   fb = inject(FormBuilder);
   router = inject(Router);
+  formUtils = FormUtils;
 
   alertService = inject(AlertService);
   authService = inject(AuthService)
@@ -52,8 +57,8 @@ export class TermDetails {
     example: ['', Validators.required],
     translationExample: ['', Validators.required],
     category: ['', Validators.required],
-    image: ['', ],
-    audio: ['', ],
+    image: ['', Validators.required],
+    audio: ['',  Validators.required],
     userId: [0, ],
     variantId: [0, Validators.required],
   })
@@ -93,7 +98,7 @@ export class TermDetails {
     console.log(this.termForm.value);
     
     if ( this.termForm.pristine ) return;
-    // if (!this.termForm.valid ) return;
+    if (!this.termForm.valid ) return;
 
     const formValue = this.termForm.value;
     const variantId = formValue.variantId ? +formValue.variantId : 0;
