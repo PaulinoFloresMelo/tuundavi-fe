@@ -1,18 +1,20 @@
-<div class="card bg-base-100 shadow-sm animate-fadeIn">
-  <figure>
-    <!-- src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" -->
+
+<div class="card w-full min-w-[150px] max-w-sm md:min-w-[200px] max-h-[400px] md:max-w-xl bg-base-100 shadow-xl animate-fadeIn">
+  <figure class="px-3 pt-3">
     <!--[src]= "imageUrl()" -->
     <img
       [src]="imageUrl() | termImage"
       [alt]="term().content" />
   </figure>
-  <div class="card-body">
+  <!-- <div class="card-body min-h-[140px] "> -->
+  <div class="card-body ">
     <h2 
       class="card-title text-accent text-lg hover:underline cursor-pointer"
       [routerLink]="['/term', term().id]" >
         {{term().content}}
     </h2>
-    <p> {{term().example | slice: 0:70 }}... </p>
+    <p> {{term().meaning}}  </p>
+    <p> {{term().example | slice: 0:70 }}...</p>
 
     <audio #audioPlayer class="hidden">
       <source [src]="term().audioUrl | termAudio" type="audio/mpeg">

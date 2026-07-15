@@ -20,7 +20,7 @@ export class TermPageComponent {
   activatedRoute = inject(ActivatedRoute)
   termService    = inject(TermsService)
   
-  termIdSlug         = this.activatedRoute.snapshot.params['idSlug'];
+  termIdSlug     = this.activatedRoute.snapshot.params['idSlug'];
   
   termResource = rxResource({
     params: () => ({ idSlug: this.termIdSlug }),

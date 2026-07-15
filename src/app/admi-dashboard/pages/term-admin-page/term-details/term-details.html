@@ -74,15 +74,15 @@
       >
       
       <!-- Botón para abrir el selector de archivos -->
-      <button class="btn btn-secondary"(click)="fileInput.click()" [disabled]="isUploading">
-        {{ isUploading ? 'Subiendo...' : 'Cambiar audio' }}
+      <button class="btn btn-secondary"(click)="fileInput.click()">
+        {{ isNew() ? 'Seleccionar audio' : 'Cambiar audio' }}
       </button>
 
       <!-- Mostrar nombre del archivo seleccionado -->
-      @if (selectedFile) {
+      @if (audioFile) {
         <div class="file-info">
-          <span>{{ selectedFile.name }}</span>
-          <span>{{ selectedFile.size | fileSize }}</span>
+          <span>{{ audioFile.name }}</span>
+          <span>{{ audioFile.size | fileSize }}</span>
         </div>
       }
 

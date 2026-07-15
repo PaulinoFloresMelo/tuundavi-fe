@@ -20,16 +20,49 @@
         <div class="card-body">
 
             <h2 class="card-title">{{ termResource.value().content }}</h2>
-            <p>{{ termResource.value().example}}</p>
+            <p>Traducción: {{ termResource.value().meaning}}</p>
+            <p>Ejemplo: {{ termResource.value().example}}</p>
+            <p>Variante: {{ termResource.value().variant.name}}</p>
+            <p>Localidad: {{ termResource.value().variant.localityName}}</p>
+            <p>Agregado por: 
+                {{ termResource.value().user.username}} 
+                {{ termResource.value().user.paternalName}}
+                {{ termResource.value().user.maternalName}}
+            </p>
             <div class="card-actions justify-end">
-            <!-- <button class="btn btn-accent">Escuchar</button> -->
-            <audio controls class="mb-2 w-full">
-                <source 
-                [src]="termResource.value().audioUrl | termAudio"
-                type="audio/mpeg">
-                Tu navegador no soporta el elemento de audio.
-            </audio>
+                <audio controls class="mb-2 w-full">
+                    <source 
+                    [src]="termResource.value().audioUrl | termAudio"
+                    type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
             </div>
         </div>
     </div>
+
+    <!-- <div class="card card-side bg-base-100 shadow-sm">
+        <figure>
+            <img
+            [src]="termResource.value().imageUrl | termImage"
+            alt="Term"
+            class="object-cover animate-fadeIn" 
+             />-->
+            <!-- class="object-cover animate-fadeIn" -->
+        <!-- </figure>
+        <div class="card-body">
+            <h2 class="card-title">{{ termResource.value().content }}</h2>
+            <p>Click the button to watch on Jetflix app.</p>
+            <p>Traducción: {{ termResource.value().meaning}}</p>
+            <p>Ejemplo: {{ termResource.value().example}}</p>
+            <p>Variante: {{ termResource.value().variant.name}}</p>
+            <div class="card-actions justify-end">
+                <audio controls class="mb-2 w-full">
+                    <source 
+                    [src]="termResource.value().audioUrl | termAudio"
+                    type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </div>
+    </div> -->
 }

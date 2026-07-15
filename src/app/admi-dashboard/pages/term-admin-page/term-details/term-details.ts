@@ -1,5 +1,5 @@
 import { Term } from '@/terms/interfaces/term.interface';
-import { Component, inject, input, signal } from '@angular/core';
+import { Component, inject, input, linkedSignal, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { TermImagePipe } from '@/terms/pipes/term-image.pipe';
 import { KeyValuePipe } from '@angular/common';
@@ -11,7 +11,7 @@ import { UpdateTermService } from '@/terms/services/update-term.service';
 import { TermsService } from '@/terms/services/terms.service';
 import { TermAudioPipe } from '@/terms/pipes/term-audio.pipe';
 import { FileSizePipe } from './file-size.pipe';
-import { GetVariantsService } from 'src/app/variants/services/get-areas.service';
+import { GetVariantsService } from 'src/app/variants/services/get-variants.service';
 import { AuthService } from '@/auth/services/auth.service';
 
 @Component({
@@ -40,11 +40,11 @@ export class TermDetails {
   updateTerm   = inject(UpdateTermService);
   
   imageFileList: FileList | undefined = undefined;
-  selectedFile: File | null = null;
+  audioFile: File | null = null;
   
   alertMessage = signal('');
   tempImage    = signal('');
-  isUploading = false;
+  isNew = linkedSignal(() => +this.term().id!==0 || this.term().id!=='0');
 
   termForm = this.fb.group({
     content: ['', Validators.required],
@@ -61,24 +61,19 @@ export class TermDetails {
     'adverbio': 'Adverbio',
     'animal': 'Animales',
     'color': 'Colores',
-    'dayOfTheWeek': 'Días de la semana',
-    'frequentVerb': 'Verbos frecuentes',
-    'numberFromOneToHundred': 'Números 1-100',
-    'schoolObject': 'Objetos escolares',
+    'dayoftheweek': 'Días de la semana',
+    'frequentverb': 'Verbos frecuentes',
+    'numberfromonetohundred': 'Números 1-100',
+    'schoolobject': 'Objetos escolares',
     'agriculture': 'Agricultura',
     'mood': 'Estados de ánimo',
-    'familyAndPeople': 'Familiares y gente',
-    'fruitsAndVegetables': 'Frutas y vegetales',
-    'householdObjects': 'Objetos domesticos',
-    'personalPronouns': 'Pronombres personales',
-    'weatherAndSeasonsOfTheYear': 'Clima y estaciones del año',
-    'foodAndDrink': 'Comidas y bebidas',
+    'familyandpeople': 'Familiares y gente',
+    'fruitsandvegetables': 'Frutas y vegetales',
+    'householdobjects': 'Objetos domesticos',
+    'personalpronouns': 'Pronombres personales',
+    'weatherandseasonsoftheyear': 'Clima y estaciones del año',
+    'foodanddrink': 'Comidas y bebidas',
   }
-
-//   currentUser = computed(() => {
-//   const data = this.authService.userProfileQuery.data();
-//   return data?.user ?? null;
-// });
   
   user = this.authService.userProfileQuery.data
 
@@ -96,7 +91,7 @@ export class TermDetails {
     this.termForm.markAllAsTouched();
     console.log(this.termForm.value);
     
-    // if ( this.termForm.pristine ) return;
+    if ( this.termForm.pristine ) return;
     // if (!this.termForm.valid ) return;
 
     const formValue = this.termForm.value;
@@ -105,14 +100,8 @@ export class TermDetails {
     const termLike: Partial<Term> = {
       ...(formValue as any),
       variantId:variantId,
-      // userId: this.currentUser() ? this.currentUser()?.id : 0
-      // userId: this.authService.data() ? this.authService.data()?.user.id : 0
       userId: this.user()?.user ? this.user()?.user.userId: 0
-    }
-
-    console.log({termLike: termLike});
-    console.log({currentUSer: this.user()?.user});
-    
+    }  
 
     if ( this.term().id === 'new'){
       
@@ -122,7 +111,7 @@ export class TermDetails {
         return
       }
 
-      if(this.selectedFile === null || this.selectedFile === undefined){
+      if(this.audioFile === null || this.audioFile === undefined){
         this.alertMessage.update(() => 'Falta seleccionar el audio');
         this.alertService.showAlert(this.alertMessage(), 'error');
         return
@@ -131,14 +120,11 @@ export class TermDetails {
       this.createTerm.mutate({
         term: termLike as any, 
         imageFile: this.imageFileList,
-        audioFile: this.selectedFile,
-        // userId: this.authService.user()?.id ? +this.authService.user()?.id! : 0
+        audioFile: this.audioFile,
       }, {
         onSuccess: (data) => {
-          console.log(data);
           this.alertMessage.update( ()=> 'Datos actualizados correctamente' )
           this.alertService.showAlert(this.alertMessage(), 'success')
-          // this.router.navigate(['/admin/organizations']);
           this.router.navigate(['/admin/terms', data.id]);
           
           this.termForm.markAsPristine();
@@ -153,7 +139,7 @@ export class TermDetails {
         id: this.term().id, 
         term: formValue as any, 
         imageFile: this.imageFileList,
-        audioFile: this.selectedFile
+        audioFile: this.audioFile
       }, {
         onSuccess: (data) => {
           console.log(data);
@@ -190,20 +176,20 @@ export class TermDetails {
       if (!file.type.startsWith('audio/')) {
         alert('Por favor selecciona un archivo de audio válido');
         input.value = '';
-        this.selectedFile = null;
+        this.audioFile = null;
         return;
       }
 
-      // Validar tamaño (ej. 20 MB)
-      const maxSize = 20 * 1024 * 1024; // 20 MB
+      // Validar tamaño (5 MB)
+      const maxSize = 5 * 1024 * 1024; // 5 MB
       if (file.size > maxSize) {
-        alert('El archivo excede el límite de 2 MB');
+        alert('El archivo excede el límite de 5 MB');
         input.value = '';
-        this.selectedFile = null;
+        this.audioFile = null;
         return;
       }
 
-      this.selectedFile = file;
+      this.audioFile = file;
     }
   }
   

@@ -3,26 +3,21 @@
     <!-- head -->
     <thead>
       <tr>
-        <th>
-          <label>
-            <input type="checkbox" class="checkbox" />
-          </label>
-        </th>
         <th>Término</th>
         <th>Ejemplo</th>
-        <th>Localidad</th>
         <th>Variante</th>
+        <th>Detalles</th>
       </tr>
     </thead>
     <tbody>
       <!-- row 1 -->
       @for (term of terms(); track term.id) {
         <tr>
-          <th>
+          <!-- <th>
             <label>
               <input type="checkbox" class="checkbox" />
             </label>
-          </th>
+          </th> -->
           <td>
             <div class="flex items-center gap-3">
               <div class="avatar">
@@ -43,18 +38,24 @@
           <td>
             {{ term.example }}
             <br />
-            <span class="badge badge-ghost badge-sm">Desktop Support Technician</span>
+            <span class="badge badge-ghost badge-sm">{{term.example}}</span>
           </td>
+
+          <td>
+            {{term.variant.name}}
+          </td>
+          
           <td>
             <button 
               [routerLink]="['/admin/terms', term.id]",    
-              class="btn btn-accent btn-xs">Editar</button>
+              class="btn btn-accent btn-xs">Ver más</button>
           </td>
-          <th>
+
+          <!-- <th>
             <button 
               [routerLink]="['/admin/terms', term.id]",    
               class="btn btn-error btn-xs">Eliminar</button>
-          </th>
+          </th> -->
         </tr>  
        }
       

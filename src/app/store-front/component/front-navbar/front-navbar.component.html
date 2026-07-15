@@ -42,8 +42,14 @@
             <path d="m21 21-4.3-4.3"></path>
           </g>
         </svg>
-        <input type="search" required placeholder="Buscar" />
+        <input 
+          type="search" 
+          required placeholder="Buscar" 
+          #searchInput
+          (keyup.enter)="onSearch(searchInput.value)"/>
       </label>
+      
+      <button class="btn btn-accent mx-2" (click)="onSearch(searchInput.value)">Buscar</button>
 
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 gap-2">
@@ -85,7 +91,16 @@
 
     <!-- Page content here -->
     <div class="p-4">
+      @if(!searchQuery.data()){
         <router-outlet/>
+      } @else if (searchQuery.data()) {
+        <!-- <app-search-page [terms]="searchQuery.data()!"/> -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-2 gap-3">
+          @for (term of searchQuery.data()?.terms; track $index) {
+            <term-card [term]="term"></term-card>
+          }
+        </div>
+      }
     </div>
   </div>
 

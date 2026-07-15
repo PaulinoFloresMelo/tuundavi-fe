@@ -15,12 +15,20 @@ interface Options{
 const emptyTerm: Term = {
     id: 'new',
     content: '',
+    meaning: '',
     category: '',
     imageUrl: '',
     audioUrl: '',
     user: {
         id: '',
-        username: ''
+        username: '',
+        paternalName: '',
+        maternalName: '',
+    },
+    variant:{
+        name: '',
+        description: '',
+        localityName: '',
     },
     example: []
 };
