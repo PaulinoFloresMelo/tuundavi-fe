@@ -3,8 +3,6 @@ import { StoreFrontLayoutComponent } from "./layouts/store-front-layout/store-fr
 import { HomePageComponent } from "./pages/home-page/home-page.component";
 import { TermPageComponent } from "./pages/term-page/term-page.component";
 import { NotFoundPageComponent } from "./pages/not-found-page/not-found-page.component";
-// import { CategoryPageComponent } from "./pages/category-page/category-page.component";
-import { SearchPage } from "./pages/search-page/search-page";
 
 export const storeFrontRoutes: Routes = [
     {
@@ -15,18 +13,10 @@ export const storeFrontRoutes: Routes = [
                 path: '',
                 component: HomePageComponent,
             },
-            // {
-            //     path: 'category/:category',
-            //     component: CategoryPageComponent,
-            // },
             {
                 path: 'term/:idSlug',
                 component: TermPageComponent,
             },
-            // {
-            //     path: 'search',
-            //     component: SearchPage,
-            // },
             {
                 path: '**',
                 component: NotFoundPageComponent,
