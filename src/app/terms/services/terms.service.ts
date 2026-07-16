@@ -28,6 +28,7 @@ const emptyTerm: Term = {
         maternalName: '',
     },
     variant:{
+        id: 1,
         name: '',
         description: '',
         localityName: '',

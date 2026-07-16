@@ -4,7 +4,7 @@
     <thead>
       <tr>
         <th>Término</th>
-        <th>Ejemplo</th>
+        <th>Traducción</th>
         <th>Variante</th>
         <th>Detalles</th>
       </tr>
@@ -31,14 +31,11 @@
                 <a 
                   [routerLink]="['/admin/terms', term.id]"
                   class="font-bold hover:text-accent transition-colors dusration-300">{{ term.content}}</a>
-                <div class="text-sm opacity-50">{{ term.content}}</div>
               </div>
             </div>
           </td>
           <td>
-            {{ term.example }}
-            <br />
-            <span class="badge badge-ghost badge-sm">{{term.example}}</span>
+            <span class="badge badge-ghost badge-sm">{{term.meaning}}</span>
           </td>
 
           <td>

@@ -71,6 +71,10 @@ export class FrontNavbarComponent {
     }
   }
 
+  resetCurrentTerm(){
+    this.currentTerm.set('')
+  }
+
   constructor() {
     // Efecto para manejar el error
     effect(() => {
@@ -83,5 +87,4 @@ export class FrontNavbarComponent {
       }
     });
   }
-
 }

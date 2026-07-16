@@ -90,6 +90,7 @@ export class TermDetails {
 
   setFormValue(formLike: Partial<Term>){
     this.termForm.reset(formLike as any);
+    this.termForm.get('variantId')?.setValue(formLike.variant?.id ? formLike.variant?.id : 1)
   }
 
   async onSubmit(){

@@ -38,12 +38,10 @@ export class GetTermsService {
                 }
                 })
             )
-            console.log(response);
             
             return response;
 
         } catch (error) {
-            console.log(error);
             throw new Error('No se pudieron obtener los Terminos');
         }
     }

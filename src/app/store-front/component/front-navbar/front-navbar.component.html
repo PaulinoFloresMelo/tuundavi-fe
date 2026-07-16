@@ -19,17 +19,27 @@
           class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
           
           <li>
-            <a routerLink="/category/cocina" class="btn btn-ghost" routerLinkActive="text-accent">Proponer termino</a>
+            <a 
+              routerLink="/admin/terms/new" 
+              class="btn btn-ghost" 
+              routerLinkActive="text-accent"
+              (click)="isUser()"
+              >Proponer termino</a>
           </li>
-
-          <li>
-            <a routerLink="/admin" class="btn btn-ghost" routerLinkActive="text-accent">Panel Admin</a>
-          </li>
+          
+          @if (authService.data()?.user?.isAdmin) {
+              <li>
+                <a routerLink="/admin" 
+                  class="btn btn-soft" 
+                  routerLinkActive="text-accent"
+                  (click)="isUser()">Panel Admin</a>
+              </li>
+            }
           
         </ul>
       </div>
 
-      <label class="input ml-4 hidden sm:flex">
+      <label class="input ml-4">
         <svg class="h-[1em] opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <g
             stroke-linejoin="round"
@@ -49,14 +59,22 @@
           (keyup.enter)="onSearch(searchInput.value)"/>
       </label>
       
-      <button class="btn btn-accent mx-2" (click)="onSearch(searchInput.value)">Buscar</button>
+      <button class="btn btn-accent btn-sm mx-2 px-2 sm:px-4 hidden sm:inline-flex"
+        aria-label="Buscar" 
+        (click)="onSearch(searchInput.value)"
+        >
+        <span class="hidden sm:inline">Buscar</span>
+        <svg class="block sm:hidden" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+          <path fill="#cccccc" d="M10.44 3a7.44 7.44 0 1 0 4.803 13.122c-.022.271.07.55.278.757l3.84 3.84a.96.96 0 1 0 1.358-1.358l-3.84-3.84a.96.96 0 0 0-.757-.278A7.44 7.44 0 0 0 10.44 3m-6 7.44a6 6 0 1 1 12 0a6 6 0 0 1-12 0"/>
+        </svg>
+      </button>
 
       <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 gap-2">
             
             <li>
               <a routerLink="/admin/terms/new" 
-                class="btn btn-soft ml-4" 
+                class="btn btn-soft btn-sm ml-4" 
                 routerLinkActive="text-accent"
                 (click)="isUser()">Proponer termino</a>
             </li>
@@ -64,7 +82,7 @@
             @if (authService.data()?.user?.isAdmin) {
               <li>
                 <a routerLink="/admin" 
-                  class="btn btn-soft" 
+                  class="btn btn-soft btn-sm" 
                   routerLinkActive="text-accent"
                   (click)="isUser()">Panel Admin</a>
               </li>
@@ -74,15 +92,30 @@
       <div class="navbar-end gap-4">
 
         @if ( authService.data()) {
-          <button class="btn btn-ghost">
-            {{ authService.data()?.user?.username }}
+          <button class="btn btn-soft">
+            <!-- En móvil: solo la inicial -->
+            <span class="sm:hidden">{{ authService.data()?.user?.username?.charAt(0) || '?' }}</span>
+            
+            <!-- En pantallas grandes: nombre completo -->
+            <span class="hidden sm:inline">{{ authService.data()?.user?.username }}</span>
           </button>
           
-          <button class="btn btn-sm btn-accent"
-            (click)="authService.logout()">Salir</button>
+          <button class="btn btn-sm btn-accent px-2 sm:px-4"
+            aria-label="Salir"
+            (click)="authService.logout()">
+            <span class="hidden sm:inline">Salir</span>
+            <svg class="block sm:hidden" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+              <path fill="currentColor" fill-rule="evenodd" d="M3 5c0-1.1.9-2 2-2h8v2H5v14h8v2H5c-1.1 0-2-.9-2-2zm14.176 6L14.64 8.464l1.414-1.414l4.95 4.95l-4.95 4.95l-1.414-1.414L17.176 13H10.59v-2z"/>
+            </svg>
+          </button>
         }
         @else if ( !authService.data() ) {
-          <a class="btn btn-soft" routerLink="/auth/login">Autenticación</a>
+          <a class="btn btn-soft btn-sm px-2 sm:px-4" routerLink="/auth/login" aria-label="Autenticación">
+            <span class="hidden sm:inline">Autenticación</span>
+            <svg class="block sm:hidden" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24">
+              <path fill="currentColor" d="M13 21q-.425 0-.712-.288T12 20t.288-.712T13 19h6V5h-6q-.425 0-.712-.288T12 4t.288-.712T13 3h6q.825 0 1.413.588T21 5v14q0 .825-.587 1.413T19 21zm-1.825-8H4q-.425 0-.712-.288T3 12t.288-.712T4 11h7.175L9.3 9.125q-.275-.275-.275-.675t.275-.7t.7-.313t.725.288L14.3 11.3q.3.3.3.7t-.3.7l-3.575 3.575q-.3.3-.712.288T9.3 16.25q-.275-.3-.262-.712t.287-.688z"/>
+            </svg>
+          </a>
         }
       </div>
     </nav>
@@ -94,7 +127,6 @@
       @if(!searchQuery.data()){
         <router-outlet/>
       } @else if (searchQuery.data()) {
-        <!-- <app-search-page [terms]="searchQuery.data()!"/> -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-2 gap-3">
           @for (term of searchQuery.data()?.terms; track $index) {
             <term-card [term]="term"></term-card>
@@ -111,7 +143,11 @@
       <ul class="menu w-full grow">
         <!-- List item -->
         <li>
-          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right btn btn-soft text-xl mb-7" data-tip="Homepage" routerLink="/">
+          <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right btn btn-soft text-xl mb-7" 
+            data-tip="Homepage" 
+            routerLink="/"
+            (click)="resetCurrentTerm()"
+            >
             <!-- Home icon -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linejoin="round" stroke-linecap="round" stroke-width="2" fill="none" stroke="currentColor" class="w-6 h-6">
                 <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"></path>
@@ -129,7 +165,9 @@
             <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right  btn btn-soft mb-2" 
               data-tip="Settings" 
               routerLinkActive="text-accent" 
-              [routerLink]="['/']" [queryParams]="{category: category.key, page: 1}">
+              [routerLink]="['/']" [queryParams]="{category: category.key, page: 1}"
+              (click)="resetCurrentTerm()"
+              >
               
               <span 
                 class="is-drawer-close:hidden"

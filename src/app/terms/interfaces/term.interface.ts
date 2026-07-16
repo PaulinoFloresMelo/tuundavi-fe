@@ -23,6 +23,7 @@ export interface Term{
         maternalName: string;
     },
     variant:{
+        id: number,
         name: string,
         description: string;
         localityName: string;
