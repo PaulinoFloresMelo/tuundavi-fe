@@ -21,7 +21,7 @@ export class GetTermsService {
 
     private http = inject(HttpClient);
     private options = {
-            limit : 1, offset : 0, category: ''
+            limit : 10, offset : 0, category: ''
         }
 
     private async getTerms(category: string, page: number): Promise<TermsResponse> {

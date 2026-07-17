@@ -13,12 +13,13 @@
             "category": "animales",
             "variante": {
                 "nombre": "Náhuatl de la Sierra noreste de Puebla",
-                "descripción": "Tomado de : EJERCICIOS PARA EL APRENDIZAJE DE LA LENGUA NÁHUATL DE HUEYAPAN Y DICCIONARIO ESPAÑOLNÁHUATL. MARCELINO MONTERO BAEZ",
                 "localidad": {
-                    "nombre": "Hueyapan"
+                    "estado": "Puebla",
+                    "Municipio": "Puebla",
+                    "Localidad": "San Lucas Axala"
                 }
             },
-            "userId": "1"
+            "emailUser": "emailUser@gmail.com"
         },
         {
             "id": 2,

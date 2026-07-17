@@ -10,7 +10,6 @@ import { RouterLink } from '@angular/router';
   selector: 'term-card',
   imports: [
     RouterLink, 
-    SlicePipe, 
     TermImagePipe,
     TermAudioPipe
   ],
