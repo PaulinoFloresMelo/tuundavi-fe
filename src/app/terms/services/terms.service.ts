@@ -42,29 +42,6 @@ export class TermsService {
     private termsCache = new Map<string,TermsResponse>();
     private termCache = new Map<string,Term>();
 
-    // getTerms( options: Options ):Observable<TermsResponse>{
-
-    //     const { limit = 2, offset = 0 , category = ''} = options;
-        
-    //     const key = `${limit}-${offset}-${category}`; // 9-0-''
-    //     if ( this.termsCache.has(key) ) {
-    //         return of(this.termsCache.get(key)!);
-    //     }
-
-    //     return this.http
-    //     .get<TermsResponse>(`${baseUrl}/terms`,{
-    //         params:{
-    //             limit, 
-    //             offset, 
-    //             category 
-    //         }
-    //     })
-    //     .pipe(
-    //         tap((resp) => console.log(resp)),
-    //         tap((resp) => this.termsCache.set(key, resp))
-    //     );
-    // }
-
     getTermById(id: string): Observable<Term>{
         if (id === 'new') {
             return of(emptyTerm);

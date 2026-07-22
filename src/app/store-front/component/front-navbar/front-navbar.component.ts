@@ -36,23 +36,26 @@ export class FrontNavbarComponent {
     }
     return
   }
-
-  categories = {
-    'adverbio': 'Adverbio',
+  
+  grammaticalCategory = {
     'animal': 'Animales',
     'color': 'Colores',
     'dayoftheweek': 'Días de la semana',
-    'frequentverb': 'Verbos frecuentes',
-    'numberfromonetohundred': 'Números 1-100',
+    'numbers': 'Números',
     'schoolobject': 'Objetos escolares',
     'agriculture': 'Agricultura',
-    'mood': 'Estados de ánimo',
-    'familyandpeople': 'Familiares y gente',
-    'fruitsandvegetables': 'Frutas y vegetales',
-    'householdobjects': 'Objetos domesticos',
-    'personalpronouns': 'Pronombres personales',
-    'weatherandseasonsoftheyear': 'Clima y estaciones del año',
     'foodanddrink': 'Comidas y bebidas',
+    'weatherandseasonsoftheyear': 'Clima y estaciones del año',
+    'householdobjects': 'Objetos domesticos',
+    'fruitsandvegetables': 'Frutas y vegetales',
+    'familyandpeople': 'Familiares y gente',
+    'mood': 'Estados de ánimo',
+  }
+  
+  semanticCategory = {
+    'adverbio': 'Adverbio',
+    'frequentverb': 'Verbos frecuentes',
+    'personalpronouns': 'Pronombres personales',
   }
 
   currentTerm = signal('');

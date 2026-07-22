@@ -20,6 +20,7 @@ export class TermsAdminPage {
     termsQuery = injectQuery(() => 
       this.getTerms.termsQuery(
         this.paginationService.currentCategory(),
+        this.paginationService.letter(),
         this.paginationService.currentPage()
       )
     );

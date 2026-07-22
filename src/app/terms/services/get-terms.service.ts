@@ -21,10 +21,10 @@ export class GetTermsService {
 
     private http = inject(HttpClient);
     private options = {
-            limit : 10, offset : 0, category: ''
+            limit : 10, offset : 0, category: '', letter: ''
         }
 
-    private async getTerms(category: string, page: number): Promise<TermsResponse> {
+    private async getTerms(category: string, letter: string, page: number): Promise<TermsResponse> {
         
 
         try {
@@ -32,12 +32,15 @@ export class GetTermsService {
             const response = await lastValueFrom(
                 this.http.get<TermsResponse>(`${baseUrl}/terms`,{
                     params:{
-                    limit : this.options.limit,
-                    offset: this.options.limit * (page-1),
-                    category: category
-                }
+                        limit : this.options.limit,
+                        offset: this.options.limit * (page-1),
+                        category: category,
+                        letter: letter
+                    }
                 })
             )
+            console.log(response);
+            
             
             return response;
 
@@ -46,11 +49,11 @@ export class GetTermsService {
         }
     }
 
-    termsQuery(category: string, page: number) {
+    termsQuery(category: string, letter: string, page: number) {
 
         const termssQuery = queryOptions({    
-            queryKey: ['terms', category, page.toString()],
-            queryFn: () => this.getTerms(category, page),
+            queryKey: ['terms', category, letter, page.toString()],
+            queryFn: () => this.getTerms(category, letter, page),
             staleTime: 5 * 60 * 1000
         })
         return termssQuery

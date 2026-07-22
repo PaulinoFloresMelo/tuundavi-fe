@@ -7,9 +7,10 @@ import { RouterLink } from '@angular/router';
   templateUrl: './pagination.component.html',
 })
 export class PaginationComponent { 
-  pages        = input(0);
-  currentPage  = input<number>(1);
-  currentCategory  = input<string>('');
+  pages           = input(0);
+  currentPage     = input<number>(1);
+  currentCategory = input<string>('');
+  letter          = input<string>('');
 
   activePage   = linkedSignal(this.currentPage);
 

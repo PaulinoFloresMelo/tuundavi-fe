@@ -5,7 +5,7 @@
         <button class="join-item btn"
             [class.btn-accent]="page === activePage()"
             [routerLink]="[]"
-            [queryParams]="{ category: currentCategory(), page: page}"
+            [queryParams]="{ category: currentCategory(),letter: letter(),  page: page}"
             (click)="activePage.set(page)"
             >
             {{page}}

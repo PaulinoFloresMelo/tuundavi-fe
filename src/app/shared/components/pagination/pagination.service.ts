@@ -29,4 +29,17 @@ export class PaginationService {
 
     public currentCategory = linkedSignal(this._currentCategory);
 
+
+    private _letter = toSignal(
+        this.activatedRoute.queryParamMap.pipe(
+            map( params => (params.get('letter') ? params.get('letter')! : '' )),
+            map((letter) => (letter))
+        ),
+        {
+        initialValue: '',
+        }
+    )
+
+    public letter = linkedSignal(this._letter);
+
 }

@@ -1,13 +1,21 @@
 
 
-<h1 class="text-3xl font-bold">
-  Todos los términos
-</h1>
+ @for (letter of alphabet | keyvalue; track $index) {
+    <button class="btn btn-outline mb-2 ml-3"  
+      routerLinkActive="text-accent" 
+      [routerLink]="['/']" [queryParams]="{category: category(), letter: letter.key, page: 1}"
+      >
+      
+      <span 
+        class="is-drawer-close:hidden"
+      >{{letter.value}}</span>
+    </button>
+  }
 
 
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-2 gap-3">
   
-  @for (term of termsQuery.data()?.terms; track $index) {
+  <!-- @for (term of termsQuery.data()?.terms; track $index) {
     <term-card [term]="term"></term-card>
   }
 
@@ -21,14 +29,41 @@
       <p>No hay datos</p>
     }
 
-  }
-  
+  } -->
+  <div class="overflow-x-auto">
+    <table class="table">
+      <!-- head -->
+      <thead>
+        <tr>
+          <th></th>
+          <th>Términos</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- row -->
+         @for (term of termsQuery.data()?.terms; track $index) {
+          <tr>
+            <th>{{term.id}}</th>
+            <!-- <td>{{term.meaning}}</td> -->
+            <td>
+              <a 
+                [routerLink]="['/term', term.id]"
+                class="font-bold hover:text-accent transition-colors dusration-300">{{ term.meaning }}
+              </a>
+            </td>
+          </tr>
+         }
+    
+      </tbody>
+    </table>
+  </div>  
 </div>
 
 <app-pagination 
   [pages]="termsQuery.data()?.pages ?? 0"
   [currentPage]="paginationService.currentPage()"
   [currentCategory]="paginationService.currentCategory()"
+  [letter]="paginationService.letter()"
 />
 
 

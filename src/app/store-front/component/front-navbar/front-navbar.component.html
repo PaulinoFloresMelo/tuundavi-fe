@@ -120,8 +120,6 @@
       </div>
     </nav>
 
-    
-
     <!-- Page content here -->
     <div class="p-4">
       @if(!searchQuery.data()){
@@ -158,14 +156,48 @@
             </span>
           </button>
         </li>
+        
+        <li>
+          <button class="btn btn-outline mb-2" 
+            routerLink="/"
+            (click)="resetCurrentTerm()"
+            >
+            Categoría semántica
+          </button>
+        </li>
 
         <!-- List item -->
-        @for (category of categories | keyvalue; track $index) {
+        @for (category of grammaticalCategory | keyvalue; track $index) {
           <li>
-            <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right  btn btn-soft mb-2" 
+            <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right  btn btn-soft mb-2 ml-3" 
               data-tip="Settings" 
               routerLinkActive="text-accent" 
-              [routerLink]="['/']" [queryParams]="{category: category.key, page: 1}"
+              [routerLink]="['/']" [queryParams]="{category: category.key, letter: 'a', page: 1}"
+              (click)="resetCurrentTerm()"
+              >
+              
+              <span 
+                class="is-drawer-close:hidden"
+              >{{category.value}}</span>
+            </button>
+          </li>
+        }
+
+        <li>
+          <button class="btn btn-outline mb-2 mt-2" 
+            routerLink="/"
+            (click)="resetCurrentTerm()"
+            >
+            Categoría gramtical
+          </button>
+        </li>
+        <!-- List item -->
+        @for (category of semanticCategory | keyvalue; track $index) {
+          <li>
+            <button class="is-drawer-close:tooltip is-drawer-close:tooltip-right  btn btn-soft mb-2 ml-3" 
+              data-tip="Settings" 
+              routerLinkActive="text-accent" 
+              [routerLink]="['/']" [queryParams]="{category: category.key, letter: 'a', page: 1}"
               (click)="resetCurrentTerm()"
               >
               
