@@ -23,7 +23,6 @@
               routerLink="/admin/terms/new" 
               class="btn btn-ghost" 
               routerLinkActive="text-accent"
-              (click)="isUser()"
               >Proponer termino</a>
           </li>
           
@@ -32,7 +31,7 @@
                 <a routerLink="/admin" 
                   class="btn btn-soft" 
                   routerLinkActive="text-accent"
-                  (click)="isUser()">Panel Admin</a>
+                  >Panel Admin</a>
               </li>
             }
           
@@ -76,7 +75,7 @@
               <a routerLink="/admin/terms/new" 
                 class="btn btn-soft btn-sm ml-4" 
                 routerLinkActive="text-accent"
-                (click)="isUser()">Proponer termino</a>
+                >Proponer termino</a>
             </li>
 
             @if (authService.data()?.user?.isAdmin) {
@@ -84,7 +83,7 @@
                 <a routerLink="/admin" 
                   class="btn btn-soft btn-sm" 
                   routerLinkActive="text-accent"
-                  (click)="isUser()">Panel Admin</a>
+                  >Panel Admin</a>
               </li>
             }
         </ul>

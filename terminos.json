@@ -61,5 +61,37 @@
                 }
             ]
         }
-    ]
+    ],
+    "nameVariants": {
+        "1": "Náhuatl de la Sierra, noreste de Puebla",
+        "2" : "Náhuatl del noroeste central",
+        "3" : "Náhuatl del Istmo",
+        "4" : "Náhuatl de la Huasteca veracruzana",
+        "5" : "Náhuatl de la Huasteca potosina",
+        "6" : "Náhuatl de Oaxaca",
+        "7" : "Náhuatl de la Sierra negra, sur",
+        "8" : "Náhuatl de la Sierra negra, norte",
+        "9" : "Náhuatl central de Veracruz",
+        "10" : "Náhuatl de la Sierra oeste de Puebla",
+        "11" : "Náhuatl alto del norte de Puebla",
+        "12" : "Náhuatl del Istmo bajo",
+        "13" : "Náhuatl del centro de Puebla",
+        "14" : "Mexicano bajo de occidente",
+        "15" : "Mexicano del noroeste",
+        "16" : "Mexicano de Guerrero",
+        "17" : "Mexicano de occidente",
+        "18" : "Mexicano central de occidente",
+        "19" : "Mexicano central bajo",
+        "20" : "Mexicano de Temixco",
+        "21" : "Mexicano de Puente de Ixtla",
+        "22" : "Mexicano de Tetela del Volcán",
+        "23" : "Mexicano alto de occidente",
+        "24" : "Mexicano del oriente",
+        "25" : "Mexicano del oriente central",
+        "26" : "Mexicano del centro bajo",
+        "27" : "Mexicano del centro alto",
+        "28" : "Mexicano del centro",
+        "29" : "Mexicano del oriente de Puebla",
+        "30" : "Mexicano de la Huasteca hidalguense"
+    }
 }

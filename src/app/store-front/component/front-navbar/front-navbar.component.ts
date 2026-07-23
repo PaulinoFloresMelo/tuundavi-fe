@@ -28,14 +28,6 @@ export class FrontNavbarComponent {
   searchTermService = inject(SearchTermService);
 
   alertMessage = signal('');
-
-  isUser(){
-    if(!this.authService.data()){
-      this.alertMessage.update(() => 'Es necesario autenticarse');
-      this.alertService.showAlert(this.alertMessage(), 'error');
-    }
-    return
-  }
   
   grammaticalCategory = {
     'animal': 'Animales',
