@@ -11,10 +11,11 @@ import { UpdateTermService } from '@/terms/services/update-term.service';
 import { TermsService } from '@/terms/services/terms.service';
 import { TermAudioPipe } from '@/terms/pipes/term-audio.pipe';
 import { FileSizePipe } from './file-size.pipe';
-import { GetVariantsService } from 'src/app/variants/services/get-variants.service';
 import { AuthService } from '@/auth/services/auth.service';
-// import { FormErrorFieldset } from '@/shared/components/form-error-fieldset/form-error-fieldset';
 import { FormUtils } from '@/utils/form-utils';
+import { GetVariantsNameService } from 'src/app/variantName/services/get-variantsName.service';
+import { GetVariantsStateService } from 'src/app/variantState/services/get-variantsState.service';
+import * as data from "../../../../../../public/assets/terminos.json"
 
 @Component({
   selector: 'term-details',
@@ -40,7 +41,8 @@ export class TermDetails {
   alertService = inject(AlertService);
   authService = inject(AuthService)
   termsService = inject(TermsService);
-  variantsService = inject(GetVariantsService);
+  variantsNameService = inject(GetVariantsNameService);
+  variantsStateService = inject(GetVariantsStateService);
   createTerm   = inject(CreateTermService);
   updateTerm   = inject(UpdateTermService);
   
@@ -82,6 +84,7 @@ export class TermDetails {
   }
   
   user = this.authService.userProfileQuery.data
+
 
   ngOnInit(): void {
     this.setFormValue(this.term());

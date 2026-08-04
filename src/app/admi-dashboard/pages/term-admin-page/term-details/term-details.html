@@ -90,7 +90,7 @@
         formControlName="variantId">
         
         <option disabled selected>Seleccione una variante</option>
-          @for (variant of variantsService.data()?.data; track variant.id) {
+          @for (variant of variantsNameService.data()?.data; track variant.id) {
             <option [value]="variant.id">{{ variant.name }}</option>
           }
       </select>
@@ -104,7 +104,7 @@
         formControlName="variantId">
         
         <option disabled selected>Seleccione una variante</option>
-          @for (variant of variantsService.data()?.data; track variant.id) {
+          @for (variant of variantsStateService.data()?.data; track variant.id) {
             <option [value]="variant.id">{{ variant.name }}</option>
           }
       </select>
@@ -115,7 +115,7 @@
         formControlName="variantId">
         
         <option disabled selected>Seleccione una variante</option>
-          @for (variant of variantsService.data()?.data; track variant.id) {
+          @for (variant of variantsNameService.data()?.data; track variant.id) {
             <option [value]="variant.id">{{ variant.name }}</option>
           }
       </select>
@@ -126,7 +126,7 @@
         formControlName="variantId">
         
         <option disabled selected>Seleccione una variante</option>
-          @for (variant of variantsService.data()?.data; track variant.id) {
+          @for (variant of variantsNameService.data()?.data; track variant.id) {
             <option [value]="variant.id">{{ variant.name }}</option>
           }
       </select>
