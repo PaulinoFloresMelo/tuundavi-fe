@@ -20,7 +20,7 @@ export class GetVariantsService {
         try {
             
             const response = await lastValueFrom(
-                this.http.get<VariantResponse>(`${baseUrl}/variants`,{
+                this.http.get<VariantResponse>(`${baseUrl}/termsNahuatl`,{
             }))
             console.log(response);
             

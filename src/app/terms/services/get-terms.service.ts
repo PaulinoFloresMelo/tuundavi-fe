@@ -30,7 +30,7 @@ export class GetTermsService {
         try {
             
             const response = await lastValueFrom(
-                this.http.get<TermsResponse>(`${baseUrl}/terms`,{
+                this.http.get<TermsResponse>(`${baseUrl}/meanings`,{
                     params:{
                         limit : this.options.limit,
                         offset: this.options.limit * (page-1),

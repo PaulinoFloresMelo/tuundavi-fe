@@ -1,0 +1,143 @@
+{
+    "states": {
+        "01AS": "Aguascalientes",
+        "02BC": "Baja California",
+        "03BS": "Baja California Sur",
+        "04CC": "Campeche",
+        "05CL": "Coahuila de Zaragoza",
+        "06CM": "Colima",
+        "07CS": "Chiapas",
+        "08CH": "Chihuahua",
+        "09DF": "Ciudad de México",
+        "10DG": "Durango",
+        "11GT": "Guanajuato",
+        "12GR": "Guerrero",
+        "13HG": "Hidalgo",
+        "14JC": "Jalisco",
+        "15MC": "Estado de México",
+        "16MN": "Michoacán de Ocampo",
+        "17MS": "Morelos",
+        "18NT": "Nayarit",
+        "19NL": "Nuevo León",
+        "20OC": "Oaxaca",
+        "21PL": "Puebla",
+        "22QT": "Querétaro",
+        "23QR": "Quintana Roo",
+        "24SP": "San Luis Potosí",
+        "25SL": "Sinaloa",
+        "26SR": "Sonora",
+        "27TC": "Tabasco",
+        "28TS": "Tamaulipas",
+        "29TL": "Tlaxcala",
+        "30VZ": "Veracruz de Ignacio de la Llave",
+        "31YN": "Yucatán",
+        "32ZS": "Zacatecas" 
+    },
+    
+    "Náhuatl de la Sierra, noreste de Puebla":[
+        "Puebla",
+        {
+            "1":"1:21"
+        }
+    ],
+    "Náhuatl del noroeste central":[
+        "Hidalgo",
+        "Puebla",
+        {
+            "1":"2:21",
+            "2":"2:14"
+        }
+    ],
+    "Náhuatl del Istmo":[
+        "Veracruz de Ignacio de la Llave",
+        {
+            "1": "3:30"
+        }
+    ],
+    "Náhuatl de la Huasteca veracruzana":[
+        "Veracruz de Ignacio de la Llave",
+        {
+            "1": "4:30"
+        }
+    ],
+    "Náhuatl de la Huasteca potosina":[
+        "San Luis Potosí"
+    ],
+    "Náhuatl de Oaxaca":[
+        "Oaxaca"
+    ],
+    "Náhuatl de la Sierra negra, sur":[
+        "Puebla"
+    ],
+    "Náhuatl de la Sierra negra, norte":[
+        "Puebla"
+    ],
+    "Náhuatl central de Veracruz":[
+        "Veracruz"
+    ],
+    "Náhuatl de la Sierra oeste de Puebla":[
+        "Puebla"
+    ],
+    "Náhuatl alto del norte de Puebla":[
+        "Puebla"
+    ],
+    "Náhuatl del Istmo bajo":[
+        "Veracruz"
+    ],
+    "Náhuatl del centro de Puebla":[
+        "Puebla"
+    ],
+    "Mexicano bajo de occidente":[
+        "Colima"
+    ],
+    "Mexicano del noroeste":[
+       "Durango"
+    ],
+    "Mexicano de Guerrero":[
+        "Guerrero",
+        "Puebla"
+    ],
+    "Mexicano de occidente":[
+        "Jalisco"
+    ],
+    "Mexicano central de occidente":[
+        "Michoacán"
+    ],
+    "Mexicano central bajo":[
+        "Morelos"
+    ],
+    "Mexicano de Temixco":[
+        "Morelos"
+    ],
+    "Mexicano de Puente de Ixtla":[
+        "Morelos"
+    ],
+    "Mexicano de Tetela del Volcán":[
+        "Morelos"
+    ],
+    "Mexicano alto de occidente":[
+        "Nayarit"
+    ],
+    "Mexicano del oriente":[
+        "Tabasco"
+    ],
+    "Mexicano del oriente central":[
+        "Tlaxcala"
+    ],
+    "Mexicano del centro bajo":[
+        "Estado de México"
+    ],
+    "Mexicano del centro alto":[
+        "Ciudad de México",
+        "Estado de México"
+    ],
+    "Mexicano del centro":[
+        "Estado de México"
+    ],
+    "Mexicano del oriente de Puebla":[
+        "Puebla"
+    ],
+    "Mexicano de la Huasteca hidalguense":[
+        "Hidalgo"
+    ]
+}

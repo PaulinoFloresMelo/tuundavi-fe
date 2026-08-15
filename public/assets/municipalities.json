@@ -1,0 +1,88 @@
+
+{
+    "Náhuatl de la Sierra, noreste de Puebla": {
+        "Puebla": {
+            "municipalities":{
+                "1-21PL-1An": "Atempan",
+                "1-21PL-2Ao": "Ayotoxco de Guerrero",
+                "1-21PL-3Cn": "Cuautempan",
+                "1-21PL-4Co": "Cuetzalan del Progreso",
+                "1-21PL-5Ca": "Chignautla",
+                "1-21PL-6Hn": "Hueyapan",
+                "1-21PL-7Ho": "Hueytamalco",
+                "1-21PL-8Hn": "Huitzilán de Serdán",
+                "1-21PL-9In": "Ixtacamaxtitlán",
+                "1-21PL-10Ja": "Jonotla",
+                "1-21PL-11Na": "Nauzontla",
+                "1-21PL-12To": "Tetela de Ocampo",
+                "1-21PL-13Tn": "Teziutlán",
+                "1-21PL-14Tc": "Tlatlauquitepec",
+                "1-21PL-15Ta": "Tuzamapan de Galeana",
+                "1-21PL-16Xo": "Xochiapulco",
+                "1-21PL-17Xz": "Xochitlán de Vicente Suárez",
+                "1-21PL-18Yc": "Yaonáhuac",
+                "1-21PL-19Za": "Zacapoaxtla",
+                "1-21PL-20Za": "Zautla",
+                "1-21PL-21Zz": "Zapotitlán de Méndez",
+                "1-21PL-22Za": "Zaragoza",
+                "1-21PL-23Zn": "Zoquiapan"
+            }
+        }
+    },
+    "Náhuatl del noroeste central":{
+        "Puebla":{
+            "municipalities":{
+                "2-21PL-1Ca": "Chiconcuautla",
+                "2-21PL-2Hy": "Honey",
+                "2-21PL-3Ho": "Huauchinango",
+                "2-21PL-4Ja": "Jopala",
+                "2-21PL-5Jo": "Juan Galindo",
+                "2-21PL-6Nn": "Naupan",
+                "2-21PL-7Pn": "Pahuatlán",
+                "2-21PL-8Ta": "Tlaola",
+                "2-21PL-9Ta": "Tlapacoya",
+                "2-21PL-10Xc": "Xicotepec",
+                "2-21PL-11Za": "Zihuateutla"
+            }
+        }
+    },
+    "Náhuatl del Istmo":{
+        "Veracruz de Ignacio de la Llave": {
+            "municipalities": {
+                "3-30VZ-1Ce": "Cosoleacaque",
+                "3-30VZ-2Mn": "Mecayapan",
+                "3-30VZ-3Pn": "Pajapan",
+                "3-30VZ-4Za": "Zaragoza"
+            }
+        }
+    },
+
+    "Náhuatl de la Huasteca veracruzana":{
+        "Veracruz de Ignacio de la Llave": {
+            "municipalities": {
+                "4-30VZ-1Bz": "Benito Juárez",
+                "4-30VZ-2Co": "Castillo de Teayo",
+                "4-30VZ-3Ca": "Chalma",
+                "4-30VZ-4Cl": "Chiconamel",
+                "4-30VZ-5Cc": "Chicontepec",
+                "4-30VZ-6Ca": "Chontla",
+                "4-30VZ-7Cl": "Citlaltépetl",
+                "4-30VZ-8Ha": "Huayacocotla",
+                "4-30VZ-9In": "Ilamatlán",
+                "4-30VZ-10Ic": "Ixcatepec",
+                "4-30VZ-11Io": "Ixhuatlán de Madero",
+                "4-30VZ-12Po": "Pánuco",
+                "4-30VZ-13Pz": "Platón Sánchez",
+                "4-30VZ-14Tn": "Tamalín",
+                "4-30VZ-15Ta": "Tantima",
+                "4-30VZ-16Ta": "Tantoyuca",
+                "4-30VZ-17Ta": "Tepetzintla",
+                "4-30VZ-18Tc": "Texcatepec",
+                "4-30VZ-19To": "Tlachichilco",
+                "4-30VZ-20Te": "Temapache",
+                "4-30VZ-21Zs": "Zontecomatlán de López y Fuentes" 
+            }
+        }
+    }
+}
+
