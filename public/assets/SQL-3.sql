@@ -1,3 +1,4 @@
+-- Registros: 166, Variante. (3, "Náhuatl del Istmo")
 INSERT INTO localities (id, name, municipality_id) VALUES 
     ("3-30VZ-1Ce-1",  "Arroyo el Limón", "3-30VZ-1Ce"),
     ("3-30VZ-1Ce-2",  "Bajo Grande", "3-30VZ-1Ce"),
@@ -94,7 +95,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("3-30VZ-2Mn-7",  "El Rubí", "3-30VZ-2Mn"),
     ("3-30VZ-2Mn-8",  "Encino Amarillo", "3-30VZ-2Mn"),
     ("3-30VZ-2Mn-9",  "Guasinapa", "3-30VZ-2Mn"),
-    ("3-30VZ-2Mn-10",  "Huazuntlán", "3-30VZ-2Mn"),
+    ("3-30VZ-2Mn-10",  "Huazuntlán", "3-30VZ-2Mn");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("3-30VZ-2Mn-11",  "Ixhuapan", "3-30VZ-2Mn"),
     ("3-30VZ-2Mn-12",  "Juan Morales", "3-30VZ-2Mn"),
     ("3-30VZ-2Mn-13",  "La Bocana (Dos Bocas)", "3-30VZ-2Mn"),

@@ -1,3 +1,4 @@
+-- Registros: 1520, Variante. (4, "Náhuatl de la Huasteca veracruzana")
 INSERT INTO localities (id, name, municipality_id) VALUES 
     ("4-30VZ-1Bz-1",   "Acxitla", "4-30VZ-1Bz"),
     ("4-30VZ-1Bz-2",   "Ahuapilol", "4-30VZ-1Bz"),
@@ -95,7 +96,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-2Co-24",   "Las Américas", "4-30VZ-2Co"),
     ("4-30VZ-2Co-25",   "Leonilo Francisco Cruz", "4-30VZ-2Co"),
     ("4-30VZ-2Co-26",   "Lima Vieja", "4-30VZ-2Co"),
-    ("4-30VZ-2Co-27",   "Mequetla", "4-30VZ-2Co"),
+    ("4-30VZ-2Co-27",   "Mequetla", "4-30VZ-2Co");
+INSERT INTO localities (id, name, municipality_id) VALUES 
     ("4-30VZ-2Co-28",   "Moralillo", "4-30VZ-2Co"),
     ("4-30VZ-2Co-29",   "Nuevo Jalisco", "4-30VZ-2Co"),
     ("4-30VZ-2Co-30",   "Palma Nueva", "4-30VZ-2Co"),
@@ -194,7 +196,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-4Cl-26",   "Las Flores", "4-30VZ-4Cl"),
     ("4-30VZ-4Cl-27",   "Llano Largo", "4-30VZ-4Cl"),
     ("4-30VZ-4Cl-28",   "Los Coyolitos", "4-30VZ-4Cl"),
-    ("4-30VZ-4Cl-29",   "Los Laureles", "4-30VZ-4Cl"),
+    ("4-30VZ-4Cl-29",   "Los Laureles", "4-30VZ-4Cl");
+INSERT INTO localities (id, name, municipality_id) VALUES 
     ("4-30VZ-4Cl-30",   "Los Venados", "4-30VZ-4Cl"),
     ("4-30VZ-4Cl-31",   "Manantial", "4-30VZ-4Cl"),
     ("4-30VZ-4Cl-32",   "Mohuijco", "4-30VZ-4Cl"),
@@ -293,7 +296,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-5Cc-77",  "El Coyol", "4-30VZ-5Cc"),
     ("4-30VZ-5Cc-78",  "El Coyolito", "4-30VZ-5Cc"),
     ("4-30VZ-5Cc-79",  "El Crucero", "4-30VZ-5Cc"),
-    ("4-30VZ-5Cc-80",  "El Cuartel", "4-30VZ-5Cc"),
+    ("4-30VZ-5Cc-80",  "El Cuartel", "4-30VZ-5Cc");
+INSERT INTO localities (id, name, municipality_id) VALUES 
     ("4-30VZ-5Cc-81",  "El Chote la Antigua", "4-30VZ-5Cc"),
     ("4-30VZ-5Cc-82",  "El Fortín", "4-30VZ-5Cc"),
     ("4-30VZ-5Cc-83",  "El Ixtle Flores Magón", "4-30VZ-5Cc"),
@@ -392,7 +396,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-5Cc-178",  "Mesa de Ahuayo", "4-30VZ-5Cc"),
     ("4-30VZ-5Cc-179",  "Mesa de Calcote", "4-30VZ-5Cc"),
     ("4-30VZ-5Cc-180",  "Mesa de Pedernales", "4-30VZ-5Cc"),
-    ("4-30VZ-5Cc-181",  "Mesa de Tzonamatl", "4-30VZ-5Cc"),
+    ("4-30VZ-5Cc-181",  "Mesa de Tzonamatl", "4-30VZ-5Cc");
+INSERT INTO localities (id, name, municipality_id) VALUES 
     ("4-30VZ-5Cc-182",  "Mexcatla", "4-30VZ-5Cc"),
     ("4-30VZ-5Cc-183",  "Monte Chiquito", "4-30VZ-5Cc"),
     ("4-30VZ-5Cc-184",  "Monte Grande", "4-30VZ-5Cc"),
@@ -491,7 +496,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-5Cc-277",  "Tzocohuititla", "4-30VZ-5Cc"),
     ("4-30VZ-5Cc-278",  "Tzontzopilotl", "4-30VZ-5Cc"),
     ("4-30VZ-5Cc-279",  "Xahuayoca", "4-30VZ-5Cc"),
-    ("4-30VZ-5Cc-280",  "Xalatla", "4-30VZ-5Cc"),
+    ("4-30VZ-5Cc-280",  "Xalatla", "4-30VZ-5Cc");
+INSERT INTO localities (id, name, municipality_id) VALUES 
     ("4-30VZ-5Cc-281",  "Xaltepec", "4-30VZ-5Cc"),
     ("4-30VZ-5Cc-282",  "Xicalango", "4-30VZ-5Cc"),
     ("4-30VZ-5Cc-283",  "Xihuicalco", "4-30VZ-5Cc"),
@@ -590,7 +596,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-8Ha-20",  "Rafael Valenzuela (San Josecito)", "4-30VZ-8Ha"),
     ("4-30VZ-8Ha-21",  "San Antonio Ixtatetla", "4-30VZ-8Ha"),
     ("4-30VZ-8Ha-22",  "Viborillas", "4-30VZ-8Ha"),
-    ("4-30VZ-8Ha-23",  "Zilacatipan (Tenaxcalzingo)", "4-30VZ-8Ha"),
+    ("4-30VZ-8Ha-23",  "Zilacatipan (Tenaxcalzingo)", "4-30VZ-8Ha");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-8Ha-24",  "Zonzonapa", "4-30VZ-8Ha"),
     ("4-30VZ-9In-1",  "Acuescumux", "4-30VZ-9In"),
     ("4-30VZ-9In-2",  "Altamira", "4-30VZ-9In"),
@@ -689,7 +696,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-11Io-11",  "Ayotla", "4-30VZ-11Io"),
     ("4-30VZ-11Io-12",  "Barrio Abajo Colatlán", "4-30VZ-11Io"),
     ("4-30VZ-11Io-13",  "Barrio de Otlatzintla", "4-30VZ-11Io"),
-    ("4-30VZ-11Io-14",  "Brasil", "4-30VZ-11Io"),
+    ("4-30VZ-11Io-14",  "Brasil", "4-30VZ-11Io");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-11Io-15",  "Cacahuatengo", "4-30VZ-11Io"),
     ("4-30VZ-11Io-16",  "Cantollano", "4-30VZ-11Io"),
     ("4-30VZ-11Io-17",  "Cerro el Tablón", "4-30VZ-11Io"),
@@ -788,7 +796,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-11Io-112",  "Siete Palmas Barrio Abajo", "4-30VZ-11Io"),
     ("4-30VZ-11Io-113",  "Siete Palmas Barrio Arriba", "4-30VZ-11Io"),
     ("4-30VZ-11Io-114",  "Tecalco", "4-30VZ-11Io"),
-    ("4-30VZ-11Io-115",  "Tecanahua", "4-30VZ-11Io"),
+    ("4-30VZ-11Io-115",  "Tecanahua", "4-30VZ-11Io");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-11Io-116",  "Tecomate de Beltrán", "4-30VZ-11Io"),
     ("4-30VZ-11Io-117",  "Tenextongo (San Antonio)", "4-30VZ-11Io"),
     ("4-30VZ-11Io-118",  "Teopancahuac", "4-30VZ-11Io"),
@@ -887,7 +896,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-13Pz-6",  "Amoxoyahual", "4-30VZ-13Pz"),
     ("4-30VZ-13Pz-7",  "Apachitempa", "4-30VZ-13Pz"),
     ("4-30VZ-13Pz-8",  "Atempa", "4-30VZ-13Pz"),
-    ("4-30VZ-13Pz-9",  "Atexcal", "4-30VZ-13Pz"),
+    ("4-30VZ-13Pz-9",  "Atexcal", "4-30VZ-13Pz");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-13Pz-10",  "Brasilar", "4-30VZ-13Pz"),
     ("4-30VZ-13Pz-11",  "Buena Vista", "4-30VZ-13Pz"),
     ("4-30VZ-13Pz-12",  "Cacalaca", "4-30VZ-13Pz"),
@@ -986,7 +996,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-14Tn-13",  "San Javier", "4-30VZ-14Tn"),
     ("4-30VZ-14Tn-14",  "San Pedrito", "4-30VZ-14Tn"),
     ("4-30VZ-14Tn-15",  "Soteapan", "4-30VZ-14Tn"),
-    ("4-30VZ-14Tn-16",  "Tierra y Libertad", "4-30VZ-14Tn"),
+    ("4-30VZ-14Tn-16",  "Tierra y Libertad", "4-30VZ-14Tn");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-14Tn-17",  "San Jerónimo (La Guásima)", "4-30VZ-14Tn"),
     ("4-30VZ-15Ta-1",  "Acececa", "4-30VZ-15Ta"),
     ("4-30VZ-15Ta-2",  "Carmona y Valle (Las Gallinas)", "4-30VZ-15Ta"),
@@ -1085,7 +1096,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-16Ta-73",  "Las Trojes", "4-30VZ-16Ta"),
     ("4-30VZ-16Ta-74",  "Las Víboras", "4-30VZ-16Ta"),
     ("4-30VZ-16Ta-75",  "Lindero Aguacate", "4-30VZ-16Ta"),
-    ("4-30VZ-16Ta-76",  "Loma Alta", "4-30VZ-16Ta"),
+    ("4-30VZ-16Ta-76",  "Loma Alta", "4-30VZ-16Ta");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-16Ta-77",  "Loma Atravesada", "4-30VZ-16Ta"),
     ("4-30VZ-16Ta-78",  "Loma el Arpa", "4-30VZ-16Ta"),
     ("4-30VZ-16Ta-79",  "Los Ajos", "4-30VZ-16Ta"),
@@ -1185,7 +1197,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-17Ta-33",  "Tenexco", "4-30VZ-17Ta"),
     ("4-30VZ-17Ta-34",  "Tepetzintla", "4-30VZ-17Ta"),
     ("4-30VZ-17Ta-35",  "Tezitlal", "4-30VZ-17Ta"),
-    ("4-30VZ-17Ta-36",  "Tierra Blanca", "4-30VZ-17Ta"),
+    ("4-30VZ-17Ta-36",  "Tierra Blanca", "4-30VZ-17Ta");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-18Tc-1",  "Apanga (San Isidro Apanga)", "4-30VZ-18Tc"),
     ("4-30VZ-18Tc-2",  "Apoxteca", "4-30VZ-18Tc"),
     ("4-30VZ-18Tc-3",  "Ayotuxtla", "4-30VZ-18Tc"),
@@ -1283,7 +1296,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-20Te-59",  "El Mirador", "4-30VZ-20Te"),
     ("4-30VZ-20Te-60",  "El Nueve (La Concepción)", "4-30VZ-20Te"),
     ("4-30VZ-20Te-61",  "El Peñón", "4-30VZ-20Te"),
-    ("4-30VZ-20Te-62",  "El Pocito (Dos Lomitas)", "4-30VZ-20Te"),
+    ("4-30VZ-20Te-62",  "El Pocito (Dos Lomitas)", "4-30VZ-20Te");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-20Te-63",  "El Rayo", "4-30VZ-20Te"),
     ("4-30VZ-20Te-64",  "El Rodeo (Agua Nacida)", "4-30VZ-20Te"),
     ("4-30VZ-20Te-65",  "El Salto", "4-30VZ-20Te"),
@@ -1382,7 +1396,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-20Te-160",  "Otatal", "4-30VZ-20Te"),
     ("4-30VZ-20Te-161",  "Palo Blanco", "4-30VZ-20Te"),
     ("4-30VZ-20Te-162",  "Palo Blanco II (Chontla)", "4-30VZ-20Te"),
-    ("4-30VZ-20Te-163",  "Paso de Álamo (La Pita)", "4-30VZ-20Te"),
+    ("4-30VZ-20Te-163",  "Paso de Álamo (La Pita)", "4-30VZ-20Te");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-20Te-164",  "Paso del Perro (La Pimienta)", "4-30VZ-20Te"),
     ("4-30VZ-20Te-165",  "Piedras Negras", "4-30VZ-20Te"),
     ("4-30VZ-20Te-166",  "Potrero del Llano", "4-30VZ-20Te"),
@@ -1481,7 +1496,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-21Zs-35",  "La Candelaria", "4-30VZ-21Zs"),
     ("4-30VZ-21Zs-36",  "La Cruz", "4-30VZ-21Zs"),
     ("4-30VZ-21Zs-37",  "Limontitla", "4-30VZ-21Zs"),
-    ("4-30VZ-21Zs-38",  "Los Naranjos", "4-30VZ-21Zs"),
+    ("4-30VZ-21Zs-38",  "Los Naranjos", "4-30VZ-21Zs");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("4-30VZ-21Zs-39",  "Moloxla", "4-30VZ-21Zs"),
     ("4-30VZ-21Zs-40",  "Ostoteno", "4-30VZ-21Zs"),
     ("4-30VZ-21Zs-41",  "Otlatzintla", "4-30VZ-21Zs"),

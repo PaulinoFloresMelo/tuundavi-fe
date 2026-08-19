@@ -1,3 +1,4 @@
+-- Registros: 399, Variante. (2, "Náhuatl de la Sierra, noreste de Puebla")
 INSERT INTO localities (id, name, municipality_id) VALUES 
     ("2-13HG-1An-1", "Acaxochitlán", "2-13HG-1An"),
     ("2-13HG-1An-2", "Alpinagua", "2-13HG-1An"),
@@ -95,7 +96,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("2-21PL-3Ho-16",  "Chahuac", "2-21PL-3Ho"),
     ("2-21PL-3Ho-17",  "Chicuase", "2-21PL-3Ho"),
     ("2-21PL-3Ho-18",  "El Mirador", "2-21PL-3Ho"),
-    ("2-21PL-3Ho-19",  "El Paraíso", "2-21PL-3Ho"),
+    ("2-21PL-3Ho-19",  "El Paraíso", "2-21PL-3Ho");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("2-21PL-3Ho-20",  "Gustavo Díaz Ordaz (La Cuenca)", "2-21PL-3Ho"),
     ("2-21PL-3Ho-21",  "Huauchinango", "2-21PL-3Ho"),
     ("2-21PL-3Ho-22",  "Huejotzingo", "2-21PL-3Ho"),
@@ -195,7 +197,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("2-21PL-6Nn-15",  "Tlaxpanaloya", "2-21PL-6Nn"),
     ("2-21PL-7Pn-1",  "Acahuales (El Aguacate)", "2-21PL-7Pn"),
     ("2-21PL-7Pn-2",  "Acalapa", "2-21PL-7Pn"),
-    ("2-21PL-7Pn-3",  "Ahila", "2-21PL-7Pn"),
+    ("2-21PL-7Pn-3",  "Ahila", "2-21PL-7Pn");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("2-21PL-7Pn-4",  "Ahuacatitla", "2-21PL-7Pn"),
     ("2-21PL-7Pn-5",  "Almoloya", "2-21PL-7Pn"),
     ("2-21PL-7Pn-6",  "Atla", "2-21PL-7Pn"),
@@ -295,7 +298,8 @@ INSERT INTO localities (id, name, municipality_id) VALUES
     ("2-21PL-10Xc-24",  "La Cascada (Las Chacas)", "2-21PL-10Xc"),
     ("2-21PL-10Xc-25",  "La Chivería", "2-21PL-10Xc"),
     ("2-21PL-10Xc-26",  "La Garcita", "2-21PL-10Xc"),
-    ("2-21PL-10Xc-27",  "La Herradura", "2-21PL-10Xc"),
+    ("2-21PL-10Xc-27",  "La Herradura", "2-21PL-10Xc");
+INSERT INTO localities (id, name, municipality_id) VALUES
     ("2-21PL-10Xc-28",  "La Magdalena", "2-21PL-10Xc"),
     ("2-21PL-10Xc-29",  "La Muralla", "2-21PL-10Xc"),
     ("2-21PL-10Xc-30",  "La Palma", "2-21PL-10Xc"),
