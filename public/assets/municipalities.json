@@ -1,6 +1,6 @@
 
 {
-    "Náhuatl de la Sierra, noreste de Puebla": {
+    "1-Náhuatl de la Sierra, noreste de Puebla": {
         "Puebla": {
             "municipalities":{
                 "1-21PL-1An": "Atempan",
@@ -14,22 +14,27 @@
                 "1-21PL-9In": "Ixtacamaxtitlán",
                 "1-21PL-10Ja": "Jonotla",
                 "1-21PL-11Na": "Nauzontla",
-                "1-21PL-12To": "Tetela de Ocampo",
-                "1-21PL-13Tn": "Teziutlán",
-                "1-21PL-14Tc": "Tlatlauquitepec",
-                "1-21PL-15Ta": "Tuzamapan de Galeana",
-                "1-21PL-16Xo": "Xochiapulco",
-                "1-21PL-17Xz": "Xochitlán de Vicente Suárez",
-                "1-21PL-18Yc": "Yaonáhuac",
-                "1-21PL-19Za": "Zacapoaxtla",
-                "1-21PL-20Za": "Zautla",
-                "1-21PL-21Zz": "Zapotitlán de Méndez",
-                "1-21PL-22Za": "Zaragoza",
-                "1-21PL-23Zn": "Zoquiapan"
+                "1-21PL-12To": "Tenampulco",
+                "1-21PL-13To": "Tetela de Ocampo",
+                "1-21PL-14Tn": "Teziutlán",
+                "1-21PL-15Tc": "Tlatlauquitepec",
+                "1-21PL-16Ta": "Tuzamapan de Galeana",
+                "1-21PL-17Xo": "Xiutetelco",
+                "1-21PL-18Xo": "Xochiapulco",
+                "1-21PL-19Xz": "Xochitlán de Vicente Suárez",
+                "1-21PL-20Yc": "Yaonáhuac",
+                "1-21PL-21Za": "Zacapoaxtla",
+                "1-21PL-22Za": "Zautla",
+                "1-21PL-23Zz": "Zapotitlán de Méndez",
+                "1-21PL-24Za": "Zaragoza",
+                "1-21PL-25Zn": "Zoquiapan"
             }
         }
     },
-    "Náhuatl del noroeste central":{
+    "2-Náhuatl del noroeste central":{
+        "Hidalgo":{
+            "2-13HG-1An": "Acaxochitlán"
+        },
         "Puebla":{
             "municipalities":{
                 "2-21PL-1Ca": "Chiconcuautla",
@@ -46,7 +51,7 @@
             }
         }
     },
-    "Náhuatl del Istmo":{
+    "3-Náhuatl del Istmo":{
         "Veracruz de Ignacio de la Llave": {
             "municipalities": {
                 "3-30VZ-1Ce": "Cosoleacaque",
@@ -57,7 +62,7 @@
         }
     },
 
-    "Náhuatl de la Huasteca veracruzana":{
+    "4-Náhuatl de la Huasteca veracruzana":{
         "Veracruz de Ignacio de la Llave": {
             "municipalities": {
                 "4-30VZ-1Bz": "Benito Juárez",
