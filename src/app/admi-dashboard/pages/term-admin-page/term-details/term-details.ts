@@ -20,6 +20,7 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { distinctUntilChanged, map, startWith } from 'rxjs';
 import { injectQuery } from '@tanstack/angular-query-experimental';
 import { GetStateService } from '../../../../variantName/services/get-state.service';
+import { GetMunicipalitiesService } from '../../../../variantName/services/get-municipalities.service';
 
 @Component({
   selector: 'term-details',
@@ -49,6 +50,7 @@ export class TermDetails {
   getVariantService = inject(GetVariantService);
   getStateService = inject(GetStateService);
   variantsStateService = inject(GetVariantsStateService);
+  getMunicipalitiesService = inject(GetMunicipalitiesService);
   createTerm   = inject(CreateTermService);
   updateTerm   = inject(UpdateTermService);
   
@@ -71,6 +73,7 @@ export class TermDetails {
     variantId: [0, Validators.required],
     stateId: ['', Validators.required],
     municipalityId: ['', Validators.required],
+    localityId: ['', Validators.required],
   })
 
   categories = {
@@ -102,6 +105,7 @@ export class TermDetails {
     { initialValue: 0 }
   );
 
+
   statesByVariantIdQuery = injectQuery(() => 
     this.getVariantService.variantQuery(
       this.variantIdSignal().toString()
@@ -122,6 +126,22 @@ export class TermDetails {
     this.getStateService.stateQuery(
       {id: this.stateIdSignal().toString(),
          variantId: this.variantIdSignal().toString() }
+    )
+  );
+
+  
+  municipalityIdSignal = toSignal(
+    this.termForm.get('municipalityId')!.valueChanges.pipe(
+      startWith(this.termForm.get('municipalityId')?.value),
+      distinctUntilChanged(),
+      map(value => value ?? ''),
+    ),
+    { initialValue: '' }
+  );
+
+  localitiesByMunicipalyIdQuery = injectQuery(() => 
+    this.getMunicipalitiesService.MunicipalitQuery(
+      this.municipalityIdSignal().toString()
     )
   );
 

@@ -125,12 +125,12 @@
 
       <span class="label text-xs">Localidad</span>
       <select class="select select-bordered w-full"
-        [ngClass]="formUtils.inputClasses(termForm,'stateId')"
-        formControlName="stateId">
+        [ngClass]="formUtils.inputClasses(termForm,'localityId')"
+        formControlName="localityId">
         
-        <option disabled selected>Seleccione una variante</option>
-          @for (variant of variantsNameService.data()?.data; track variant.id) {
-            <option [value]="variant.id">{{ variant.name }}</option>
+        <option disabled selected>Seleccione una localidad</option>
+          @for (locality of localitiesByMunicipalyIdQuery.data()?.localities; track locality.id) {
+            <option [value]="locality.id">{{ locality.name }}</option>
           }
       </select>
 

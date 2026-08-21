@@ -5,31 +5,27 @@ import { queryOptions } from "@tanstack/angular-query-experimental"
 import { lastValueFrom } from "rxjs";
 
 import { environment } from "src/environments/environment";
-import { MunicipalitiesByStateId } from "../interfaces/municipalities-by-state-id-response.interface";
+import { LocalitiesByMunicipalityId } from "../interfaces/localities-by-mucipality-id-response.interface";
 
 const baseUrl = environment.baseUrl;
 
 @Injectable({providedIn: 'root'})
-export class GetStateService {
+export class GetMunicipalitiesService {
 
     private http = inject(HttpClient);
 
-    private async getState(params: {id: string, variantId: string}): Promise<MunicipalitiesByStateId> {
-        if(params.id === ''){
+    private async getMunicipality( id: string): Promise<LocalitiesByMunicipalityId> {
+        if( id === ''){
             return {
                 id: 0,
                 name: '',
-                municipalities: []
+                localities: []
             }
         }
         try {
             
             const response = await lastValueFrom(
-                this.http.get<MunicipalitiesByStateId>(`${baseUrl}/states/${params.id}`,{
-                    params:{
-                        variantId: params.variantId
-                    }
-                })
+                this.http.get<LocalitiesByMunicipalityId>(`${baseUrl}/municipalities/${id}`)
             )
             console.log(response);
             
@@ -40,13 +36,13 @@ export class GetStateService {
         }
     }
 
-    stateQuery(params: {id: string, variantId: string}) {
+    MunicipalitQuery(id: string) {
 
-        const stateQuery = queryOptions({    
-            queryKey: ['state', params.id],
-            queryFn: () => this.getState(params),
+        const MunicipalitQuery = queryOptions({    
+            queryKey: ['mucipality', id],
+            queryFn: () => this.getMunicipality( id ),
             staleTime: 5 * 60 * 1000
         })
-        return stateQuery
+        return MunicipalitQuery
     }
 }

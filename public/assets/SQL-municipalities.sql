@@ -28,7 +28,7 @@ INSERT INTO municipalities ( id, name, state_id ) VALUES
 
 -- Municipios de Puebla que hablan Náhuatl del noroeste central.
 INSERT INTO municipalities ( id, name, state_id ) VALUES
-  ("2-13HG-1An", "Acaxochitlán", "21PL"),
+  ("2-13HG-1An", "Acaxochitlán", "13HG"),
   ("2-21PL-1Ca", "Chiconcuautla", "21PL" ),
   ("2-21PL-2Hy", "Honey", "21PL" ),
   ("2-21PL-3Ho", "Huauchinango", "21PL" ),
