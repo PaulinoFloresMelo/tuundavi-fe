@@ -1,25 +1,25 @@
 import { inject, Injectable } from "@angular/core"
 import { HttpClient } from "@angular/common/http"
 
-import { injectQuery } from "@tanstack/angular-query-experimental"
+import { queryOptions } from "@tanstack/angular-query-experimental"
 import { lastValueFrom } from "rxjs";
 
 import { environment } from "src/environments/environment";
-import { VariantsNameResponse } from "../interfaces/variantsName-response.interface";
+import { StatesByVariantsId } from "../interfaces/states-by-variants-id-response.interface";
 
 const baseUrl = environment.baseUrl;
 
 @Injectable({providedIn: 'root'})
-export class GetVariantsNameService {
+export class GetVariantService {
 
     private http = inject(HttpClient);
 
-    private async getVariantsName(): Promise<VariantsNameResponse> {
+    private async getVariant(id: string): Promise<StatesByVariantsId> {
 
         try {
             
             const response = await lastValueFrom(
-                this.http.get<VariantsNameResponse>(`${baseUrl}/variants`,)
+                this.http.get<StatesByVariantsId>(`${baseUrl}/variants/${id}`,)
             )
             console.log(response);
             
@@ -30,13 +30,13 @@ export class GetVariantsNameService {
         }
     }
 
-    public variantsNameQuery = injectQuery(() => ({
-        queryKey: ['variantsName'],
-        queryFn: () => this.getVariantsName(),
-        staleTime: 5 * 60 * 1000,
-    }));
+    variantQuery(id: string) {
 
-    get data() {
-        return this.variantsNameQuery.data;
+        const variantQuery = queryOptions({    
+            queryKey: ['variant', id],
+            queryFn: () => this.getVariant(id),
+            staleTime: 5 * 60 * 1000
+        })
+        return variantQuery
     }
 }

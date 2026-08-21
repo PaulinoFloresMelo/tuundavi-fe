@@ -100,30 +100,33 @@
 
       <span class="label text-xs">Estado</span>
       <select class="select select-bordered w-full"
-        [ngClass]="formUtils.inputClasses(termForm,'variantId')"
-        formControlName="variantId">
+        [ngClass]="formUtils.inputClasses(termForm,'stateId')"
+        formControlName="stateId">
         
         <option disabled selected>Seleccione una variante</option>
-          @for (variant of variantsStateService.data()?.data; track variant.id) {
+          <!-- @for (variant of variantsStateService.data()?.data; track variant.id) {
+            <option [value]="variant.id">{{ variant.name }}</option>
+          } -->
+          @for (variant of statesByVariantIdQuery.data()?.states; track variant.id) {
             <option [value]="variant.id">{{ variant.name }}</option>
           }
       </select>
 
       <span class="label text-xs">Municipio</span>
       <select class="select select-bordered w-full"
-        [ngClass]="formUtils.inputClasses(termForm,'variantId')"
-        formControlName="variantId">
+        [ngClass]="formUtils.inputClasses(termForm,'municipalityId')"
+        formControlName="municipalityId">
         
         <option disabled selected>Seleccione una variante</option>
-          @for (variant of variantsNameService.data()?.data; track variant.id) {
-            <option [value]="variant.id">{{ variant.name }}</option>
+          @for (municipality of municipaltiesByStateIdQuery.data()?.municipalities; track municipality.id) {
+            <option [value]="municipality.id">{{ municipality.name }}</option>
           }
       </select>
 
       <span class="label text-xs">Localidad</span>
       <select class="select select-bordered w-full"
-        [ngClass]="formUtils.inputClasses(termForm,'variantId')"
-        formControlName="variantId">
+        [ngClass]="formUtils.inputClasses(termForm,'stateId')"
+        formControlName="stateId">
         
         <option disabled selected>Seleccione una variante</option>
           @for (variant of variantsNameService.data()?.data; track variant.id) {

@@ -15,7 +15,11 @@ import { AuthService } from '@/auth/services/auth.service';
 import { FormUtils } from '@/utils/form-utils';
 import { GetVariantsNameService } from 'src/app/variantName/services/get-variantsName.service';
 import { GetVariantsStateService } from 'src/app/variantState/services/get-variantsState.service';
-import * as data from "../../../../../../public/assets/terminos.json"
+import { GetVariantService } from '../../../../variantName/services/get-variant.service';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { distinctUntilChanged, map, startWith } from 'rxjs';
+import { injectQuery } from '@tanstack/angular-query-experimental';
+import { GetStateService } from '../../../../variantName/services/get-state.service';
 
 @Component({
   selector: 'term-details',
@@ -42,6 +46,8 @@ export class TermDetails {
   authService = inject(AuthService)
   termsService = inject(TermsService);
   variantsNameService = inject(GetVariantsNameService);
+  getVariantService = inject(GetVariantService);
+  getStateService = inject(GetStateService);
   variantsStateService = inject(GetVariantsStateService);
   createTerm   = inject(CreateTermService);
   updateTerm   = inject(UpdateTermService);
@@ -63,6 +69,8 @@ export class TermDetails {
     audio: ['',  Validators.required],
     userId: [0, ],
     variantId: [0, Validators.required],
+    stateId: ['', Validators.required],
+    municipalityId: ['', Validators.required],
   })
 
   categories = {
@@ -85,10 +93,41 @@ export class TermDetails {
   
   user = this.authService.userProfileQuery.data
 
+  variantIdSignal = toSignal(
+    this.termForm.get('variantId')!.valueChanges.pipe(
+      startWith(this.termForm.get('variantId')?.value),
+      distinctUntilChanged(),
+      map(value => value ?? 0),
+    ),
+    { initialValue: 0 }
+  );
+
+  statesByVariantIdQuery = injectQuery(() => 
+    this.getVariantService.variantQuery(
+      this.variantIdSignal().toString()
+      // {id: this.variantIdSignal().toString(), }
+    )
+  );
+
+  stateIdSignal = toSignal(
+    this.termForm.get('stateId')!.valueChanges.pipe(
+      startWith(this.termForm.get('stateId')?.value),
+      distinctUntilChanged(),
+      map(value => value ?? ''),
+    ),
+    { initialValue: '' }
+  );
+
+  municipaltiesByStateIdQuery = injectQuery(() => 
+    this.getStateService.stateQuery(
+      {id: this.stateIdSignal().toString(),
+         variantId: this.variantIdSignal().toString() }
+    )
+  );
 
   ngOnInit(): void {
     this.setFormValue(this.term());
-    console.log(this.term());
+    // console.log(this.term());
   }
 
   setFormValue(formLike: Partial<Term>){
