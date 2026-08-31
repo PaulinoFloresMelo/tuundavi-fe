@@ -3,4 +3,5 @@ INSERT INTO variants_states ( variant_id, state_id ) VALUES
   (2, "13HG"),
   (2, "21PL"),
   (3, "30VZ"),
-  (4, "30VZ");
+  (4, "30VZ"),
+  (22, "17MS");
