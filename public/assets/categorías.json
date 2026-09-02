@@ -1,0 +1,14 @@
+{
+    "categorías": {
+        "1": "verbos",
+        "2": "pronombres-personales",
+        "3": "pronombres-demostrativos",
+        "4": "pronombres-indefinidos",
+        "5": "pronombres-pronominal-sujeto",
+        "6": "adbverbios",
+        "7": "adjetivos-calificativos",
+        "9": "adjetivos-numerales-cardinales",
+        "10": "adjetivos-numerales-ordinales"
+        
+    }
+}

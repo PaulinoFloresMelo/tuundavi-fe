@@ -71,3 +71,7 @@ INSERT INTO municipalities ( id, name, state_id ) VALUES
 ("4-30VZ-19To", "Tlachichilco", "30VZ"),
 ("4-30VZ-20Te", "Temapache", "30VZ"),
 ("4-30VZ-21Zs", "Zontecomatlán de López y Fuentes", "30VZ");
+
+-- Municipios de Veracruz que hablan Mexicano de Tetela del Volcán.
+INSERT INTO municipalities ( id, name, state_id ) VALUES
+("22-17MS-1Tn", "Tetela del Volcán", "17MS");
