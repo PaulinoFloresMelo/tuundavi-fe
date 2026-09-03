@@ -20,7 +20,7 @@ export class GetTermService {
         try {
             
             const response = await lastValueFrom(
-                this.http.get<TermResponse>(`${baseUrl}/terms/${id}`,)
+                this.http.get<TermResponse>(`${baseUrl}/meanings/${id}`,)
             )
             console.log(response);
             
