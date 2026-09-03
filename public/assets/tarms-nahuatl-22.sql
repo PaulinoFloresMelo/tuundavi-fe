@@ -1,42 +1,42 @@
-INSERT INTO meanings (id, meaning, image_url, category ) VALUES --pag.16, 17
-("v.-000-001", "ver",       "ver.png",      "v."),
-("v.-000-002", "querer",    "querer.png",   "v."),
-("v.-000-003", "escuchar",  "escuchar.png", "v."),
-("v.-000-004", "agarrar",   "agarrar.png",  "v."),
-("v.-000-005", "hacer",     "hacer.png",    "v."),
-("v.-000-006", "comer",     "comer.png",    "v."),
-("v.-000-007", "beber",     "beber.png",    "v."),
-("v.-000-008", "amar",      "amar.png",     "v."),
-("v.-000-009", "dormir",   "dormir.png",    "v."),
-("v.-000-010", "caminar",  "caminar.png",   "v."),
-("v.-000-011", "bailar",   "bailar.png",    "v."),
-("v.-000-012", "llorar",   "llorar.png",    "v."),
-("v.-000-013", "reír",     "reír.png",      "v."),
-("v.-000-014", "trabajar", "trabajar.png",  "v."),
-("v.-000-015", "escribir", "escribir.png",  "v."),
-("v.-000-016", "contar",   "contar.png",    "v."),
-("v.-000-017", "cortar",   "cortar.png",    "v."),
-("v.-000-018", "barrer",   "barrer.png",    "v."),
-("v.-000-019", "decir",    "decir.png",     "v."),
-("v.-000-020", "coser",    "coser.png",     "v."),
-("v.-000-021", "tener",    "tener.png",     "v."),
-("v.-000-022", "vender",   "vender.png",    "v."),
-("v.-000-023", "ganar",    "ganar.png",     "v."),
-("v.-000-024", "enojar",   "enojar.png",    "v."),
-("v.-000-025", "gritar",   "gritar.png",    "v."),
-("v.-000-026", "jugar",    "jugar.png",     "v.");
-INSERT INTO meanings (id, meaning, image_url, category ) VALUES --pag.20
-("pron.pers.-01", "yo",       "yo.png",       "pron.pers."),
-("pron.pers.-02", "tú",       "tú.png",       "pron.pers."),
-("pron.pers.-03", "él",       "él.png",       "pron.pers."),
-("pron.pers.-04", "nosotros", "nosotros.png", "pron.pers."),
-("pron.pers.-05", "ustedes",  "ustedes.png",  "pron.pers."),
-("pron.pers.-06", "ellos",    "ellos.png",    "pron.pers.");
-INSERT INTO meanings (id, meaning, image_url, category ) VALUES --pag.22
-("pron.dem.-01", "este, esta, esto (objeto)", "este.png",  "pron.dem."),
-("pron.dem.-02", "ese, esa, eso (objeto)",    "ese.png",   "pron.dem."),
-("pron.dem.-03", "aquel, aquello",            "aquel.png", "pron.dem."),
-("pron.dem.-04", "allá",                      "allá.png",  "pron.dem.");
+INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, state_id, municipality_id, locality_id ) VALUES --pag.16, 17
+("22-17MS-1Tn-7-v.000-001", 22, "Itta",       "Itta.m4a",       "v.-000-001", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-002", 22, "Negui",      "Negui.m4a",      "v.-000-002", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-003", 22, "Kagui",      "Kagui.m4a",      "v.-000-003", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-004", 22, "Asi",        "Asi.m4a",        "v.-000-004", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-005", 22, "Chiua",      "Chiua.m4a",      "v.-000-005", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-006", 22, "Tlakua",     "Tlakua.m4a",     "v.-000-006", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-007", 22, "Guii",       "Guii.m4a",       "v.-000-007", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-008", 22, "Tlasojtla",  "Tlasojtla.m4a",  "v.-000-008", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-009", 22, "Kochi",      "Kochi.m4a",      "v.-000-009", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-010", 22, "Nejnemi",    "Nejnemi.m4a",    "v.-000-010", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-011", 22, "Mijtotia",   "Mijtotia.m4a",   "v.-000-011", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-012", 22, "Choga",      "Choga.m4a",      "v.-000-012", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-013", 22, "Güetska",    "Güetska.m4a",    "v.-000-013", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-014", 22, "Teguiti",    "Teguiti.m4a",    "v.-000-014", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-015", 22, "Tlajkuiloa", "Tlajkuiloa.m4a", "v.-000-015", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-016", 22, "Pua",        "Pua.m4a",        "v.-000-016", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-017", 22, "Tegui",      "Tegui.m4a",      "v.-000-017", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-018", 22, "Tlachpana",  "Tlachpana.m4a",  "v.-000-018", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-019", 22, "Kijta",      "Kijta.m4a",      "v.-000-019", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-020", 22, "Tsoma",      "Tsoma.m4a",      "v.-000-020", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-021", 22, "Kipia",      "Kipia.m4a",      "v.-000-021", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-022", 22, "Namaga",     "Namaga.m4a",     "v.-000-022", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-023", 22, "Tlani",      "Tlani.m4a",      "v.-000-023", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-024", 22, "Kualani",    "Kualani.m4a",    "v.-000-024", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-025", 22, "Tsajtsi",    "Tsajtsi.m4a",    "v.-000-025", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-v.000-026", 22, "Mauiltia",   "Mauiltia.m4a",   "v.-000-026", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7");
+INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, state_id, municipality_id, locality_id ) VALUES --pag.20
+("22-17MS-1Tn-7-pron.pers.-01", 22, "NE-NEJUA",  "NE-NEJUA.m4a", "pron.pers.-01", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-pron.pers.-02", 22, "TE-TEJUA ", "TE-TEJUA.m4a", "pron.pers.-02", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-pron.pers.-03", 22, "YEGUA",     "YEGUA.m4a",    "pron.pers.-03", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-pron.pers.-04", 22, "TEJUAN",    "TEJUAN.m4a",   "pron.pers.-04", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-pron.pers.-05", 22, "ANMEJUAN",  "ANMEJUAN.m4a", "pron.pers.-05", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-pron.pers.-06", 22, "YEJUAN",    "YEJUAN.m4a",   "pron.pers.-06", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7");
+INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, state_id, municipality_id, locality_id ) VALUES --pag.22
+("22-17MS-1Tn-7-pron.dem.-01", 22, "Inin", "Inin.m4a", "pron.dem.-01",  true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-pron.dem.-02", 22, "Inon", "Inon.m4a", "pron.dem.-02",  true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-pron.dem.-03", 22, "Nega", "Nega.m4a", "pron.dem.-03",  true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-pron.dem.-04", 22, "Nepa", "Nepa.m4a", "pron.dem.-04",  true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7");
 INSERT INTO meanings (id, meaning, image_url, category ) VALUES 
 ("22-17MS-1Tn-7-33", "quien", "yo.png", "pron.indef."),
 ("22-17MS-1Tn-7-34", "algunos", "tú.png", "pron.indef."),
@@ -324,7 +324,7 @@ INSERT INTO meanings (id, meaning, image_url, category ) VALUES --pag.52
 ("22-17MS-1Tn-7-1", "agua estancada",    "agua estancada.png",   "s."),
 ("22-17MS-1Tn-7-1", "agua dulce",        "agua dulce.png",       "s."),
 ("22-17MS-1Tn-7-1", "agua de chile",     "agua de chile.png",    "s.");
-INSERT INTO meanings (id, meaning, image_url, category ) VALUES --pag.60
+INSERT INTO meanings (id, meaning, image_url, category ) VALUES --pag.60}
 ("22-17MS-1Tn-7-1", "bailaba",               "bailaba.png",               "v.i.copr."),
 ("22-17MS-1Tn-7-1", "bailador,a",            "bailador,a.png",            "adj."),
 ("22-17MS-1Tn-7-1", "bailando,está",         "bailando,está.png",         "v.i.ger.compl."),
