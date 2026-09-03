@@ -2,6 +2,8 @@ import { TermAudioPipe } from '@/terms/pipes/term-audio.pipe';
 import { TermImagePipe } from '@/terms/pipes/term-image.pipe';
 import { GetTermService } from '@/terms/services/get-term.service';
 import { TermsService } from '@/terms/services/terms.service';
+import { FormUtils } from '@/utils/form-utils';
+import { TitleCasePipe } from '@angular/common';
 import { Component, effect, ElementRef, inject, ViewChild } from '@angular/core';
 import { rxResource, toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -13,7 +15,8 @@ import { map } from 'rxjs';
   imports: [
     // TermImageComponent
     TermAudioPipe,
-    TermImagePipe
+    TermImagePipe,
+    TitleCasePipe
   ],
   templateUrl: './term-page.component.html',
 })
@@ -22,7 +25,8 @@ export class TermPageComponent {
   
   activatedRoute = inject(ActivatedRoute);
   router = inject(Router);
-  getTermService = inject(GetTermService)
+  getTermService = inject(GetTermService);
+  formUtils = FormUtils;
   
   termIdSlug     = this.activatedRoute.snapshot.params['idSlug'];
 

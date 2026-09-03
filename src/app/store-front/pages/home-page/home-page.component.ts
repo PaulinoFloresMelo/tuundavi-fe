@@ -6,7 +6,7 @@ import { PaginationService } from '@/shared/components/pagination/pagination.ser
 import { GetTermsService } from '@/terms/services/get-terms.service';
 import { injectQuery } from '@tanstack/angular-query-experimental';
 import { ActivatedRoute, RouterLink, RouterLinkActive } from '@angular/router';
-import { KeyValuePipe } from '@angular/common';
+import { KeyValuePipe, TitleCasePipe } from '@angular/common';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs';
 
@@ -17,8 +17,8 @@ import { map } from 'rxjs';
     RouterLink,
     RouterLinkActive,
     KeyValuePipe,
-    TermCardComponent, 
-    PaginationComponent
+    PaginationComponent,
+    TitleCasePipe
   ],
   templateUrl: './home-page.component.html',
 })

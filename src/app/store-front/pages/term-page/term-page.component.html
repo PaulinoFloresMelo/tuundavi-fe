@@ -19,8 +19,8 @@
 
         <div class="card-body">
 
-            <h2 class="card-title">{{ term.data()?.meaning }}</h2>
-            <p>Categoría: {{ term.data()?.category}}</p>
+            <h2 class="card-title">{{ term.data()?.meaning | titlecase }}</h2>
+            <p>Categoría: {{  formUtils.abreviaturas[term.data()?.category!]}}</p>
         </div>
     </div>
 
@@ -31,23 +31,22 @@
             <!-- head -->
             <thead>
             <tr>
-                <th></th>
                 <th>Náhuatl</th>
                 <th>Pronunciación</th>
                 <th>Variante</th>
+                <th>Estado</th>
                 <th>Localidad</th>
                 <th>Propuesto por</th>
             </tr>
             </thead>
             <tbody>
             <!-- row 1 -->
-            @for (variant of term.data()?.variants; track $index) {
+            @for (term of term.data()?.terms; track $index) {
                 <tr>
-                    <th>{{variant.id}}</th>
-                    <td>{{variant.content}}</td>
+                    <td>{{term.content}}</td>
                     <td>
                         <audio #audioPlayer class="hidden">
-                            <source [src]="variant.audioUrl | termAudio" type="audio/mpeg">
+                            <source [src]="term.audioUrl | termAudio" type="audio/mpeg">
                             Tu navegador no soporta el elemento de audio.
                         </audio>
 
@@ -59,9 +58,10 @@
                             </svg>
                         </button>
                     </td>
-                    <td>{{variant.name}}</td>
-                    <td>{{variant.locality}}</td>
-                    <td>{{variant.email}}</td>
+                    <td>{{formUtils.variants[term.variantId]}}</td>
+                    <td>{{formUtils.states[term.stateId]}}</td>
+                    <td>{{term.locality.name}}</td>
+                    <td>{{term.email}}</td>
                 </tr>
             }
             </tbody>
