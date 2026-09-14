@@ -37,7 +37,8 @@
         "pres.": "presente", 
         "pron.": "pronombre", 
         "reg.": "regionalismo", 
-        "rel.": "relativo", 
+        "rel.": "relativo",
+        "rev.": "", 
         "s.": "sustantivo",
         "suj.": "sujeto", 
         "sing.": "singular", 
@@ -50,6 +51,7 @@
         "v. r.": "verbo reflexivo", 
         "v. rec.": "verbo recíproco", 
         "v.t.": "verbo transitivo", 
-        "v.t.i.": "verbo transitivo usado como intransitivo" 
+        "v.t.i.": "verbo transitivo usado como intransitivo",
+        "*.": "no clasificado"
     }
 }
