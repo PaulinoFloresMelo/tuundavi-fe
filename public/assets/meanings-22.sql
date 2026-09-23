@@ -800,50 +800,91 @@ INSERT INTO meanings (id, meaning, image_url, category ) VALUES --pag.74
 ("v.i.xxxxxxxxxxxx-000-000-560", "derretir (se)",            "derretir (se).png",            "v.i."),
 ("v.t.xxxxxxxxxxxx-000-000-561", "derribar",                 "derribar.png",                 "v.t.");
 INSERT INTO meanings (id, meaning, image_url, category ) VALUES --pag.78
-dos (veces)                        s.compl.
-dos mil ochocientos                s.
-dos mil ochocientos                s.
-dos mil                            s.
-dos milcuatrocientos               s.
-dos veces                          s.compl.
-doy (le)                           v.t.pres.
-doy                                v.t.pres.
-duele (te)                         v.i.pres.
-dueño,a amo,a                      s.
-
-duerma                             v.i.imper.
-duérmase                           v.i.imper .
-duérmase usted                     v.i.imper.rev.
-duerme                             v.i.pres.
-duerme el señor                    v.i.pres.rev.
-duerme usted                       v.i.pres.rev.
-duerme                             v.i.pres.rev.
-duermen                            v.i.pres.
-duermes                            *.
-duermo                             v.i.pres.
-
-dulce                              adj.s.
-dulce golosina                     s.
-durmiendo                          v.i.ger.
-durmieron                          v.i.pret.
-durmió                             v.i.pret.
-duro,a                             adj.k.
-ebrio,a borracho,a                 adj.
-echa (se) de espaldas              v.i.pres.
-eco (hace)                         v.i.
-edificio (de la biblioteca)        s.
-
-ejercicio                          s.
-ejocote                            s.
-ejote s frijol tierno              s.
-el pron                            *.
-el que-                            *.
-el que cosecha                     *.
-el se-, ellos se-                  pref.r.
-ellos, ellas                       pron.
-ellos, ellas (reverencial)         *.
-elote                              s.
-embaraza                           v.r.pres.
-embarazada                         adj.
-embarazo                           s.
-embárrale                          v.t.imper.
+("s.compl.xxxxxxxx-000-000-561", "dos (veces)",                 "dos (veces).png",                 "s.compl."),
+("s.xxxxxxxxxxxxxx-000-000-562", "dos mil ochocientos",         "dos mil ochocientos.png",         "s."),
+("s.xxxxxxxxxxxxxx-000-000-563", "dos mil ochocientos",         "dos mil ochocientos.png",         "s."),
+("s.xxxxxxxxxxxxxx-000-000-564", "dos mil",                     "dos mil.png",                     "s."),
+("s.xxxxxxxxxxxxxx-000-000-565", "dos milcuatrocientos",        "dos milcuatrocientos.png",        "s."),
+("s.compl.xxxxxxxx-000-000-566", "dos veces",                   "dos veces.png",                   "s.compl."),
+("v.t.pres.xxxxxxx-000-000-567", "doy (le)",                    "doy (le).png",                    "v.t.pres."),
+("v.t.pres.xxxxxxx-000-000-568", "doy",                         "doy.png",                         "v.t.pres."),
+("v.i.pres.xxxxxxx-000-000-569", "duele (te)",                  "duele (te).png",                  "v.i.pres."),
+("s.xxxxxxxxxxxxxx-000-000-570", "dueño,a amo,a",               "dueño,a amo,a.png",               "s."),
+("v.i.imper.xxxxxx-000-000-571", "duerma",                      "duerma.png",                      "v.i.imper."),
+("v.i.imper.xxxxxx-000-000-572", "duérmase",                    "duérmase.png",                    "v.i.imper."),
+("v.i.imper.rev.xx-000-000-573", "duérmase usted",              "duérmase usted.png",              "v.i.imper.rev."),
+("v.i.pres.xxxxxxx-000-000-574", "duerme",                      "duerme.png",                      "v.i.pres."),
+("v.i.pres.rev.xxx-000-000-575", "duerme el señor",             "duerme el señor.png",             "v.i.pres.rev."),
+("v.i.pres.rev.xxx-000-000-576", "duerme usted",                "duerme usted.png",                "v.i.pres.rev."),
+("v.i.pres.rev.xxx-000-000-577", "duerme",                      "duerme.png",                      "v.i.pres.rev."),
+("v.i.pres.xxxxxxx-000-000-578", "duermen",                     "duermen.png",                     "v.i.pres."),
+("*.xxxxxxxxxxxxxx-000-000-579", "duermes",                     "duermes.png",                     "*."),
+("v.i.pres.xxxxxxx-000-000-580", "duermo",                      "duermo.png",                      "v.i.pres."),
+("adj.s.xxxxxxxxxx-000-000-581", "dulce",                       "dulce.png",                       "adj.s."),
+("s.xxxxxxxxxxxxxx-000-000-582", "dulce golosina",              "dulce golosina.png",              "s."),
+("v.i.ger.xxxxxxxx-000-000-583", "durmiendo",                   "durmiendo.png",                   "v.i.ger."),
+("v.i.pret.xxxxxxx-000-000-584", "durmieron",                   "durmieron.png",                   "v.i.pret."),
+("v.i.pret.xxxxxxx-000-000-585", "durmió",                      "durmió.png",                      "v.i.pret."),
+("adj.k.xxxxxxxxxx-000-000-586", "duro,a",                      "duro,a.png",                      "adj.k."),
+("adj.xxxxxxxxxxxx-000-000-587", "ebrio,a borracho,a",          "ebrio,a borracho,a.png",          "adj."),
+("v.i.pres.xxxxxxx-000-000-588", "echa (se) de espaldas",       "echa (se) de espaldas.png",       "v.i.pres."),
+("v.i.xxxxxxxxxxxx-000-000-589", "eco (hace)",                  "eco (hace).png",                  "v.i."),
+("s.xxxxxxxxxxxxxx-000-000-590", "edificio (de la biblioteca)", "edificio (de la biblioteca).png", "s."),
+("s.xxxxxxxxxxxxxx-000-000-591", "ejercicio",                   "ejercicio.png",                   "s."),
+("s.xxxxxxxxxxxxxx-000-000-592", "ejocote",                     "ejocote.png",                     "s."),
+("s.xxxxxxxxxxxxxx-000-000-593", "ejote s frijol tierno",       "ejote s frijol tierno.png",       "s."),
+("*.xxxxxxxxxxxxxx-000-000-594", "el pron",                     "el pron.png",                     "*."),
+("*.xxxxxxxxxxxxxx-000-000-595", "el que-",                     "el que-.png",                     "*."),
+("*.xxxxxxxxxxxxxx-000-000-596", "el que cosecha",              "el que cosecha.png",              "*."),
+("pref.r.xxxxxxxxx-000-000-597", "el se-, ellos se-",           "el se-, ellos se-.png",           "pref.r."),
+("pron.xxxxxxxxxxx-000-000-598", "ellos, ellas",                "ellos, ellas.png",                "pron."),
+("*.xxxxxxxxxxxxxx-000-000-599", "ellos, ellas (reverencial)",  "ellos, ellas (reverencial).png",  "*."),
+("s.xxxxxxxxxxxxxx-000-000-600", "elote",                       "elote.png",                       "s."),
+("v.r.pres.xxxxxxx-000-000-601", "embaraza",                    "embaraza.png",                    "v.r.pres."),
+("adj.xxxxxxxxxxxx-000-000-602", "embarazada",                  "embarazada.png",                  "adj."),
+("s.xxxxxxxxxxxxxx-000-000-603", "embarazo",                    "embarazo.png",                    "s."),
+("v.t.imper.xxxxxx-000-000-604", "embárrale",                   "embárrale.png",                   "v.t.imper.");
+INSERT INTO meanings (id, meaning, image_url, category ) VALUES --pag.79
+("v.t.ger.xxxxxxxx-000-000-605", "embarrando",                            "embarrando.png",                            "v.t.ger."),
+("v.t.xxxxxxxxxxxx-000-000-606", "embarrar",                              "embarrar.png",                              "v.t."),
+("*.xxxxxxxxxxxxxx-000-000-607", "embarrar, rebocar",                     "embarrar, rebocar.png",                     "*."),
+("v.t.fut.xxxxxxxx-000-000-608", "embarrará",                             "embarrará.png",                             "v.t.fut."),
+("v.t.pret.xxxxxxx-000-000-609", "embarró",                               "embarró.png",                               "v.t.pret."),
+("v.t.v.i.pres.xxx-000-000-610", "emborracha",                            "emborracha.png",                            "v.t.v.i.pres."),
+("v.i.pres.xxxxxxx-000-000-611", "embriago (me)",                         "embriago (me).png",                         "v.i.pres."),
+("s.xxxxxxxxxxxxxx-000-000-612", "empacho, indigestión",                  "empacho, indigestión.png",                  "s."),
+("s.xxxxxxxxxxxxxx-000-000-613", "empanada",                              "empanada.png",                              "s."),
+("*.xxxxxxxxxxxxxx-000-000-614", "empanada de masa",                      "empanada de masa.png",                      "*."),
+("v.t.xxxxxxxxxxxx-000-000-615", "emparejar con tierra",                  "emparejar con tierra.png",                  "v.t."),
+("v.t.pret.xxxxxxx-000-000-616", "empecé",                                "empecé.png",                                "v.t.pret."),
+("v.t.xxxxxxxxxxxx-000-000-617", "empezar",                               "empezar.png",                               "v.t."),
+("v.t.pret.xxxxxxx-000-000-618", "empezó",                                "empezó.png",                                "v.t.pret."),
+("v.t.pres.xxxxxxx-000-000-619", "empieza",                               "empieza.png",                               "v.t.pres."),
+("v.t.xxxxxxxxxxxx-000-000-620", "empollar",                              "empollar.png",                              "v.t."),
+("prep.compl.xxxxx-000-000-621", "en (dos lugares)",                      "en (dos lugares).png",                      "prep.compl."),
+("prep.compl.xxxxx-000-000-622", "en (la, los, las)",                     "en (la, los, las).png",                     "prep.compl."),
+("prep.compl.xxxxx-000-000-623", "en (vano)",                             "en (vano).png",                             "prep.compl."),
+("adv.rev.compl.xx-000-000-624", "en un momentito",                       "en un momentito.png",                       "adv.rev.compl."),
+("compl.xxxxxxxxxx-000-000-625", "en veinte lugares",                     "en veinte lugares.png",                     "compl."),
+("s.xxxxxxxxxxxxxx-000-000-626", "enano,a",                               "enano,a.png",                               "s."),
+("v.t.xxxxxxxxxxxx-000-000-627", "encaminar",                             "encaminar.png",                             "v.t."),
+("v.i.pret.xxxxxxx-000-000-628", "encegó (se)",                           "encegó (se).png",                           "v.i.pret."),
+("adj.xxxxxxxxxxxx-000-000-629", "encendido,a",                           "encendido,a.png",                           "adj."),
+("v.t.pres.xxxxxxx-000-000-630", "enciende",                              "enciende.png",                              "v.t.pres."),
+("v.t.imper.xxxxxx-000-000-631", "enciéndelo",                            "enciéndelo.png",                            "v.t.imper."),
+("prep.xxxxxxxxxxx-000-000-632", "encima",                                "encima.png",                                "prep."),
+("s.xxxxxxxxxxxxxx-000-000-633", "encinal",                               "encinal.png",                               "s."),
+("compl.xxxxxxxxxx-000-000-634", "en cinco lugares",                      "en cinco lugares.png",                      "compl."),
+("s.xxxxxxxxxxxxxx-000-000-635", "encino",                                "encino.png",                                "s."),
+("v.i.xxxxxxxxxxxx-000-000-636", "encoger (se)",                          "encoger (se).png",                          "v.i."),
+("v.i.pres.xxxxxxx-000-000-637", "encoje",                                "encoje.png",                                "v.i.pres."),
+("v.t.pres.xxxxxxx-000-000-638", "encontrar (los)",                       "encontrar (los).png",                       "v.t.pres."),
+("v.t.pret.xxxxxxx-000-000-639", "encontraron",                           "encontraron.png",                           "v.t.pret."),
+("adj.xxxxxxxxxxxx-000-000-640", "encorvado,a",                           "encorvado,a.png",                           "adj."),
+("s.xxxxxxxxxxxxxx-000-000-641", "encuentro",                             "encuentro.png",                             "s."),
+("v.t.pres.xxxxxxx-000-000-642", "endereza (concardo)",                   "endereza (concardo).png",                   "v.t.pres."),
+("*.xxxxxxxxxxxxxx-000-000-643", "endereza la lana",                      "endereza la lana.png",                      "*."),
+("v.t.compl.xxxxxx-000-000-644", "enderezar hilos para pasarse al xiotl", "enderezar hilos para pasarse al xiotl.png", "v.t.compl."),
+("v.t.xxxxxxxxxxxx-000-000-645", "endulzar",                              "endulzar.png",                              "v.t."),
+("v.i.xxxxxxxxxxxx-000-000-646", "enfermará (se)",                        "enfermará (se).png",                        "v.i."),
+("s.xxxxxxxxxxxxxx-000-000-647", "enfermedad",                            "enfermedad.png",                            "s.");
