@@ -71,9 +71,9 @@ INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, st
 INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, state_id, municipality_id, locality_id ) VALUES --pag.26
 ("22-17MS-1Tn-7-pref.indef.-01", 22, "Te",  "Te.m4a",  "pref.indef.-01", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-pref.indef.-02", 22, "Tla", "Tla.m4a", "pref.indef.-02", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7");
-INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, state_id, municipality_id, locality_id ) VALUES --pag.26, 27, 28
+INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, state_id, municipality_id, locality_id ) VALUES --pag.26
 ("22-17MS-1Tn-7-adv.-001", 22, "Uejka",         "Uejka.m4a",         "adv.-001", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adv.-002", 22, "Sejkan ",       "Sejkan .m4a",       "adv.-002", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-adv.-002", 22, "Sejkan",        "Sejkan.m4a",        "adv.-002", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.-003", 22, "Uiptla",        "Uiptla.m4a",        "adv.-003", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.-004", 22, "Kuale",         "Kuale.m4a",         "adv.-004", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.-005", 22, "Yolik",         "Yolik.m4a",         "adv.-005", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
@@ -88,10 +88,9 @@ INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, st
 ("22-17MS-1Tn-7-adv.-014", 22, "Tlatsintlan",   "Tlatsintlan.m4a",   "adv.-014", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.-015", 22, "Tlakpak",       "Tlakpak.m4a",       "adv.-015", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.-016", 22, "Uejkajpa ",     "Uejkajpa .m4a",     "adv.-016", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adv.-017", 22, "Nigan",         "Nigan.m4a",         "adv.-017", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.-018", 22, "Nanik",         "Nanik.m4a",         "adv.-018", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adv.-019", 22, "Uejka",         "Uejka.m4a",         "adv.-019", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adv.-020", 22, "Keman",         "Keman.m4a",         "adv.-020", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-adv.-020", 22, "Keman",         "Keman.m4a",         "adv.-020", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7");
+INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, state_id, municipality_id, locality_id ) VALUES --pag.27
 ("22-17MS-1Tn-7-adv.-021", 22, "Axan",          "Axan.m4a",          "adv.-021", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.-022", 22, "Mostla",        "Mostla.m4a",        "adv.-022", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.-023", 22, "Iyaljua",       "Iyaljua.m4a",       "adv.-023", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
@@ -128,13 +127,13 @@ INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, st
 ("22-17MS-1Tn-7-adv.-053", 22, "Tlakema",       "Tlakema.m4a",       "adv.-053", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.-054", 22, "Tlakamo",       "Tlakamo.m4a",       "adv.-054", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.-055", 22, "Maski",         "Maski.m4a",         "adv.-055", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adv.-056", 22, "Inon kijta",    "Inon kijta.m4a",    "adv.-056", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
+("22-17MS-1Tn-7-adv.-056", 22, "Inon kijta",    "Inon kijta.m4a",    "adv.-056", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7");
+INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, state_id, municipality_id, locality_id ) VALUES --pag. 28
 ("22-17MS-1Tn-7-adv.-057", 22, "Pitsauak",      "Pitsauak.m4a",      "adv.-057", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.-058", 22, "Ogachi",        "Ogachi.m4a",        "adv.-058", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.-059", 22, "Tomauak",       "Tomauak.m4a",       "adv.-059", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.-060", 22, "Güeyak",        "Güeyak.m4a",        "adv.-060", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adv.-061", 22, "Tsintlan",      "Tsintlan.m4a",      "adv.-061", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adv.-062", 22, "Tlatsintlan",   "Tlatsintlan.m4a",   "adv.-062", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7");
+("22-17MS-1Tn-7-adv.-061", 22, "Tsintlan",      "Tsintlan.m4a",      "adv.-061", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7");
 INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, state_id, municipality_id, locality_id ) VALUES --pag.28, 29
 ("22-17MS-1Tn-7-adj.calificat.-001", 22, "Kuagualtsin",  "Kuagualtsin.m4a",  "adj.calificat.-001", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.calificat.-002", 22, "Tsitsiguiton", "Tsitsiguiton.m4a", "adj.calificat.-002", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
@@ -150,11 +149,7 @@ INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, st
 ("22-17MS-1Tn-7-adj.calificat.-012", 22, "Mojki",        "Mojki.m4a",        "adj.calificat.-012", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.calificat.-013", 22, "Gualanki",     "Gualanki.m4a",     "adj.calificat.-013", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.calificat.-014", 22, "Tomauak ,"     "Tomauak .m4a",     "adj.calificat.-014", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adj.calificat.-015", 22, "Güeyak",       "Güeyak.m4a",       "adj.calificat.-015", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adj.calificat.-016", 22, "Chigauak ,"    "Chigauak .m4a",    "adj.calificat.-016", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adj.calificat.-017", 22, "Pitsauak",     "Pitsauak.m4a",     "adj.calificat.-017", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.calificat.-018", 22, "Alauak",       "Alauak.m4a",       "adj.calificat.-018", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adj.calificat.-019", 22, "Postejki",     "Postejki.m4a",     "adj.calificat.-019", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.calificat.-020", 22, "Posonqui",     "Posonqui.m4a",     "adj.calificat.-020", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.calificat.-021", 22, "Tlapajki",     "Tlapajki.m4a",     "adj.calificat.-021", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.calificat.-022", 22, "Tlapanki",     "Tlapanki.m4a",     "adj.calificat.-022", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
@@ -162,7 +157,6 @@ INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, st
 ("22-17MS-1Tn-7-adj.calificat.-024", 22, "Xoxoktik",     "Xoxoktik.m4a",     "adj.calificat.-024", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.calificat.-025", 22, "Kuechauak",    "Kuechauak.m4a",    "adj.calificat.-025", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.calificat.-026", 22, "Kapotstik",    "Kapotstik.m4a",    "adj.calificat.-026", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adj.calificat.-027", 22, "Chichiltik",   "Chichiltik.m4a",   "adj.calificat.-027", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.calificat.-028", 22, "Istaktik",     "Istaktik.m4a",     "adj.calificat.-028", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.calificat.-029", 22, "Nextik",       "Nextik.m4a",       "adj.calificat.-029", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7");
 INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, state_id, municipality_id, locality_id ) VALUES --pag.29, 30, 31
@@ -645,7 +639,6 @@ INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, st
 ("22-17MS-1Tn-7-adj.xxxxxxxxxxx-000-000-408", 22, "nextiguej",            "nextiguej.m4a",            "adj.xxxxxxxxxxx-000-000-408", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-s.xxxxxxxxxxxxx-000-000-409", 22, "tlajko",               "tlajko.m4a",               "s.xxxxxxxxxxxxx-000-000-409", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adv.xxxxxxxxxxx-000-000-410", 22, "tlatsakuale",          "tlatsakuale.m4a",          "adv.xxxxxxxxxxx-000-000-410", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-s.xxxxxxxxxxxxx-000-000-411", 22, "cejkan",               "cejkan.m4a",               "s.xxxxxxxxxxxxx-000-000-411", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-s.xxxxxxxxxxxxx-000-000-412", 22, "pitsotl",              "pitsotl.m4a",              "s.xxxxxxxxxxxxx-000-000-412", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-s.xxxxxxxxxxxxx-000-000-413", 22, "pitsome",              "pitsome.m4a",              "s.xxxxxxxxxxxxx-000-000-413", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-s.xxxxxxxxxxxxx-000-000-414", 22, "nagakuitlatl",         "nagakuitlatl.m4a",         "s.xxxxxxxxxxxxx-000-000-414", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
@@ -780,8 +773,6 @@ INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, st
 ("22-17MS-1Tn-7-v.t.imper.rev.xx-000-000-540", 22, "ximomaguilijtsino",           "ximomaguilijtsino.m4a",           "v.t.imper.rev.xx-000-000-540", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-v.t.imper.rev.xx-000-000-541", 22, "xikmatlatsinilijtsino",       "xikmatlatsinilijtsino.m4a",       "v.t.imper.rev.xx-000-000-541", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.xxxxxxxxxxxx-000-000-542", 22, "kanauaktik",                  "kanauaktik.m4a",                  "adj.xxxxxxxxxxxx-000-000-542", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adj.xxxxxxxxxxxx-000-000-543", 22, "pisiltik, pitsaktik",         "pisiltik, pitsaktik.m4a",         "adj.xxxxxxxxxxxx-000-000-543", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adj.xxxxxxxxxxxx-000-000-544", 22, "kagalachtik,kanauak",         "kagalachtik,kanauak.m4a",         "adj.xxxxxxxxxxxx-000-000-544", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.xxxxxxxxxxxx-000-000-545", 22, "uel",                         "uel.m4a",                         "adj.xxxxxxxxxxxx-000-000-545", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.xxxxxxxxxxxx-000-000-546", 22, "yolpajpagui",                 "yolpajpagui.m4a",                 "adj.xxxxxxxxxxxx-000-000-546", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-*.xxxxxxxxxxxxxx-000-000-547", 22, "xinechmaguilijtsino",         "xinechmaguilijtsino.m4a",         "*.xxxxxxxxxxxxxx-000-000-547", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
@@ -1145,7 +1136,6 @@ INSERT INTO terms (id, variant_id, content, audio_url, meaning_id, is_active, st
 ("22-17MS-1Tn-7-s.xxxxxxxxxxxxxx-000-000-896", 22, "tojmitl",                "tojmitl.m4a",                "s.xxxxxxxxxxxxxx-000-000-896", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-s.xxxxxxxxxxxxxx-000-000-897", 22, "chapolin",               "chapolin.m4a",               "s.xxxxxxxxxxxxxx-000-000-897", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-adj.xxxxxxxxxxxx-000-000-898", 22, "tojmio",                 "tojmio.m4a",                 "adj.xxxxxxxxxxxx-000-000-898", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
-("22-17MS-1Tn-7-adj.xxxxxxxxxxxx-000-000-899", 22, "ueyak, melak",           "ueyak, melak.m4a",           "adj.xxxxxxxxxxxx-000-000-899", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-v.t.pres.xxxxxxx-000-000-900", 22, "paga, pajpaga, tlapaga", "paga, pajpaga, tlapaga.m4a", "v.t.pres.xxxxxxx-000-000-900", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-v.t.pres.compl.x-000-000-901", 22, "mixamia",                "mixamia.m4a",                "v.t.pres.compl.x-000-000-901", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),
 ("22-17MS-1Tn-7-v.t.pres.compl.x-000-000-902", 22, "mapajpaga",              "mapajpaga.m4a",              "v.t.pres.compl.x-000-000-902", true, "17MS", "22-17MS-1Tn", "22-17MS-1Tn-7"),

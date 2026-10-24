@@ -33,7 +33,7 @@ export class FrontNavbarComponent {
     'animal': 'Animales',
     'color': 'Colores',
     'dayoftheweek': 'Días de la semana',
-    'numbers': 'Números',
+    'adj.núm.card.': 'Números',
     'schoolobject': 'Objetos escolares',
     'agriculture': 'Agricultura',
     'foodanddrink': 'Comidas y bebidas',
